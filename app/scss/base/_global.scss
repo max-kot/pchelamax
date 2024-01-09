@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+a,
+a:visited,
+a:active {
+	text-decoration: none;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: var(--font-size);
+	min-height: 100%;
+}
+
+input,
+button {
+	font: inherit;
+	cursor: pointer;
+}
+
+img,
+picture,
+video,
+svg,
+source {
+	max-width: 100%;
+}
+
+body {
+	min-height: 100vh;
+
+	font-family: var(--main-font);
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 120%;
+	color: var(--text);
+
+	background: var(--bg);
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	overflow: hidden;
+	min-height: 100vh;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+.container {
+	max-width: calc(var(--container-width) + (var(--container-padding) * 2));
+	padding: 0 var(--container-padding);
+	margin: 0 auto;
+}
+
+.btn {
+	display: inline-flex;
+	background: var(--dark);
+	color: var(--bg);
+	padding: 1.6rem 3.2rem;
+	border-radius: 2.5rem;
+	text-transform: uppercase;
+	font-weight: 500;
+	border: 0.4rem solid transparent;
+	font-size: 1.8rem;
+	transition: all 0.3s;
+	box-shadow: var(--shadow);
+
+	&:hover {
+		background: var(--bg);
+		color: var(--dark);
+		border-color: currentColor;
+	}
+}

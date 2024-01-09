@@ -1,0 +1,41 @@
+:root {
+	// Adaptive
+	--index: calc(1vw + 1vh);
+
+	// COLORS
+	--dark: #2c261b;
+	--bg: #f3eadb;
+	--bg-accent: #ddbc89;
+	--light: #ebd7b8;
+	--accent: #2c261b;
+	--secondary: #ebd7b8;
+	--third: #ddbc89;
+	--text: #413c32;
+	//--accent--gradient: linear-gradient(0deg, #f59e0b 0%, #fbbf24 100%);
+	//--secondary-op: rgba(252, 211, 77, 0.8);
+
+	--header-height: 10rem;
+
+	// MEDIA
+	--1400: 1400;
+	--1200: 1200;
+	--1000: 1000;
+	--800: 800;
+	--600: 400;
+	--400: 400;
+
+	@media (max-width: em(1400)) {
+		--header-height: 8rem;
+	}
+
+	// SHADOWS
+	--shadow: 0px 0px 6px 0px rgba(45, 45, 45, 0.1);
+
+	// CONTAINER
+	--container-width: 124rem;
+	--container-padding: 1.5rem;
+
+	// FONTS
+	--main-font: "Rubik", sans-serif;
+	--font-size: calc(10 / 16 * 100%);
+}

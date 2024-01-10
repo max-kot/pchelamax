@@ -1,5 +1,5 @@
 .first {
-	background: linear-gradient(180deg, #DDBC89 80%, rgba(221, 188, 137, 0.00) 88.88%, #F3EADB 88.88%);
+	background: linear-gradient(180deg, #ddbc89 80%, rgba(221, 188, 137, 0) 88.88%, #f3eadb 88.88%);
 
 	&__body {
 		--padding-top: calc(var(--header-height) + 4rem);
@@ -10,11 +10,15 @@
 		justify-content: space-between;
 		padding-top: var(--padding-top);
 		padding-bottom: var(--padding-bottom);
-		gap: 4rem 6rem;
+		gap: 4rem;
 
 		@media (max-width: em(1000)) {
 			flex-direction: column;
 			gap: 8rem;
+		}
+
+		@media (max-width: em(799)) {
+			gap: 10rem;
 		}
 	}
 
@@ -66,7 +70,7 @@
 		@media (max-width: em(1000)) {
 			max-width: 100%;
 			text-align: center;
-			order:3;
+			order: 3;
 
 			&:not(:last-child) {
 				margin-bottom: 2rem;
@@ -91,7 +95,7 @@
 		position: absolute;
 		z-index: 2;
 		bottom: -6rem;
-		left: -14rem;
+		left: -12rem;
 		background: var(--dark);
 		color: var(--bg);
 		border-radius: 5rem;
@@ -112,7 +116,6 @@
 		@media (max-width: em(1000)) {
 			left: 0;
 			padding: 4rem 2rem;
-
 		}
 
 		@media (max-width: em(600)) {
@@ -135,7 +138,7 @@
 
 		span {
 			max-width: 15rem;
-			
+
 			@media (max-width: em(399)) {
 				max-width: 12rem;
 			}
@@ -154,9 +157,13 @@
 	}
 
 	&__image-box {
-		flex: 1 1 50%;
+		flex: 1 1 60%;
 		position: relative;
 		padding-right: 14rem;
+
+		@media (max-width: em(1199)) {
+			padding-right: 16rem;
+		}
 
 		@media (max-width: em(1000)) {
 			width: 100%;
@@ -178,27 +185,24 @@
 	&__image {
 		border: 0.4rem solid var(--dark);
 		border-radius: 5rem;
-		padding-bottom: 80%;
 		background: var(--light);
 		overflow: hidden;
 		position: relative;
 		box-shadow: var(--shadow);
-		
+		//height: 52rem;
+		padding-bottom: 80%;
 
 		@media (max-width: em(1400)) {
 			padding-bottom: 70%;
 		}
-		@media (max-width: em(1199)) {
-			padding-bottom: 80%;
-		}
 
-		@media (max-width: em(1000)) {
+		@media (max-width: em(1200)) {
 			padding-bottom: unset;
-			height: 38rem;
+			height: 46rem;
 		}
 		@media (max-width: em(799)) {
 			padding-bottom: unset;
-			height: 32rem;
+			height: 38rem;
 		}
 
 		img,
@@ -214,35 +218,73 @@
 	}
 
 	&__tagline {
-		position: absolute;
-		z-index: 2;
-		top: 6rem;
-		right: 0;
+		//position: absolute;
+		//z-index: 2;
+		//top: 6rem;
+		//right: 0;
 
-		@media (max-width: em(1000)) {
-			top: -4rem;
-		}
-		@media (max-width: em(600)) {
-			top: -6rem;
-		}
+		//@media (max-width: em(1000)) {
+		//	top: -4rem;
+		//}
+		//@media (max-width: em(600)) {
+		//	top: -6rem;
+		//}
+
+		//border: 0.4rem solid var(--dark);
+		//background: var(--light);
+		//border-radius: 5rem;
+		//box-shadow: var(--shadow);
+		//padding: 8rem 2rem 3rem 15rem;
+
+		//@media (max-width: em(1199)) {
+		//	padding: 8rem 2rem 2rem 10rem;
+		//}
+		//@media (max-width: em(799)) {
+		//	padding: 4rem 2rem 2rem 10rem;
+		//}
+		//@media (max-width: em(400)) {
+		//	padding: 2rem 2rem 2rem 10rem;
+		//}
 	}
 }
 .tagline {
-	border: 0.4rem solid var(--dark);
-	background: var(--light);
-	border-radius: 5rem;
-	box-shadow: var(--shadow);
-	padding: 8rem 2rem 3rem 15rem;
-
-	@media (max-width: em(1199)) {
-		padding: 8rem 2rem 2rem 10rem;
+	max-width: 34rem;
+	min-height: 30rem;
+	top: 0;
+	right: 0;
+	position: absolute;
+	@media (max-width: em(1000)) {
+		top: -8rem;
 	}
+
 	@media (max-width: em(799)) {
-		padding: 4rem 2rem 2rem 10rem;
-
+		max-width: 28rem;
+		top: -10rem;
+		right: -1rem;
 	}
-	@media (max-width: em(400)) {
-		padding: 2rem 2rem 2rem 10rem;
+	@media (max-width: em(399)) {
+		top: -12rem;
+	}
+
+	&__slider {
+	}
+	&__slide {
+	}
+	&__wrapper {
+		padding-top: 4rem;
+		padding-left: 4rem;
+	}
+	&__content {
+		padding: 8rem 2rem 3rem 15rem;
+		border: 0.4rem solid var(--dark);
+		background: var(--light);
+		border-radius: 5rem;
+		box-shadow: var(--shadow);
+		position: relative;
+
+		@media (max-width: em(799)) {
+			padding: 4rem 2rem 3rem 10rem;
+		}
 	}
 	&__icon {
 		position: absolute;
@@ -250,12 +292,9 @@
 		left: -4rem;
 		width: 20rem;
 
-		@media (max-width: em(1199)) {
-			width: 15rem;
-		}
-
 		@media (max-width: em(799)) {
 			top: -6rem;
+			width: 15rem;
 		}
 
 		@media (max-width: em(600)) {

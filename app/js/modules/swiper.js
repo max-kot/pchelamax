@@ -1,23 +1,24 @@
 import Swiper from "swiper/bundle";
 
-const firstSlider = new Swiper('.first-slider', {
+const taglineSlider = new Swiper('.tagline__slider', {
 	loop: true,
 	autoplay: true,
 	autoHeight: true,
+	spaceBetween: 40,
+	grabCursor: true,
 	
+	effect: "creative",
+	creativeEffect: {
+		prev: {
+			translate: [0, 0, -400],
+		},
+		next: {
+			translate: ["100%", 0, 0],
+		},
+	},
+
 	autoplay: {
-		delay: 6000,
+		delay: 5000,
 		disableOnInteraction: false,
-	 },
-
-	pagination: {
-		el: '.first-slider__pagination',
-		clickable: true,
-	},
-
-	navigation: {
-		nextEl: '.first-slider__btn-next',
-		prevEl: '.first-slider__btn-prev',
-	},
-
+	}
 })

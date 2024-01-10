@@ -11,11 +11,21 @@
 		padding-top: var(--padding-top);
 		padding-bottom: var(--padding-bottom);
 		gap: 4rem 6rem;
+
+		@media (max-width: em(1000)) {
+			flex-direction: column;
+			gap: 8rem;
+		}
 	}
 
 	&__content {
 		flex: 1 1 30%;
 		position: relative;
+
+		@media (max-width: em(1000)) {
+			display: flex;
+			flex-direction: column;
+		}
 	}
 
 	&__title {
@@ -29,14 +39,51 @@
 		&:not(:last-child) {
 			margin-bottom: 1.2rem;
 		}
+
+		@media (max-width: em(1400)) {
+			font-size: 4.2rem;
+		}
+
+		@media (max-width: em(1199)) {
+			font-size: 3.8rem;
+		}
+
+		@media (max-width: em(1000)) {
+			text-align: center;
+			font-size: 3.4rem;
+		}
+		@media (max-width: em(799)) {
+			font-size: 3rem;
+		}
+		@media (max-width: em(399)) {
+			font-size: 2.4rem;
+		}
 	}
 
 	&__descr {
 		max-width: 28rem;
 
+		@media (max-width: em(1000)) {
+			max-width: 100%;
+			text-align: center;
+			order:3;
+
+			&:not(:last-child) {
+				margin-bottom: 2rem;
+			}
+		}
+
+		@media (max-width: em(600)) {
+			font-size: 1.4rem;
+		}
+
 		& > * {
 			@include reset;
 			line-height: 120%;
+
+			&:not(:last-child) {
+				margin-bottom: 1.6rem;
+			}
 		}
 	}
 
@@ -44,7 +91,7 @@
 		position: absolute;
 		z-index: 2;
 		bottom: -6rem;
-		right: -28rem;
+		left: -14rem;
 		background: var(--dark);
 		color: var(--bg);
 		border-radius: 5rem;
@@ -62,6 +109,23 @@
 
 		transition: all 0.3s;
 
+		@media (max-width: em(1000)) {
+			left: 0;
+			padding: 4rem 2rem;
+
+		}
+
+		@media (max-width: em(600)) {
+			padding: 3rem 2rem;
+
+			font-size: 1.8rem;
+			gap: 1.6rem;
+		}
+
+		@media (max-width: em(399)) {
+			font-size: 1.4rem;
+		}
+
 		&:hover {
 			color: var(--dark);
 			border-color: currentColor;
@@ -71,6 +135,21 @@
 
 		span {
 			max-width: 15rem;
+			
+			@media (max-width: em(399)) {
+				max-width: 12rem;
+			}
+		}
+
+		svg {
+			@media (max-width: em(600)) {
+				width: 8rem;
+				height: auto;
+			}
+
+			@media (max-width: em(399)) {
+				width: 6rem;
+			}
 		}
 	}
 
@@ -78,6 +157,22 @@
 		flex: 1 1 50%;
 		position: relative;
 		padding-right: 14rem;
+
+		@media (max-width: em(1000)) {
+			width: 100%;
+			padding: 0 6rem;
+		}
+
+		@media (max-width: em(799)) {
+			padding: 0 4rem;
+		}
+
+		@media (max-width: em(600)) {
+			padding: 0 2rem;
+		}
+		@media (max-width: em(399)) {
+			padding: 0 1rem;
+		}
 	}
 
 	&__image {
@@ -88,6 +183,23 @@
 		overflow: hidden;
 		position: relative;
 		box-shadow: var(--shadow);
+		
+
+		@media (max-width: em(1400)) {
+			padding-bottom: 70%;
+		}
+		@media (max-width: em(1199)) {
+			padding-bottom: 80%;
+		}
+
+		@media (max-width: em(1000)) {
+			padding-bottom: unset;
+			height: 38rem;
+		}
+		@media (max-width: em(799)) {
+			padding-bottom: unset;
+			height: 32rem;
+		}
 
 		img,
 		picture,
@@ -104,8 +216,15 @@
 	&__tagline {
 		position: absolute;
 		z-index: 2;
-		top: -4rem;
+		top: 6rem;
 		right: 0;
+
+		@media (max-width: em(1000)) {
+			top: -4rem;
+		}
+		@media (max-width: em(600)) {
+			top: -6rem;
+		}
 	}
 }
 .tagline {
@@ -115,10 +234,34 @@
 	box-shadow: var(--shadow);
 	padding: 8rem 2rem 3rem 15rem;
 
+	@media (max-width: em(1199)) {
+		padding: 8rem 2rem 2rem 10rem;
+	}
+	@media (max-width: em(799)) {
+		padding: 4rem 2rem 2rem 10rem;
+
+	}
+	@media (max-width: em(400)) {
+		padding: 2rem 2rem 2rem 10rem;
+	}
 	&__icon {
 		position: absolute;
 		top: -4rem;
 		left: -4rem;
+		width: 20rem;
+
+		@media (max-width: em(1199)) {
+			width: 15rem;
+		}
+
+		@media (max-width: em(799)) {
+			top: -6rem;
+		}
+
+		@media (max-width: em(600)) {
+			width: 12rem;
+			left: -2rem;
+		}
 	}
 
 	&__text {
@@ -128,5 +271,10 @@
 		font-size: 1.8rem;
 		text-transform: uppercase;
 		font-weight: 700;
+
+		@media (max-width: em(799)) {
+			font-size: 1.4rem;
+			max-width: 10rem;
+		}
 	}
 }

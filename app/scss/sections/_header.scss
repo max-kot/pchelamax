@@ -6,6 +6,31 @@
 	right: 0;
 	z-index: 55;
 
+	@media (max-width: em(1400)) {
+		padding: 1rem 0;
+	}
+
+	@media (max-width: em(1000)) {
+		padding: 2rem 0;
+		background: var(--light);
+		box-shadow: var(--shadow);
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: -100%;
+			width: 100%;
+			box-shadow: var(--shadow);
+			z-index: -1;
+			transition: right 0.3s;
+		}
+		&.active {
+			right: 0;
+		}
+	}
+
 	&__body {
 		display: flex;
 		align-items: center;
@@ -32,14 +57,81 @@
 
 	&__btn {
 		flex-shrink: 0;
+		@media (max-width: em(1000)) {
+			align-self: center;
+		}
 	}
 }
 .menu {
 	&__btn {
+		@include reset;
+		border: none;
+		background: transparent;
 		display: none;
+
+		position: relative;
+		width: 4rem;
+		height: 3rem;
+
+		span {
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 0.4rem;
+			background: var(--dark);
+			top: 50%;
+			transform: translateY(-50%);
+			border-radius: 10px;
+		}
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 0.4rem;
+			background: var(--dark);
+			left: 0;
+			border-radius: 10px;
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+
+		@media (max-width: em(1000)) {
+			display: flex;
+		}
 	}
 
 	&__box {
+		display: flex;
+		align-items: center;
+		gap: 4rem;
+
+		@media (max-width: em(1000)) {
+			position: absolute;
+			top: var(--header-height);
+			right: -100%;
+			width: 100%;
+			height: calc(100dvh - var(--header-height));
+			overflow-y: auto;
+			flex-direction: column;
+			padding: 2rem 2rem 4rem;
+			background: var(--light-op);
+			backdrop-filter: blur(5px);
+			font-size: 1.8rem;
+			transition: right 0.3s;
+
+			&.active {
+				right: 0;
+			}
+		}
 	}
 
 	&__list {
@@ -50,6 +142,13 @@
 		align-items: center;
 		gap: 0.8rem 3.2rem;
 		flex-wrap: wrap;
+
+		@media (max-width: em(1000)) {
+			flex-direction: column;
+			flex-wrap: nowrap;
+			gap: 1.6rem;
+		}
+		
 	}
 
 	&__item {

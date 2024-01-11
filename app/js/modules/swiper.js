@@ -18,7 +18,7 @@ const taglineSlider = new Swiper('.tagline__slider', {
 	},
 
 	autoplay: {
-		delay: 5000,
+		delay: 3000,
 		disableOnInteraction: false,
 	}
 })

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1340,6 +1341,7 @@ button.swiper-pagination-bullet {
   --secondary: #ebd7b8;
   --third: #ddbc89;
   --text: #413c32;
+  --dark-gradient: linear-gradient(to left, rgba(255, 255, 255, 0), #2c261b);
   --header-height: 10rem;
   --1400: 1400;
   --1200: 1200;
@@ -1398,7 +1400,7 @@ body {
   font-family: var(--main-font);
   font-size: 1.6rem;
   font-weight: 400;
-  line-height: 120%;
+  line-height: 1.2;
   color: var(--text);
   background: var(--bg);
 }
@@ -1455,6 +1457,19 @@ body {
   border-color: currentColor;
 }
 
+@-webkit-keyframes slide {
+  to {
+    -webkit-transform: translateX(calc(-100% - var(--slider-gap, 0)));
+    transform: translateX(calc(-100% - var(--slider-gap, 0)));
+  }
+}
+
+@keyframes slide {
+  to {
+    -webkit-transform: translateX(calc(-100% - var(--slider-gap, 0)));
+    transform: translateX(calc(-100% - var(--slider-gap, 0)));
+  }
+}
 .header {
   padding: 2rem 0;
   position: fixed;
@@ -1462,6 +1477,16 @@ body {
   left: 0;
   right: 0;
   z-index: 55;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.header.cover {
+  background: var(--light);
+  -webkit-box-shadow: var(--shadow);
+  box-shadow: var(--shadow);
+}
+.header.active::before {
+  right: 0;
 }
 @media (max-width: 87.5em) {
   .header {
@@ -1469,12 +1494,6 @@ body {
   }
 }
 @media (max-width: 62.5em) {
-  .header {
-    padding: 2rem 0;
-    background: var(--light);
-    -webkit-box-shadow: var(--shadow);
-    box-shadow: var(--shadow);
-  }
   .header::before {
     content: "";
     display: block;
@@ -1483,14 +1502,12 @@ body {
     bottom: 0;
     right: -100%;
     width: 100%;
+    background: var(--light);
     -webkit-box-shadow: var(--shadow);
     box-shadow: var(--shadow);
     z-index: -1;
     -webkit-transition: right 0.3s;
     transition: right 0.3s;
-  }
-  .header.active {
-    right: 0;
   }
 }
 .header__body {
@@ -1808,7 +1825,7 @@ body {
   position: absolute;
   z-index: 2;
   bottom: -6rem;
-  left: -12rem;
+  left: -11rem;
   background: var(--dark);
   color: var(--bg);
   border-radius: 5rem;
@@ -1832,7 +1849,7 @@ body {
 }
 @media (max-width: 62.5em) {
   .first__btn {
-    left: 0;
+    left: -1rem;
     padding: 4rem 2rem;
   }
 }
@@ -2019,4 +2036,93 @@ body {
     font-size: 1.4rem;
     max-width: 10rem;
   }
+}
+
+.slider {
+  padding: 3rem 0 6rem;
+}
+.slider[data-slider-direction=right] {
+  --slider-direction: reverse;
+}
+.slider[data-slider-direction=left] {
+  --slider-direction: forwards;
+}
+.slider__body {
+  --slider-gap: 4rem;
+  padding: 3rem;
+  background: var(--dark);
+  border-radius: 5rem;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  gap: var(--slider-gap);
+}
+@media (max-width: 49.9375em) {
+  .slider__body {
+    padding: 2rem 3rem;
+  }
+}
+.slider__body:hover .slider__list {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+.slider__body::before, .slider__body::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  width: 10%;
+  background: var(--dark-gradient);
+}
+.slider__body::before {
+  left: 0;
+}
+.slider__body::after {
+  right: 0;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.slider__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 4rem;
+  -webkit-animation: slide var(--slider-duration, 15s) var(--slider-direction, forwards) infinite linear;
+  animation: slide var(--slider-duration, 15s) var(--slider-direction, forwards) infinite linear;
+}
+.slider__item {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  color: var(--light);
+  font-weight: 500;
+  line-height: 1.2;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 4rem;
+}
+.slider__item::before {
+  content: "✽";
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }

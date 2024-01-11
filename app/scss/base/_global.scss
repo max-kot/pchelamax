@@ -36,7 +36,7 @@ body {
 	font-family: var(--main-font);
 	font-size: 1.6rem;
 	font-weight: 400;
-	line-height: 120%;
+	line-height: 1.2;
 	color: var(--text);
 
 	background: var(--bg);
@@ -81,5 +81,11 @@ body {
 		background: var(--bg);
 		color: var(--dark);
 		border-color: currentColor;
+	}
+}
+
+@keyframes slide {
+	to {
+		transform: translateX(calc(-100% - var(--slider-gap, 0)))
 	}
 }

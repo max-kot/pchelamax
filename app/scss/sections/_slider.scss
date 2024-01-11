@@ -1,0 +1,81 @@
+.slider {
+	padding: 3rem 0 6rem;
+
+	&[data-slider-direction="right"] {
+		--slider-direction: reverse;
+	}
+
+	&[data-slider-direction="left"] {
+		--slider-direction: forwards;
+	}
+
+	&__body {
+		--slider-gap: 4rem;
+
+		padding: 3rem;
+		background: var(--dark);
+		border-radius: 5rem;
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		white-space: nowrap;
+		gap: var(--slider-gap);
+
+		@media (max-width: em(799)) {
+			padding: 2rem 3rem;
+		}
+
+		&:hover .slider__list {
+			animation-play-state: paused;
+		}
+
+		&::before,
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			bottom: 0;
+			width: 10%;
+			background: var(--dark-gradient);
+		}
+
+		&::before {
+			left: 0;
+		}
+
+		&::after {
+			right: 0;
+			transform: rotate(180deg);
+		}
+	}
+
+	&__list {
+		@include reset;
+		list-style: none;
+
+		width: max-content;
+		display: flex;
+		align-items: center;
+		gap: 4rem;
+		animation: slide var(--slider-duration, 15s) var(--slider-direction, forwards) infinite linear;
+	}
+
+	&__item {
+		font-size: 2.2rem;
+		text-transform: uppercase;
+		color: var(--light);
+		font-weight: 500;
+		line-height: 1.2;
+		position: relative;
+		display: flex;
+		align-items: center;
+		gap: 4rem;
+
+		&::before {
+			content: "✽";
+			display: inline-flex;
+		}
+	}
+}

@@ -5,15 +5,23 @@
 	left: 0;
 	right: 0;
 	z-index: 55;
+	transition: all 0.3s;
+
+	&.cover {
+		background: var(--light);
+		box-shadow: var(--shadow);
+	}
+	&.active {
+		&::before {
+			right: 0;
+		}
+	}
 
 	@media (max-width: em(1400)) {
 		padding: 1rem 0;
 	}
 
 	@media (max-width: em(1000)) {
-		padding: 2rem 0;
-		background: var(--light);
-		box-shadow: var(--shadow);
 		&::before {
 			content: "";
 			display: block;
@@ -22,12 +30,10 @@
 			bottom: 0;
 			right: -100%;
 			width: 100%;
+			background: var(--light);
 			box-shadow: var(--shadow);
 			z-index: -1;
 			transition: right 0.3s;
-		}
-		&.active {
-			right: 0;
 		}
 	}
 

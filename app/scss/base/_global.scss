@@ -40,6 +40,10 @@ body {
 	color: var(--text);
 
 	background: var(--bg);
+
+	@media (max-width: em(600)) {
+		font-size: 1.4rem;
+	}
 }
 
 .no-scroll {
@@ -81,6 +85,38 @@ body {
 		background: var(--bg);
 		color: var(--dark);
 		border-color: currentColor;
+	}
+}
+
+.section-title {
+	@include reset;
+
+	text-align: center;
+	color: var(--dark);
+	text-transform: uppercase;
+	font-size: 4.2rem;
+	line-height: 1.2;
+	
+	@media (max-width: em(1199)) {
+		font-size: 3.8rem;
+	}
+
+	@media (max-width: em(1000)) {
+		font-size: 3.4rem;
+	}
+	@media (max-width: em(799)) {
+		font-size: 3rem;
+	}
+	@media (max-width: em(399)) {
+		font-size: 2.4rem;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 4rem;
+
+		@media (max-width: em(1000)) {
+			margin-bottom: 2rem;
+		}
 	}
 }
 

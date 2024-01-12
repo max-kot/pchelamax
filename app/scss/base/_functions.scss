@@ -34,3 +34,13 @@
 	padding: 0;
 	margin: 0;
 }
+@mixin reset-child {
+	& > *:first-child {
+		padding-top: unset;
+		margin-top: unset;
+	}
+	& > *:last-child {
+		padding-bottom: unset;
+		margin-bottom: unset;
+	}
+}

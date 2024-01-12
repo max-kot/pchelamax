@@ -1,6 +1,13 @@
 .slider {
 	padding: 3rem 0 6rem;
 
+	@media (max-width: em(1200)) {
+		padding: 3rem 0;
+	}
+	
+	@media (max-width: em(600)) {
+		padding: 1.5rem 0;
+	}
 	&[data-slider-direction="right"] {
 		--slider-direction: reverse;
 	}

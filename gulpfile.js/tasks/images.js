@@ -5,7 +5,7 @@ const settings = require('../config/settings.js');
 function images() {
 	return app.gulp.src([
 		path.images.src,
-		`!${path.src}/images/**/*.{webp,svg}`
+		`!${path.src}/images/**/*.{webp,svg,ico}`
 	])
 		.pipe(app.plumber(
 			app.notify.onError({

@@ -2818,6 +2818,23 @@ body {
 .cases-item--promotion {
   border: 4px solid var(--dark);
 }
+@media (max-width: 68.75em) {
+  .cases-item--promotion.cases-item--height {
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 2;
+    grid-row: 7/9;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+}
+@media (max-width: 43.6875em) {
+  .cases-item--promotion.cases-item--height {
+    grid-column: unset;
+    -ms-grid-row: 12;
+    grid-row: 12;
+  }
+}
 .cases-item--promotion .cases-item__title {
   -webkit-box-flex: unset;
   -ms-flex: unset;

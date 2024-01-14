@@ -3,7 +3,7 @@ const allCasesItem = document.querySelectorAll('.cases-item');
 const casesBtn = document.querySelector('.cases__btn-more');
 
 allCasesItem.forEach((item, index) => {
-	if (index <= 7) {
+	if (index <= 5) {
 		item.classList.add('active');
 	}
 });
@@ -11,7 +11,7 @@ allCasesItem.forEach((item, index) => {
 casesBtn.addEventListener('click', () => {
 	casesBtn.classList.add('hidden');
 	allCasesItem.forEach((item, index) => {
-		if (index > 7) {
+		if (index > 5) {
 			item.classList.add('active');
 		}
 	});

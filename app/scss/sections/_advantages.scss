@@ -11,11 +11,13 @@
 	}
 
 	&__list {
+		--column: 3;
+		--width: calc((100% - (2rem * (var(--column) - 1))) / var(--column));
 		@include reset;
 		list-style-type: none;
 
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(32rem, auto));
+		grid-template-columns: repeat(auto-fill, minmax(36rem, auto));
 		gap: 2rem;
 
 		@media (max-width: em(600)) {
@@ -77,11 +79,11 @@
 
 		@media (max-width: em(799)) {
 			font-size: 2rem;
+			max-width: 100%;
 		}
 
 		@media (max-width: em(600)) {
 			font-size: 1.8rem;
-			max-width: 100%;
 		}
 	}
 

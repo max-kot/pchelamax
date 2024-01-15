@@ -4,6 +4,7 @@
 
 	// COLORS
 	--dark: #2c261b;
+	--dark-op: rgba(44, 38, 27, 0.6);
 	--bg: #f3eadb;
 	--bg-accent: #ddbc89;
 	--light: #ebd7b8;
@@ -11,6 +12,7 @@
 	--light-op-7: rgba(235, 215, 184, 0.7);
 	--accent: #2c261b;
 	--secondary: #ebd7b8;
+	--secondary-gradient: linear-gradient(90deg, rgba(255, 255, 255, 0),#ebd7b8);
 	--third: #ddbc89;
 	--text: #413c32;
 	--dark-gradient: linear-gradient(to left, rgba(255, 255, 255, 0), #2c261b);

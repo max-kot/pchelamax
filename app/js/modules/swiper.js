@@ -6,14 +6,14 @@ const taglineSlider = new Swiper('.tagline__slider', {
 	autoHeight: true,
 	spaceBetween: 40,
 	grabCursor: true,
-	
+
 	effect: "creative",
 	creativeEffect: {
 		prev: {
 			translate: [0, 0, -400],
 		},
 		next: {
-			translate: ["100%", 0, 0],
+			translate: ["110%", 0, 0],
 		},
 	},
 
@@ -22,3 +22,34 @@ const taglineSlider = new Swiper('.tagline__slider', {
 		disableOnInteraction: false,
 	}
 })
+
+function startModalSlider() {
+	const modalSlider = new Swiper('.modal-slider', {
+		loop: true,
+		autoplay: true,
+		grabCursor: true,
+
+		effect: "creative",
+		creativeEffect: {
+			prev: {
+				translate: [0, 0, -400],
+			},
+			next: {
+				translate: ["110%", 0, 0],
+			},
+		},
+
+		pagination: {
+			el: '.modal-slider__pagination',
+			clickable: true,
+		},
+
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		}
+	})
+}
+startModalSlider();
+
+export { startModalSlider };

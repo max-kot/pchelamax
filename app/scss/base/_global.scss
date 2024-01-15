@@ -99,7 +99,7 @@ body {
 	text-transform: uppercase;
 	font-size: 4.2rem;
 	line-height: 1.2;
-	
+
 	@media (max-width: em(1199)) {
 		font-size: 3.8rem;
 	}
@@ -122,9 +122,24 @@ body {
 		}
 	}
 }
-
+.box {
+	padding: 4rem 3rem;
+	border-radius: 5rem;
+	background: var(--secondary);
+	box-shadow: var(--shadow);
+	@media (max-width: em(799)) {
+		border-radius: 3rem;
+		padding: 3rem 2rem;
+	}
+}
+.secondary-title {
+	color: var(--dark);
+	font-weight: 700;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+}
 @keyframes slide {
 	to {
-		transform: translateX(calc(-100% - var(--slider-gap, 0)))
+		transform: translateX(calc(-100% - var(--slider-gap, 0)));
 	}
 }

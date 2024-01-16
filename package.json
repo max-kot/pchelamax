@@ -11,6 +11,7 @@
   "devDependencies": {
     "@babel/core": "^7.21.8",
     "@babel/preset-env": "^7.21.5",
+    "@fancyapps/ui": "^5.0.33",
     "babel-loader": "^9.1.2",
     "browser-sync": "^2.29.1",
     "del": "^6.0.0",
@@ -38,10 +39,8 @@
     "gulp-webp": "^4.0.1",
     "sass": "^1.62.1",
     "webpack": "^5.82.1",
-    "webpack-stream": "^7.0.0"
-  },
-  "dependencies": {
-    "normalize.css": "^8.0.1",
+    "webpack-stream": "^7.0.0",
+	 "normalize.css": "^8.0.1",
     "swiper": "^11.0.5"
   }
 }

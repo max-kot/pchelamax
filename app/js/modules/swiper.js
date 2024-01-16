@@ -22,6 +22,44 @@ const taglineSlider = new Swiper('.tagline__slider', {
 		disableOnInteraction: false,
 	}
 })
+const reviewSlider = new Swiper('.reviews-slider', {
+	loop: true,
+	autoplay: true,
+	slidesPerView: 1,
+	spaceBetween: 30,
+	navigation: {
+		nextEl: '.reviews-slider__btn-next',
+		prevEl: '.reviews-slider__btn-prev',
+	},
+
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
+
+	breakpoints: {
+		// when window width is >= 400px
+		400: {
+			slidesPerView: 1,
+			spaceBetween: 30,
+		},
+		// when window width is >= 600px
+		600: {
+			slidesPerView: 2,
+			spaceBetween: 30,
+		},
+		// when window width is >= 800px
+		800: {
+			slidesPerView: 3,
+			spaceBetween: 30,
+		},
+		// when window width is >= 1000px
+		1000: {
+			slidesPerView: 3,
+			spaceBetween: 40
+		},
+	},
+})
 
 function startModalSlider() {
 	const modalSlider = new Swiper('.modal-slider', {

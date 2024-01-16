@@ -50,7 +50,7 @@
 
 	&__body {
 		position: relative;
-		height: calc(100vh - (var(--padding-top) * 2));
+		height: calc(100dvh - (var(--padding-top) * 2));
 		overflow-y: auto;
 		background: var(--bg);
 		padding: 6rem 4rem;

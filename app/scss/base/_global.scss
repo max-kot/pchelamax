@@ -31,7 +31,7 @@ source {
 }
 
 body {
-	min-height: 100vh;
+	min-height: 100dvh;
 
 	font-family: var(--main-font);
 	font-size: 1.6rem;
@@ -55,7 +55,7 @@ body {
 	flex-direction: column;
 	position: relative;
 	overflow: hidden;
-	min-height: 100vh;
+	min-height: 100dvh;
 }
 
 .main {

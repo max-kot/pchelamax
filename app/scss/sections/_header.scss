@@ -45,17 +45,6 @@
 	}
 
 	&__logo {
-		flex-shrink: 0;
-
-		font-weight: 700;
-		text-transform: uppercase;
-		font-size: 3.2rem;
-		color: var(--dark);
-		transition: all 0.3s;
-
-		&:hover {
-			transform: scale(1.1);
-		}
 	}
 
 	&__menu {
@@ -207,5 +196,19 @@
 				width: 100%;
 			}
 		}
+	}
+}
+
+.logo {
+	flex-shrink: 0;
+
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 3.2rem;
+	color: var(--dark);
+	transition: all 0.3s;
+
+	&:hover {
+		transform: scale(1.1);
 	}
 }

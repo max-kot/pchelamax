@@ -2,7 +2,7 @@
 	padding: 3rem 0;
 
 	.container {
-		--container-width: 100rem;
+		--container-width: 90rem;
 	}
 
 	&__body {
@@ -86,7 +86,6 @@
 		align-items: center;
 		overflow: hidden;
 		border-bottom: 4px solid var(--dark);
-		justify-content: space-between;
 		cursor: pointer;
 		text-align: center;
 		transition: all 0.3s;
@@ -114,6 +113,7 @@
 		}
 		&::after {
 			content: "+";
+			margin-left: auto;
 			display: block;
 			font-size: 7rem;
 			text-transform: uppercase;

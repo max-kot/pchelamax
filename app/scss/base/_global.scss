@@ -17,8 +17,11 @@ html {
 }
 
 input,
-button {
+button,
+label,
+textarea {
 	font: inherit;
+	color: inherit;
 	cursor: pointer;
 }
 
@@ -27,6 +30,7 @@ picture,
 video,
 svg,
 source {
+	width: 100%;
 	max-width: 100%;
 }
 

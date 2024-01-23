@@ -35,7 +35,7 @@ function renderCase(item, parent) {
 				<div class="modal-slide__image">
 					<img src="${slide['image']}" alt="${slide['text']}">
 				</div>
-				<div class="modal-slide__description">
+				<div class="modal-slide__description" style="${!slide['textVisible']? 'display: none;' : ''}">
 					${slide['text']}
 				</div>
 			</div>

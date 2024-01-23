@@ -8,7 +8,7 @@
 				<div class="contacts__info-wrapper">
 					<div class="contacts__info">
 						<h3 class="contacts__subtitle">
-							<span class="contacts__title-icon">
+							<span class="contacts__subtitle-icon">
 								<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M36.6653 22.3613C36.6653 21.5278 35.9903 20.8444 35.132 20.8027C34.4431 20.7694 32.7293 21.2056 31.76 20.75C29.3684 19.6248 19.5106 14.4353 19.5106 14.4353C18.644 13.9658 16.5191 13.2712 15.4414 13.5407L7.58067 16.6744C6.81404 16.8661 6.19185 17.3301 5.79465 17.9329C5.50578 18.2608 5.18913 20.5388 4.75582 22.6085C4.3225 24.6782 3.79198 26.0478 3.79198 26.0478C3.36422 27.6258 4.61138 28.6843 5.71965 28.8732C6.82793 29.0621 8.27785 28.3815 8.70561 26.8007L9.61667 22.4279C9.76389 21.7167 10.35 21.1722 11.0833 21.0639L13.8526 21.1639L12.8776 26.1506C12.8776 26.1506 17.8107 32.4653 24.7853 33.9627C27.3435 34.5128 29.724 32.9126 31.5572 32.7987C32.4044 32.7459 34.1654 32.932 34.9403 33.1571C35.8014 33.4071 36.668 32.7737 36.668 31.9041V22.3613H36.6653Z"
@@ -60,13 +60,45 @@
 									</defs>
 								</svg>
 							</span>
-							<span>
+							<span class="contacts__subtitle-text">
 								Напишите мне и я отвечу на все вопросы
 							</span>
 						</h3>
+						<form class="contacts__form form" action="#">
+							<div class="form__field">
+								<label class="form__label" for="name">Ваше имя:</label>
+								<input id="name" class="form__input" name="name" type="text" id="name" placeholder="Алла"
+									required>
+							</div>
+							<div class="form__field">
+								<label class="form__label" for="phone">Ваш телефон (никнейм или ссылку на профиль):</label>
+								<input class="form__input" name="phone" type="text" id="phone" placeholder="+123456789999 или @alla.flower"
+									required>
+							</div>
+							<div class="form__field">
+								<label class="form__label" for="message">Ваше сообщение:</label>
+								<textarea class="form__input form__textarea" name="message" id="message"
+									placeholder="Если есть вопросы то напишите мне..."></textarea>
+							</div>
+							<button class="form__btn btn" type="submit">Отправить</button>
+						</form>
+					</div>
+				</div>
+				<div class="contacts__image-box">
+					<div class="contacts__image">
+						<picture>
+							<source srcset="images/photo-1.avif" type="image/avif">
+							<source srcset="images/photo-1.webp" type="image/webp">
+							<img src="images/photo-1.jpg" alt="Моё фото :)">
+						</picture>
+					</div>
+					<div class="contacts__social-box">
+						<h3 class="contacts__subtitle">
+							Вы также можете связаться со мной с помощью соцсетей:
+						</h3>
 						<ul class="contacts__social-list social">
 							<li class="social__item">
-								<a class="social__link" href="#" target="_blank">
+								<a class="social__link" href="/" target="_blank">
 									<span class="social__link-icon">
 										<svg width="40" height="40" viewBox="0 0 40 40" fill="none"
 											xmlns="http://www.w3.org/2000/svg">
@@ -87,7 +119,7 @@
 								</a>
 							</li>
 							<li class="social__item">
-								<a class="social__link" href="#" target="_blank">
+								<a class="social__link" href="/" target="_blank">
 									<span class="social__link-icon">
 										<svg width="40" height="40" viewBox="0 0 40 40" fill="none"
 											xmlns="http://www.w3.org/2000/svg">
@@ -104,28 +136,6 @@
 						</ul>
 					</div>
 				</div>
-				<div class="contacts__image-box">
-					<div class="contacts__image">
-						<picture>
-							<source srcset="images/photo-1.avif" type="image/avif">
-							<source srcset="images/photo-1.webp" type="image/webp">
-							<img src="images/photo-1.jpg" alt="Моё фото :)">
-						</picture>
-					</div>
-					<a class="contacts__link btn" href="#contacts">
-						<span class="contacts__link-icon">
-							<svg width="160" height="161" viewBox="0 0 160 161" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M44.9758 41.4999C42.2144 41.5134 39.9867 43.7628 40.0002 46.5242L40.2191 91.5237C40.2325 94.2851 42.482 96.5127 45.2434 96.4993C48.0047 96.4859 50.2324 94.2364 50.219 91.475L50.0244 51.4755L90.0239 51.2809C92.7853 51.2675 95.0129 49.018 94.9995 46.2566C94.9861 43.4952 92.7366 41.2676 89.9752 41.281L44.9758 41.4999ZM119.572 113.313L48.5184 42.9472L41.4818 50.0526L112.536 120.418L119.572 113.313Z"
-									fill="currentColor" />
-							</svg>
-						</span>
-						<span class="contacts__link-text">
-							Свяжитесь со мной и получите бесплатную консультацию
-						</span>
-					</a>
-				</div>
-
 			</div>
 		</div>
 	</div>

@@ -1,7 +1,10 @@
 .cases {
-	padding: 3rem 0;
+	padding: 6rem 0;
 	background: var(--bg-gradient);
 	
+	@media (max-width: em(600)) {
+		padding: 3rem 0;
+	}
 	&__body {
 		display: flex;
 		flex-direction: column;
@@ -82,7 +85,7 @@
 	&.active {
 		display: block;
 	}
-	
+
 	&:hover {
 		color: var(--light);
 		background: var(--dark);
@@ -213,7 +216,7 @@
 }
 .cases-item--promotion {
 	border: 4px solid var(--dark);
-	
+
 	&.cases-item--height {
 		@media (max-width: em(1100)) {
 			grid-row: 7 / 9;

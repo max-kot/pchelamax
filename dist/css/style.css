@@ -5823,6 +5823,7 @@ body {
 .section-404__icon {
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  max-width: 23rem;
 }
 @media (max-width: 49.9375em) {
   .section-404__icon {

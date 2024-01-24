@@ -5780,8 +5780,6 @@ body {
   align-items: center;
   gap: 1rem;
   position: relative;
-  -webkit-box-shadow: var(--shadow);
-  box-shadow: var(--shadow);
 }
 .section-404__icon-num {
   display: -webkit-inline-box;

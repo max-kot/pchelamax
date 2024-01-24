@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	@@include('./includes/base/_head.html', {
+	'title': 'Спасибо за заявку! | VERATARGET | Таргетолог Вера ',
+	'favicon': '/images/dart-board.svg',
+	})
+	@@include('includes/base/_styles.html')
+	@@include('includes/base/_script.html')
+</head>
+
+<body>
+	<div class="wrapper">
+		@@include('includes/sections/_header.html')
+		<main class="main">
+			@@include('includes/sections/_success.html')
+		</main>
+		@@include('includes/sections/_footer.html', {
+		class: 'footer--no-bg',
+		})
+	</div>
+</body>
+
+</html>

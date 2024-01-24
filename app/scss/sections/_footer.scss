@@ -2,6 +2,9 @@
 	background: var(--secondary);
 	padding-bottom: 4rem;
 
+	&--no-bg {
+		background: unset;
+	}
 	&__body {
 		padding-top: 3rem;
 		position: relative;

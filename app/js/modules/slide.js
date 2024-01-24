@@ -1,3 +1,8 @@
-const sliderListCopy = document.querySelector('.slider__list').cloneNode(true);
-document.querySelector('.slider__body').appendChild(sliderListCopy)
+const sliderListCopy = document.querySelector('.slider__list');
+
+if (sliderListCopy) {
+	sliderListCopy.cloneNode(true);
+	document?.querySelector('.slider__body').appendChild(sliderListCopy)
+}
+
 

@@ -1,8 +1,11 @@
+
+
 const sliderListCopy = document.querySelector('.slider__list');
-
 if (sliderListCopy) {
-	sliderListCopy.cloneNode(true);
-	document?.querySelector('.slider__body').appendChild(sliderListCopy)
+	const allSliderItems = document.querySelectorAll('.slider__item')
+
+	allSliderItems.forEach((sliderItem) => {
+		const sliderItemCopy = sliderItem.cloneNode(true);
+		sliderListCopy.appendChild(sliderItemCopy)
+	})
 }
-
-

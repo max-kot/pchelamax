@@ -2,6 +2,7 @@
 *::before,
 *::after {
 	box-sizing: inherit;
+	//hyphens: auto; // для правильного переноса слов
 }
 
 a,

@@ -26,15 +26,15 @@
 		overflow: hidden;
 		display: flex;
 		white-space: nowrap;
-		gap: var(--slider-gap);
+		
 
 		@media (max-width: em(799)) {
 			padding: 2rem 3rem;
 		}
 
-		&:hover .slider__list {
-			animation-play-state: paused;
-		}
+		//&:hover .slider__list {
+		//	animation-play-state: paused;
+		//}
 
 		&::before,
 		&::after {
@@ -59,14 +59,15 @@
 	}
 
 	&__list {
+		--slider-gap: 4rem;
 		@include reset;
 		list-style: none;
 
 		width: max-content;
 		display: flex;
 		align-items: center;
-		gap: 4rem;
-		animation: slide var(--slider-duration, 15s) var(--slider-direction, forwards) infinite linear;
+		gap: var(--slider-gap);
+		animation: slide var(--slider-duration, 30s) var(--slider-direction, forwards) infinite linear;
 	}
 
 	&__item {

@@ -1,18 +1,31 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru-RU">
 
 <head>
-	@@include('./includes/base/_head.html', {
-	'title': 'Страница не найдена | VERATARGET | Таргетолог Вера ',
-	'favicon': '/images/dart-board.svg',
+	@@include('./includes/base/_head-no-seo.html', {
+	'title': 'VERATARGET | Страница не найдена',
+	'canonLink': 'https://veratarget.netlify.app/404.html',
+	'ogLang': 'ru_RU',
+	'ogSitename': 'VERATARGET',
+	'ogTitle': 'VERATARGET | Страница не найдена',
+	'ogImage': 'images/share.png',
+	'ogLink': 'https://veratarget.netlify.app/404.html',
+	'faviconPС': 'images/favicon.png',
+	'ogType': 'website',
+	'faviconApple': 'images/favicon--apple.png',
+	'faviconSVG' : 'images/favicon.svg',
+	'msColor': '#ddbc89',
+	'msFavicon': 'images/favicon--ms.svg',
 	})
+	@@include('includes/base/_styles.html')
+	@@include('includes/base/_script.html')
 	@@include('includes/base/_styles.html')
 	@@include('includes/base/_script.html')
 </head>
 
 <body>
 	<div class="wrapper">
-		@@include('includes/sections/_header.html')
+		@@include('includes/sections/_header-page.html')
 		<main class="main">
 			@@include('includes/sections/_section-404.html')
 		</main>

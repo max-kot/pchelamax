@@ -143,8 +143,4 @@ body {
 	font-size: 1.8rem;
 	text-transform: uppercase;
 }
-@keyframes slide {
-	to {
-		transform: translateX(calc(-100% - var(--slider-gap, 0)));
-	}
-}
+

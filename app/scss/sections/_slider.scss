@@ -4,7 +4,7 @@
 	@media (max-width: em(1200)) {
 		padding: 3rem 0;
 	}
-	
+
 	@media (max-width: em(600)) {
 		padding: 1.5rem 0;
 	}
@@ -24,9 +24,6 @@
 		border-radius: 5rem;
 		position: relative;
 		overflow: hidden;
-		display: flex;
-		white-space: nowrap;
-		
 
 		@media (max-width: em(799)) {
 			padding: 2rem 3rem;
@@ -67,10 +64,11 @@
 		display: flex;
 		align-items: center;
 		gap: var(--slider-gap);
-		animation: slide var(--slider-duration, 30s) var(--slider-direction, forwards) infinite linear;
+		animation: slide var(--slider-duration, 15s) var(--slider-direction, forwards) infinite linear;
 	}
 
 	&__item {
+		flex-shrink: 0;
 		font-size: 2.2rem;
 		text-transform: uppercase;
 		color: var(--light);
@@ -85,5 +83,10 @@
 			content: "✽";
 			display: inline-flex;
 		}
+	}
+}
+@keyframes slide {
+	to {
+		transform: translateX(calc(-50% - (var(--slider-gap, 0) / 2)));
 	}
 }

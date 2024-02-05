@@ -3282,7 +3282,7 @@ body {
 }
 
 .modal {
-  --padding-top: 4rem;
+  --padding-top: 1.6rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -4516,7 +4516,7 @@ body {
   }
 }
 .about__title:not(:last-child) {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 @media (max-width: 62.5em) {
   .about__title:not(:last-child) {
@@ -4746,7 +4746,7 @@ body {
 }
 .cases-item:hover::after {
   background: var(--dark);
-  opacity: 1;
+  opacity: 0.95;
 }
 .cases-item:hover .cases-item__btn {
   opacity: 1;

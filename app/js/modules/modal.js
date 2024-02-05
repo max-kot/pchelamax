@@ -1,9 +1,3 @@
-import { startModalSlider } from "./swiper";
-import { casesInfo } from "../cases-info";
-import { renderCase } from "./renderCase";
-
-
-
 const modalWrapper = document.querySelector('.modal-wrapper');
 
 if (modalWrapper) {
@@ -20,23 +14,14 @@ if (modalWrapper) {
 				modalId = btn.getAttribute('href').slice(1);
 			}
 
-			//! for render
-			modal.id = modalId;
-			if (casesInfo[modalId]) {
-				renderCase(casesInfo[modalId], modalBody);
-				startModalSlider();
-			}
-
-
+			
 			let currentModal = modalWrapper.querySelector(`#${modalId}`);
-			if (casesInfo[modalId]) {
-				modalWrapper.classList.add('active');
-				allModalBox.forEach((modal) => {
-					modal.classList.remove('active');
-				})
-				currentModal.classList.add('active');
-				document.body.classList.add('no-scroll');
-			}
+			modalWrapper.classList.add('active');
+			allModalBox.forEach((modal) => {
+				modal.classList.remove('active');
+			})
+			currentModal.classList.add('active');
+			document.body.classList.add('no-scroll');
 
 			function closeModal() {
 				if (currentModal) {

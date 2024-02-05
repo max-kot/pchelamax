@@ -14,7 +14,7 @@ allLinks.forEach((link) => {
 			e.preventDefault();
 		}
 
-		if (href !== '#' && href.startsWith('#')) {
+		if (href !== '#' && href.startsWith('#') && !link.hasAttribute('data-modal-btn')) {
 			e.preventDefault();
 
 			const sectionEl = document.querySelector(href);

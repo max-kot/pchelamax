@@ -39,28 +39,7 @@
 <!-- favicon-->
 
 	<link rel="stylesheet" href="./css/style.min.css">
-	<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-	(function (m, e, t, r, i, k, a) {
-		m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
-		m[i].l = 1 * new Date();
-		for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
-		k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-	})
-		(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-	ym(96194577, "init", {
-		clickmap: true,
-		trackLinks: true,
-		accurateTrackBounce: true,
-		webvisor: true
-	});
-</script>
-<noscript>
-	<div><img src="https://mc.yandex.ru/watch/96194577" style="position:absolute; left:-9999px;" alt="" /></div>
-</noscript>
-<!-- /Yandex.Metrika counter -->
-<script src="./js/main.min.js" defer></script>
+	<script src="./js/main.min.js" defer></script>
 </head>
 
 <body>
@@ -70,7 +49,7 @@
 		<div class="header__body">
 			<a class="header__logo logo" href="#">VeraTarget</a>
 			<nav class="header__menu menu">
-				<button class="menu__btn" type="button">
+				<button class="menu__btn" type="button" aria-label="Открыть/закрыть меню">
 					<span></span>
 				</button>
 				<div class="menu__box">
@@ -814,7 +793,7 @@
 						<form class="contacts__form form" name="contact" netlify action="/success.html">
 							<div class="form__field">
 								<label class="form__label" for="name">Ваше имя:</label>
-								<input id="name" class="form__input" name="name" type="text" id="name" placeholder="Алла"
+								<input id="name" class="form__input" name="name" type="text" placeholder="Алла"
 									required>
 							</div>
 							<div class="form__field">
@@ -916,6 +895,7 @@
 		</div>
 	</div>
 </footer>
+
 		<div class="modal-wrapper">
 			<article class="modal" id="case-1">
 	<div class="container">
@@ -1007,7 +987,9 @@
 					</ul>
 					<p>Получали достаточно много обращений, однако сконвертировать их в продажи стало более сложной
 						проблемой. Поэтому был пересмотрен и улучшен скрипт продаж.</p>
-					<p>Запускали как статичные, так и видео-креативы. Из-за нехватки качественного материала было принято решение помочь отснять дополнительный контент. Отлично сработал запуск в рекламу видео-отзыва от блогера.</p>
+					<p>Запускали как статичные, так и видео-креативы. Из-за нехватки качественного материала было принято
+						решение помочь отснять дополнительный контент. Отлично сработал запуск в рекламу видео-отзыва от
+						блогера.</p>
 					<h3 class="secondary-title">Результаты в цифрах за период 15 ноября - 12 декабря:</h3>
 					<ul>
 						<li>195$ потрачено;</li>
@@ -1099,13 +1081,20 @@
 				</div>
 				<div class="modal__content box">
 					<h3 class="secondary-title">Подробнее:</h3>
-					<p>Уникальность проекта заключается в том, что создание сайтов происходит “под ключ” - от создания
-						прототипа до рекомендаций по продвижению. Основной посадочной страницей является сайт, на котором можно оставить заявку. Поэтому я предложила создать квиз, за прохождение которого потенциальный
-						клиент получит бонус - бесплатный аудит о том, какой сайт лучше выбрать. Также были протестированы и другие посадочные
-						страницы с разными призывами.</p>
-					<p>Основная часть целевой аудитории - это бизнесы, но я также протестировала такую гипотезу, как
+					<p>
+						Уникальность проекта заключается в том, что создание сайтов происходит “под ключ” - от создания
+						прототипа
+						до рекомендаций по продвижению. Основной посадочной страницей является сайт, на котором можно оставить
+						заявку. Поэтому я предложила бы создать квиз, за прохождение которого потенциальный клиент получит
+						бонус
+						- бесплатный аудит о том, какой сайт лучше выбрать. И тестировать эти посадочные страницы с разными
+						призывами.
+					</p>
+					<p>
+						Основная часть целевой аудитории - это бизнесы, но я бы также протестировала такую гипотезу, как
 						таргетироваться более точечно на специалистов digital-сферы с оффером о создании сайта-портфолио и на
-						Project manager, которым зачастую нужны фрилансеры для проекта.</p>
+						Project Manager, которым зачастую нужны фрилансеры для проекта.
+					</p>
 				</div>
 				<a class="modal__btn btn" href="#contacts">
 					Давайте обсудим ваш проект
@@ -1189,18 +1178,21 @@
 				</div>
 				<div class="modal__content box">
 					<h3 class="secondary-title">Подробнее:</h3>
-					<p>Уникальность данной продукции заключается в том, что она натуральная и домашняя, поэтому подойдёт для
-						всей семьи. В рекламе я предложила использовать видео с процессом сбора и упаковки продукции, чтобы вызвать доверие у
-						потенциальных клиентов и показать, что продукция действительно домашняя. Учитывая, что часть аудитории
-						семейная, в креативах было предложено использовать фото с детьми для повышения доверия.</p>
-					<p>В рекламу я предложила запускать наборы (сеты) из нескольких позиций, чтобы популяризировать всю
-						фермерскую продукцию. Наборы идут с какой-либо выгодой для потенциального клиента - скидкой или
-						подарком при первом заказе.</p>
 					<p>
-						Для начала мы решили запустить рекламу на основные продукты, а при закрытии клиента предлагать в продажу
-						дополнительную продукцию.
+						Уникальность данной продукции заключается в том, что она натуральная и домашняя, поэтому подойдёт для
+					всей семьи. В рекламе я бы показала процесс сбора и упаковки продукции, чтобы вызвать доверие у
+					потенциальных клиентов и убедить их в том, что продукция действительно домашняя. Учитывая, что часть аудитории - 
+					семейная, в креативах также можно было бы использовать фото с детьми для повышения доверия.
 					</p>
-
+					<p>
+						В рекламу я бы предложила запускать наборы (сеты) из нескольких позиций, чтобы популяризировать всю
+					фермерскую продукцию. Наборы шли бы с какой-либо выгодой для потенциального клиента - скидкой или
+					подарком при первом заказе.
+					</p>
+					<p>
+						Также можно запустить рекламу на основные продукты, а при закрытии клиента предлагать в продажу
+					дополнительную продукцию.
+					</p>
 				</div>
 				<a class="modal__btn btn" href="#contacts">
 					Давайте обсудим ваш проект
@@ -1211,6 +1203,27 @@
 </article>
 		</div>
 	</div>
+	<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+	(function (m, e, t, r, i, k, a) {
+		m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+		m[i].l = 1 * new Date();
+		for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+		k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+	})
+		(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+	ym(96194577, "init", {
+		clickmap: true,
+		trackLinks: true,
+		accurateTrackBounce: true,
+		webvisor: true
+	});
+</script>
+<noscript>
+	<div><img src="https://mc.yandex.ru/watch/96194577" style="position:absolute; left:-9999px;" alt="" /></div>
+</noscript>
+<!-- /Yandex.Metrika counter -->
 </body>
 
 </html>

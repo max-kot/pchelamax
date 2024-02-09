@@ -4,12 +4,12 @@
 <head>
 	@@include('./includes/base/_head-no-seo.html', {
 	'title': 'Страница не найдена',
-	'canonLink': 'https://veratarget.netlify.app/404.html',
+	'canonLink': 'https://veratarget.com/404.html',
 	'ogLang': 'ru_RU',
 	'ogSitename': 'VERATARGET',
 	'ogTitle': 'Страница не найдена',
 	'ogImage': 'images/share.png',
-	'ogLink': 'https://veratarget.netlify.app/404.html',
+	'ogLink': 'https://veratarget.com/404.html',
 	'faviconPС': 'images/favicon.png',
 	'ogType': 'website',
 	'altImageTwitter': 'Страница не найдена',
@@ -18,8 +18,7 @@
 	'msColor': '#ddbc89',
 	'msFavicon': 'images/favicon--ms.svg',
 	})
-	@@include('includes/base/_styles.html')
-	@@include('includes/base/_script.html')
+	@@include('includes/base/_metrics.html')
 	@@include('includes/base/_styles.html')
 	@@include('includes/base/_script.html')
 </head>
@@ -32,7 +31,7 @@
 		</main>
 		@@include('includes/sections/_footer.html', {class:'footer--no-bg'})
 	</div>
-	@@include('includes/base/_metrics.html')
+	
 </body>
 
 </html>

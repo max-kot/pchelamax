@@ -4,12 +4,12 @@
 <head>
 	@@include('./includes/base/_head-no-seo.html', {
 		'title': 'Спасибо за заявку!',
-		'canonLink': 'https://veratarget.netlify.app/success.html',
+		'canonLink': 'https://veratarget.com/success.html',
 		'ogLang': 'ru_RU',
 		'ogSitename': 'VERATARGET',
 		'ogTitle': 'Спасибо за заявку!',
 		'ogImage': 'images/share.png',
-		'ogLink': 'https://veratarget.netlify.app/success.html',
+		'ogLink': 'https://veratarget.com/success.html',
 		'faviconPС': 'images/favicon.png',
 		'ogType': 'website',
 		'altImageTwitter': 'Спасибо за заявку!',
@@ -18,8 +18,10 @@
 		'msColor': '#ddbc89',
 		'msFavicon': 'images/favicon--ms.svg',
 		})
+	@@include('includes/base/_metrics.html')
 	@@include('includes/base/_styles.html')
 	@@include('includes/base/_script.html')
+	
 </head>
 
 <body>
@@ -32,7 +34,6 @@
 		class: 'footer--no-bg',
 		})
 	</div>
-	@@include('includes/base/_metrics.html')
 </body>
 
 </html>

@@ -4466,6 +4466,7 @@ body {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    text-align: center;
   }
 }
 .about__subtitle-icon {
@@ -4507,6 +4508,7 @@ body {
 @media (max-width: 49.9375em) {
   .about__title {
     font-size: 3rem;
+    text-align: center;
   }
 }
 @media (max-width: 24.9375em) {

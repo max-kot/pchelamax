@@ -4,7 +4,7 @@ const casesBtn = document.querySelector('.cases__btn-more');
 
 if (casesList) {
 	allCasesItem.forEach((item, index) => {
-		if (index > 3) {
+		if (index >= 3) {
 			// если проектов будет мало
 			casesBtn.classList.add('hidden');
 		}
@@ -14,7 +14,7 @@ if (casesList) {
 	});
 
 	casesBtn.addEventListener('click', () => {
-		// убираем кнопку когда покази всё
+		// убираем кнопку когда показываем всё
 		casesBtn.classList.add('hidden');
 		allCasesItem.forEach((item, index) => {
 			if (index > 4) {

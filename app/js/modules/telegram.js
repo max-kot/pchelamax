@@ -1,5 +1,5 @@
 document.querySelector(".form").addEventListener("submit", async function (e) {
-	//e.preventDefault(); // ! - если отправка идёт и на почту нужно отрубить
+	e.preventDefault(); // !
 	
 	const formData = new FormData(this);
 	const jsonData = Object.fromEntries(formData.entries());
@@ -8,7 +8,7 @@ document.querySelector(".form").addEventListener("submit", async function (e) {
 		body: JSON.stringify(jsonData),
 	});
 
-	if (response.ok) console.warn("Сообщение отправлено!");
+	if (response.ok) window.location.href = 'https://veratarget.com/success';
 
 	else console.warn("Ошибка отправки!");
 });

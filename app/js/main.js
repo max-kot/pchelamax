@@ -5,5 +5,6 @@ import "./modules/menu.js";
 import "./modules/runningline.js";
 import "./modules/cases.js";
 import "./modules/modal.js";
+import "./modules/telegram.js";
 
 

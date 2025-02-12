@@ -61,7 +61,7 @@ const settings = {
 	},
 
 	avif: {
-		quality: 50,
+		quality: 85,
 	},
 
 	imagemin: {

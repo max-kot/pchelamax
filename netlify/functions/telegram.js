@@ -1,5 +1,5 @@
 const token = "7291827046:AAEKBYiBzt9hB28P3Kt6QMQbMWsOe_9OQqs";
-const chatId = "-1001449215447";
+const chatId = "728730912";
 
 export const handler = async (event) => {
 

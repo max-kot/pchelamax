@@ -1,0 +1,45 @@
+{
+	"id": "en",
+	"meta": {
+		"title": "Vera Target"
+	},
+	"header": {
+		"url": "/en",
+		"menu": [
+			{
+				"text": "Service",
+				"href": "#service"
+			},
+			{
+				"text": "Project",
+				"href": "#project"
+			}
+		],
+		"btn": "Get in touch",
+		"burgerTitle": "Open / close menu"
+	},
+	"hero": {
+		"title": [
+			"Set up Instagram",
+			"adverts",
+			"without",
+			"extra costs"
+		],
+		"text": "Achieve high audience reach with a personalized strategy!",
+		"langList": [
+			{
+				"text": "eng",
+				"href": "/en",
+				"isActive": true,
+				"title": "switch site on english version"
+			},
+			{
+				"text": "рус",
+				"href": "/",
+				"isActive": false,
+				"title": "переключить сайт на русский язык"
+			}
+		],
+		"scrollBtnTitle": "Scroll to learn more"
+	}
+}

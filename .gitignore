@@ -1,10 +1,5 @@
 .DS_Store
-.idea/
-.idea/*
-.vscode
-*.sublime*
-node_modules/
-npm-debug.*
-package-lock.json
-# Local Netlify folder
-.netlify
+Thumbs.db
+db.json
+*.log
+node_modules

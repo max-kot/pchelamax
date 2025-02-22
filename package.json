@@ -1,46 +1,34 @@
 {
-  "name": "gulp-univers",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Max Kotlarenko",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.21.8",
-    "@babel/preset-env": "^7.21.5",
-    "@fancyapps/ui": "^5.0.33",
-    "babel-loader": "^9.1.2",
-    "browser-sync": "^2.29.1",
-    "del": "^6.0.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-avif": "^1.1.1",
-    "gulp-babel": "^8.0.0",
-    "gulp-cheerio": "^1.0.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-file-include": "^2.3.0",
-    "gulp-fonter": "^0.3.0",
-    "gulp-group-css-media-queries": "^1.2.2",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-newer": "^1.4.0",
-    "gulp-notify": "^4.0.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-replace": "^1.1.4",
-    "gulp-sass": "^5.1.0",
-    "gulp-shorthand": "^1.1.0",
-    "gulp-svg-sprite": "^2.0.3",
-    "gulp-svgmin": "^4.1.0",
-    "gulp-ttf2woff2": "^4.0.1",
-    "gulp-webp": "^4.0.1",
-    "sass": "^1.62.1",
-    "webpack": "^5.82.1",
-    "webpack-stream": "^7.0.0",
-	 "normalize.css": "^8.0.1",
-    "swiper": "^11.0.5"
-  }
+	"name": "minista-project",
+	"private": true,
+	"type": "module",
+	"browserslist": [
+		"last 5 versions"
+	],
+	"scripts": {
+		"dev": "node tasks/fonts-style.js && minista --open",
+		"build1": "minista build",
+		"build": "node tasks/create-html-img-for-css.js && node tasks/fonts-style.js && minista build && node tasks/fonts-converter.js && node tasks/css-image-optim.js && node tasks/remove-html-img-for-css.js",
+		"preview": "minista preview --open",
+		"fonts": "node tasks/fonts-converter.js",
+		"fontsCss": "node tasks/fonts-style.js",
+		"cssImage": "node tasks/css-image.js",
+		"cssImg": "node tasks/css-image-optim.js",
+		"createImgJsx": "node tasks/create-html-img-for-css.js",
+		"deleteImgJsx": "node tasks/remove-html-img-for-css.js"
+	},
+	"prettier": {
+		"semi": false
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.4.20",
+		"fontmin": "^2.0.0",
+		"minista": "^3.1.12",
+		"postcss": "^8.5.1",
+		"postcss-preset-env": "^10.1.3",
+    "postcss-pxtorem": "^6.1.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"sass": "^1.83.4"
+	}
 }

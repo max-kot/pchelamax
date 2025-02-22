@@ -1,0 +1,59 @@
+.btn {
+}
+
+.link[href] {
+	color: inherit;
+	transition: color var(--duration-fast);
+
+	@include hoverLine(var(--color-accent), 4px, 4px, width var(--duration-fast));
+
+	@include hover {
+		color: var(--color-dark);
+	}
+}
+
+.btn-label {
+	@include square(rem(180));
+	background: var(--color-accent);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 60px;
+	margin-top: rem(-104);
+	border-radius: 50%;
+	color: var(--color-sub-accent);
+	font-family: var(--secondary-font);
+	font-weight: 500;
+	transition: color var(--duration-medium);
+	position: relative;
+
+	span {
+		z-index: 2;
+	}
+
+	@include circleHover(var(--color-dark));
+
+	@include hover {
+		color: var(--color-accent);
+	}
+	@include media($tablet) {
+		background: var(--color-sub-accent);
+		color: var(--color-accent);
+		margin-top: unset;
+		margin-left: unset;
+		align-self: flex-start;
+		padding-top: unset;
+		font-size: adapt(60, 18, $finishBreakpoint, $tablet);
+		@include square(adapt(400, 160, $finishBreakpoint, $tablet));
+		margin-top: rem(30);
+
+		transform: translateY(100%);
+		opacity: 0;
+		transition: all var(--duration-medium) !important;
+
+		.menu-open & {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}

@@ -1,0 +1,22 @@
+.lang-switcher {
+	display: flex;
+	font-family: var(--secondary-font);
+	font-weight: 500;
+	
+	&__item {
+		&:not(:last-child) {
+			&:after {
+				content: "/";
+			}
+		}
+	}
+
+	&__link {
+		color: inherit;
+		text-transform: uppercase;
+		
+		&.active {
+			color: var(--color-accent);
+		}
+	}
+}

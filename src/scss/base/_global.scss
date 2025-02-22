@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+	box-sizing: inherit; //! обязательно, т.к. многие библиотеки и плагины имеют свой box-sizing
+	line-height: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	hyphens: auto; // для правильного переноса слов
+	text-wrap: balance; // выравнивает текста, чтобы они хорошо смотрелись
+}
+
+a:where([class]),
+a:where([class]):visited,
+a:where([class]):active {
+	text-decoration: none;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: var(--font-size-html);
+	min-height: 100%;
+	scroll-behavior: smooth;
+}
+
+input,
+button,
+label,
+textarea,
+select,
+option {
+	font: inherit;
+	color: inherit;
+	cursor: pointer;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+img,
+picture,
+video,
+svg,
+source {
+	max-width: 100%;
+	width: auto;
+	height: auto;
+}
+
+body {
+	min-width: rem($finishBreakpoint); // ! сайт будет масштабироваться
+	min-height: 100dvh;
+	font-family: var(--main-font);
+	font-size: var(--font-size);
+	font-weight: 400;
+
+	color: var(--color-gray);
+	background: var(--color-light);
+	
+	& * {
+		line-height: 140%;
+	}
+
+	.menu-open &{
+		overflow: hidden;
+	}
+}

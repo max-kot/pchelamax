@@ -1,0 +1,15 @@
+Хорошо, теперь мне нужен скрипт, который бы создал бы файлик src/pages/bgimg.jsx, если его нет, вставил бы этот текст подключения
+import { Img } from "../components/tools/Img";
+export default function () {
+	return (<div className="bgimgjsx">
+	
+	</div>)
+}
+
+- затем необходимо пройтись по всем папкам в папке src и найти все файлы с расширением scss, у них нужно узнать background или background-image, url путь с картинкой
+
+- этот url путь необходимо вставить в файл src/pages/bgimg.jsx в виде компонента
+<Img src="путь с url от scss файла" />
+
+
+Теперь мне нужен скрипт на Node.js, который будет удалять src/pages/bgimg.jsx и docs/pages/bgimg.html

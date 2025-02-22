@@ -1,0 +1,57 @@
+{
+	"id": "ru",
+	"meta": {
+		"title": "Вера Таргет"
+	},
+	"header": {
+		"url": "/",
+		"menu": [
+			{
+				"text": "Услуги",
+				"href": "#service"
+			},
+			{
+				"text": "Кейсы",
+				"href": "#projects"
+			},
+			{
+				"text": "Обо мне",
+				"href": "#about"
+			},
+			{
+				"text": "Процесс работы",
+				"href": "#process"
+			},
+			{
+				"text": "Отзывы",
+				"href": "#reviews"
+			}
+		],
+		"btn": "Контакты",
+		"burgerTitle": "Открыть / закрыть меню"
+	},
+	"hero": {
+		"title": [
+			"Настрою рекламу",
+			"в Instagram",
+			"без лишних",
+			"затрат"
+		],
+		"text": "Получите индивидуальную стратегию и добейтесь высокого охвата аудитории!",
+		"langList": [
+			{
+				"text": "eng",
+				"href": "/en",
+				"isActive": false,
+				"title": "switch site on english version"
+			},
+			{
+				"text": "рус",
+				"href": "/",
+				"isActive": true,
+				"title": "переключить сайт на русский язык"
+			}
+		],
+		"scrollBtnTitle": "Прокрутите, чтобы узнать больше"
+	}
+}

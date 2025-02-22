@@ -1,0 +1,60 @@
+.title-1 {
+	font-family: var(--secondary-font);
+	font-weight: 700;
+	font-size: adapt(60, 20);
+	color: var(--color-dark);
+	text-transform: uppercase;
+	display: grid;
+	
+	@include media($mobile) {
+		gap: rem(10);
+	}
+
+&__word {
+	//grid-column: 1;
+
+	&--1 {
+		justify-self: end;
+		position: relative;
+
+		svg {
+			position: absolute;
+			bottom: 0;
+			right: 4px;
+			width: 47%;
+			transform: translateY(100%);
+			color: var(--color-accent);
+
+			.en & {
+				width: 62%;
+			}
+		}
+	}
+	&--2 {
+		//grid-column: 2;
+		padding-left: adapt(170, 10);
+
+		.en & {
+			padding-left: adapt(300, 20);
+		}
+		
+	}
+	&--3 {
+		
+		.en & {
+			padding-left: adapt(170, 10);
+		}
+	}
+	&--3 {
+		
+	}
+	
+	&--4 {
+		
+	}
+	&--5 {
+		
+	}
+}
+	
+}

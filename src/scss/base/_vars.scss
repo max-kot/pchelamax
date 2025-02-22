@@ -1,0 +1,42 @@
+// Для myClamp
+// - ширина полотна (макета)
+$templateWidth: 1440;
+// - минимальная ширина страницы
+$finishBreakpoint: 320;
+$unitsDefault: ""; // px / rem / ''
+
+$laptop: 1440.98;
+$tablet: 1024.98;
+$mobile: 768.98;
+$mobile-s: 481.98;
+
+:root {
+	// Adaptive
+	--index: calc(1vw + 1vh);
+
+	// COLORS
+	--color-light: #f8f9fa;
+	--color-accent: #ffd43b;
+	--color-sub-accent: #212529;
+	--color-dark: #212529;
+	--color-gray: #495057;
+
+	// CONTAINER
+	--container-width: #{rem(1200)};
+	--container-padding: #{rem(15)}; //! даже если контейнер на весь экран, отсупы оставь а ширину сделай на 100%
+
+	// FONTS
+	--font-size-html: 100%; // 1rem = 1px ===> calc(1 / 16 * 100%)
+	--font-size: #{adapt(18, 16)};
+	--main-font: "Racama", sans-serif;
+	--secondary-font: "Unbounded-VF", sans-serif;
+
+
+	// TRANSITION
+	--duration-fast: 0.3s;
+	--duration-medium: 0.5s;
+	--duration-slow: 0.8s;
+
+	// Other
+	--header-height: #{adapt(151, 136)};
+}

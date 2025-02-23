@@ -31,7 +31,7 @@ export default defineConfig({
 		hmr: true, // Включаем горячую замену модулей
 		watch: {
 			usePolling: true, // Следит за изменениями в файлах
-		 },
+		},
 	},
 	plugins: [react()]
 });

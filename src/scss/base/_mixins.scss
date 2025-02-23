@@ -422,13 +422,18 @@
 		background: $color;
 		border-radius: 50%;
 
-		transform: translate#{$translate}($positionStart);
+		transform: translate#{$translate }($positionStart);
 		transition: transform $duration;
 	}
 
 	@include hover {
 		&::#{$el} {
-			transform: translate#{$translate}($positionEnd);
+			transform: translate#{$translate }($positionEnd);
 		}
 	}
+}
+
+@mixin custom-scroll($color, $bg, $width: auto) {
+	scrollbar-color: $color $bg;
+	scrollbar-width: $width;
 }

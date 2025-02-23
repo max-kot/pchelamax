@@ -4,11 +4,11 @@
 		"title": "Vera Target"
 	},
 	"header": {
-		"url": "/en",
+		"url": "https://max-kot.github.io/veratarget/en",
 		"menu": [
 			{
-				"text": "Service",
-				"href": "#service"
+				"text": "Services",
+				"href": "#services"
 			},
 			{
 				"text": "Project",
@@ -29,17 +29,47 @@
 		"langList": [
 			{
 				"text": "eng",
-				"href": "/en",
+				"href": "https://max-kot.github.io/veratarget/en",
 				"isActive": true,
 				"title": "switch site on english version"
 			},
 			{
 				"text": "рус",
-				"href": "/",
+				"href": "https://max-kot.github.io/veratarget/",
 				"isActive": false,
 				"title": "переключить сайт на русский язык"
 			}
 		],
 		"scrollBtnTitle": "Scroll to learn more"
+	},
+	"services": {
+		"title": "Services",
+		"tabs": [
+			{
+				"id": "tab-1",
+				"button": "Strategy design",
+				"text": "The advertising company does not start blindly.Each project begins with the preparation of a marketing strategy to achieve maximum sales."
+			},
+			{
+				"id": "tab-2",
+				"button": "Making creatives",
+				"text": "I make both static creatives and videos.I will help with the preparation of photos and video materials, if necessary."
+			},
+			{
+				"id": "tab-3",
+				"button": "Advertising setting",
+				"text": "I launch advertising campaigns to different groups of the target audience and analyze which give the best result."
+			},
+			{
+				"id": "tab-4",
+				"button": "Feedback of the results",
+				"text": "Every day you get a report on the results of an advertising campaign, as well as a monthly report."
+			},
+			{
+				"id": "tab-5",
+				"button": "Focus of your goals",
+				"text": "In each project, I plunge with my head and help you achieve the maximum result!"
+			}
+		]
 	}
 }

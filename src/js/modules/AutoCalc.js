@@ -19,7 +19,6 @@ export class AutoCalc {
 	}
 
 	calcValue(element, props) {
-
 		const [name, property] = props;
 
 		if (property === 'width') {
@@ -51,8 +50,7 @@ export class AutoCalc {
 		this.elements.forEach((element) => {
 			const props = element.getAttribute('data-auto-calc').toLowerCase().replaceAll(' ', '').split(',');
 
-			this.calcValue(element, props);
-
+			window.addEventListener('load', () => this.calcValue(element, props));
 			window.addEventListener('resize', () => this.calcValue(element, props));
 		})
 	}

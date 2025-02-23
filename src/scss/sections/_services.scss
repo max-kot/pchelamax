@@ -1,0 +1,34 @@
+.services {
+
+
+	&__container {
+		padding-block: adapt(120, 60);
+		
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: rem(30);
+		align-items: end;
+
+		@include media($mobile) {
+			grid-template-columns: 1fr;
+		}
+
+	}
+
+	&__tab-buttons {
+		order: 2;
+
+		@include media($mobile) {
+			order: 1;
+		}
+	}
+
+	&__tabs {
+		order: 1;
+		@include media($mobile) {
+			order: 2;
+		}
+	}
+}
+
+

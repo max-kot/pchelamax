@@ -26,6 +26,9 @@ html {
 	font-size: var(--font-size-html);
 	min-height: 100%;
 	scroll-behavior: smooth;
+	scrollbar-gutter: stable;
+
+	@include custom-scroll(var(--color-gray), var(--color-accent));
 }
 
 input,
@@ -62,12 +65,12 @@ body {
 
 	color: var(--color-gray);
 	background: var(--color-light);
-	
+
 	& * {
 		line-height: 140%;
 	}
 
-	.menu-open &{
+	.menu-open & {
 		overflow: hidden;
 	}
 }

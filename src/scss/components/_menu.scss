@@ -1,77 +1,95 @@
+@mixin _menu {
+	--top: calc(100vh - var(--header-height));
+
+	position: fixed;
+	top: var(--header-height);
+	left: 0;
+	width: 100%;
+	height: var(--top);
+	padding-block: rem(30) var(--btn-contacts-height);
+	padding-right: max(calc(var(--container-padding) + #{rem(10)}), calc((100% - var(--container-width)) / 2));
+	//padding-right: adapt(100, 30, $finishBreakpoint, $tablet);
+	padding-left: adapt(60, 15, $finishBreakpoint, $tablet);
+	overflow: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	visibility: hidden;
+
+	.menu-open & {
+		visibility: visible;
+	}
+}
+
+@mixin _menu-list {
+	flex-wrap: nowrap;
+	flex-direction: column;
+	font-size: adapt(80, 30, $finishBreakpoint, $tablet);
+	text-align: right;
+	align-items: flex-end;
+}
+
+@mixin _menu-link {
+	transform: translateY(100%);
+	opacity: 0;
+	transition: transform var(--duration-medium) !important;
+
+	.menu-open & {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 .menu {
+	.header-bg & {
+		@include _menu;
+	}
 	@include media($tablet, max) {
-		//display: none;
-		--top: calc(100vh - var(--header-height));
-
-		position: absolute;
-		top: var(--header-height);
-		left: 0;
-		width: 100%;
-		height: var(--top);
-		padding-block: rem(30);
-		padding-right: adapt(100, 30, $finishBreakpoint, $tablet);
-		padding-left: adapt(60, 15, $finishBreakpoint, $tablet);
-		overflow: auto;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
-
-		visibility: hidden;
-
-		.menu-open & {
-			visibility: visible;
-		}
+		@include _menu;
 	}
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
 		gap: adapt(30, 20);
 
+		.header-bg & {
+			@include _menu-list;
+		}
 		@include media($tablet, max) {
-			flex-wrap: nowrap;
-			flex-direction: column;
-			font-size: adapt(80, 30, $finishBreakpoint, $tablet);
-			text-align: right;
-			align-items: flex-end;
+			@include _menu-list;
 		}
 	}
 
 	&__item {
-		@include media($tablet) {
-			overflow: hidden;
-
-			.menu-open & {
-				//overflow: auto;
-			}
-		}
+		overflow: hidden;
 	}
 
 	&__link {
 		color: inherit;
+		.header-bg & {
+			@include _menu-link;
+		}
 		@include media($tablet) {
-			transform: translateY(100%);
-			opacity: 0;
-			transition: all var(--duration-medium) !important;
-
-			.menu-open & {
-				opacity: 1;
-				transform: translateY(0);
-			}
+			@include _menu-link;
 		}
 	}
 }
 
 .burger-btn {
-	@include media($tablet, min) {
-		display: none;
+	display: none;
+	.header-bg & {
+		display: block;
+	}
+	@include media($tablet, max) {
+		display: block;
 	}
 
 	border: none;
 	background: transparent;
 	position: relative;
-	width: rem(70);
-	height: rem(70);
-	padding: rem(16);
+	width: adapt(60, 50, $finishBreakpoint, 768);
+	height: adapt(60, 50, $finishBreakpoint, 768);
+	padding: rem(10);
 	margin-left: auto;
 	position: relative;
 

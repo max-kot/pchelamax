@@ -8,7 +8,7 @@
 	"scripts": {
 		"dev": "node tasks/fonts-style.js && minista --open",
 		"build1": "minista build",
-		"build": "node tasks/create-html-img-for-css.js && node tasks/fonts-style.js && minista build && node tasks/fonts-converter.js && node tasks/css-image-optim.js && node tasks/remove-html-img-for-css.js",
+		"build": "node tasks/fonts-style.js && minista build && node tasks/fonts-converter.js",
 		"preview": "minista preview --open",
 		"fonts": "node tasks/fonts-converter.js",
 		"fontsCss": "node tasks/fonts-style.js",

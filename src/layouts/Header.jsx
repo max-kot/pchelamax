@@ -14,10 +14,12 @@ export const Header = ({ data }) => {
 				<Button
 					href="#contacts"
 					className="btn-label header__btn"
-					data-adaptive-mover=".header__menu, max-width: 1024px">
+					data-auto-calc="btn-contacts, height"
+					>
 					<span>{btn}</span>
 				</Button>
 				<BurgerButton title={burgerTitle} />
+				{/* data-adaptive-mover=".header__menu, max-width: 1024px" */}
 			</div>
 		</header>
 	)

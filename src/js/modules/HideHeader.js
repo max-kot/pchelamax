@@ -2,9 +2,10 @@ export class HideHeader {
 	constructor(selector, options) {
 		const defaultOptions = {
 			offset: 'auto', // то расстояние, после которого исчезнет header при скролле вниз
-			hiddenClass: 'hidden',
+			hiddenClass: 'header-hidden',
 			backgroundClass: false,
 			showScrollEnd: true, // появляется когда закончил события прокрутки (прокрутил шапка прячется, остановился ==> показывается)
+			parents: ['html', '.wrapper']
 		}
 
 		this.selector = selector || '.header';
@@ -12,6 +13,14 @@ export class HideHeader {
 		this.options = Object.assign(defaultOptions, options);
 		this.lastScroll = 0; // отвечает за последнюю позицию прокрутки, т.е. относительно него мы будем отмечать, куда мы скроллим страницу: вверх или вниз
 		this.init();
+	}
+
+	addClass(parents, className) {
+		parents.forEach((parent) => document.querySelector(parent).classList.add(className))
+	}
+	
+	removeClass(parents, className) {
+		parents.forEach((parent) => document.querySelector(parent).classList.remove(className))
 	}
 	// функция, определяющая позицию скролла === где мы сейчас находимся
 	scrollPosition() {
@@ -25,13 +34,17 @@ export class HideHeader {
 	}
 
 	hideOnScroll(header, offset) {
-		const { hiddenClass } = this.options;
+		const { hiddenClass, parents } = this.options;
 
 		if (this.scrollPosition() > this.lastScroll && !this.containsHidden(header) && this.scrollPosition() > offset) {
 			header.classList.add(hiddenClass);
+			this.addClass(parents, hiddenClass)
 		}
 
-		if (this.scrollPosition() < this.lastScroll && this.containsHidden(header)) header.classList.remove(hiddenClass);
+		if (this.scrollPosition() < this.lastScroll && this.containsHidden(header)){
+			header.classList.remove(hiddenClass);
+			this.removeClass(parents, hiddenClass)
+		}
 	};
 
 	showScrollEnd(header) {
@@ -45,14 +58,16 @@ export class HideHeader {
 	}
 
 	addBgClass(header, offset) {
-		const { backgroundClass } = this.options;
+		const { backgroundClass, parents } = this.options;
 
 		if (this.scrollPosition() > offset) {
 			header.classList.add(backgroundClass);
+			this.addClass(parents, backgroundClass)
 		}
 
 		if (!this.scrollPosition()) {
 			header.classList.remove(backgroundClass);
+			this.removeClass(parents, backgroundClass)
 		}
 	}
 

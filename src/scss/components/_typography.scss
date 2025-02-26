@@ -59,3 +59,24 @@
 }
 	
 }
+
+.title-2 {
+	font-family: var(--secondary-font);
+	text-transform: uppercase;
+	font-size: adapt(36, 24);
+	line-height: 120%;
+	font-weight: 600;
+	color: var(--color-dark);
+	text-indent: rem(59);
+
+	&:not(:last-child) {
+		margin-bottom: rem(30);
+	}
+}
+
+.title-3 {
+	font-family: var(--secondary-font);
+	font-weight: 400;
+	line-height: 120%;
+	font-size: adapt(24, 20);
+}

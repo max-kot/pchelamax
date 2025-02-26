@@ -79,6 +79,7 @@ export class Menu {
 
 			const btn = element.querySelector(btnSelector) || document.querySelector(btnSelector);
 			const list = element.querySelector(listSelector) || document.querySelector(listSelector);
+			const allLinks = element.querySelectorAll('a')
 
 			if (list && Object.keys(accessibility)) {
 				this.accessibleMenu(list)
@@ -92,6 +93,7 @@ export class Menu {
 			}
 
 			document.addEventListener('keydown', ({ code: key }) => key === 'Escape' && this.closeMenu(parents, activeClass))
+			allLinks.forEach(link => link.addEventListener('click', () => this.closeMenu(parents, activeClass)))
 		})
 	}
 }

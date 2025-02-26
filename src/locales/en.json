@@ -4,7 +4,7 @@
 		"title": "Vera Target"
 	},
 	"header": {
-		"url": "https://max-kot.github.io/veratarget/en",
+		"url": "#",
 		"menu": [
 			{
 				"text": "Services",
@@ -12,7 +12,19 @@
 			},
 			{
 				"text": "Project",
-				"href": "#project"
+				"href": "#projects"
+			},
+			{
+				"text": "About me",
+				"href": "#about"
+			},
+			{
+				"text": "Work process",
+				"href": "#process"
+			},
+			{
+				"text": "Reviews",
+				"href": "#reviews"
 			}
 		],
 		"btn": "Get in touch",
@@ -71,5 +83,34 @@
 				"text": "In each project, I plunge with my head and help you achieve the maximum result!"
 			}
 		]
+	},
+	"projects": {
+		"title": "Cases",
+		"subtitle": "From clicks to sales - real cases",
+		"description": "Targeted advertising is not luck, but a strategy.We analyze the cases where the right solutions led to high results.",
+		"cases": [
+			{
+				"title": "Master of permanent makeup",
+				"image": "src/assets/images/case-1.jpg",
+				"href": "#case-1"
+			},
+			{
+				"title": "Startup installation of stretch ceilings",
+				"image": "src/assets/images/case-2.jpg",
+				"href": "#case-2"
+			},
+			{
+				"title": "Startup for the development of sites and web applications",
+				"image": "src/assets/images/case-3.jpg",
+				"href": "#case-3"
+			},
+			{
+				"title": "Fisheries Import Company from Norway",
+				"image": "src/assets/images/case-4.jpg",
+				"href": "#case-4"
+			}
+		],
+		"buttonDescription": "Is there a project that needs effective advertising?Let's promote him together!",
+		"buttonText": "Let's discuss your project"
 	}
 }

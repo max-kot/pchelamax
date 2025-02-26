@@ -1,5 +1,12 @@
 .hero {
-	padding-block: rem(30) rem(60);
+	padding-bottom: rem(60);
+	padding-top: calc(rem(40) + var(--header-height));
+	transition: all 0.3s;
+
+	.header-bg & {
+	
+	}
+
 	&__container {
 	}
 

@@ -2,6 +2,7 @@ import { Menu } from "./modules/Menu";
 import { AutoCalc } from "./modules/AutoCalc.js";
 import { AdaptiveMover } from "./modules/AdaptiveMover.js";
 import { HideHeader } from "./modules/HideHeader.js";
+import { HideMenu } from "./modules/HideMenu.js";
 import { RunningLine } from "./modules/RunningLine.js";
 import { Tabs } from "./modules/Tabs.js";
 
@@ -13,7 +14,7 @@ new Menu(".menu", {
 });
 
 new AdaptiveMover()
-new HideHeader('.header', { showScrollEnd: false });
+new HideHeader('.header', { showScrollEnd: false, backgroundClass: 'header-bg'});
 new RunningLine('[data-running-line]', {
 	quantity: 15,
 });

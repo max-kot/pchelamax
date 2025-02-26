@@ -1,3 +1,5 @@
+import { Icon } from "minista";
+
 export const Button = (props) => {
 	let {
 		children,

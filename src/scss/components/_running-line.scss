@@ -58,7 +58,7 @@
 			content: '';
 			@include square(rem(18));
 
-			background-image: url('public/images/star.svg');
+			background-image: url('../images/star.svg');
 			background-position: center center;
 			background-size: 100%;
 			background-repeat: no-repeat;

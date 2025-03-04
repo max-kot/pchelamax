@@ -1,20 +1,23 @@
 import { Button } from "../components/Button";
 import { Img } from "../components/Img";
 import { RunningLine } from "../components/RunningLine";
+import { Modal } from "../components/Modal";
 
 export const Projects = ({ data }) => {
-	const { title, subtitle, description, cases, buttonText, buttonDescription } = data;
+	const { title, subtitle, description, cases, buttonText, buttonDescription, buttonModalDescription } = data;
 	const Case = ({ data }) => {
 		const { href, image, title } = data;
 		return (<article className="projects__item project">
-			<a className="project__link" href={href}>
+			<a className="project__link" href={href} data-modal-btn={href}>
 				<div className="project__image">
-					<Img src={image} alt={title}/>
+					<Img src={image} alt={title} />
 				</div>
 				<h4 className="project__title title-3">{title}</h4>
 			</a>
 		</article>)
-	}
+	};
+	
+	
 	return (
 		<section class="projects" id="projects">
 			<h2 className="visually-hidden">{title}</h2>
@@ -34,6 +37,9 @@ export const Projects = ({ data }) => {
 						<Button href="#contacts" className="btn-arrow">{buttonText}<span></span></Button>
 					</div>
 				</div>
+			</div>
+			<div className="project__modals">
+				{cases.map((item, index) => <Modal data={item} key={index} extra={{buttonModalDescription, buttonText}}/>)}
 			</div>
 		</section>
 	)

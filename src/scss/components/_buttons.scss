@@ -5,6 +5,32 @@
 	margin-bottom: rem(-80);
 	z-index: -1;
 }
+
+@mixin label-btn-core {
+	@include square(adapt(180, 140));
+	background: var(--color-accent);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 60px;
+	margin-top: rem(-104);
+	border-radius: 50%;
+	color: var(--color-sub-accent);
+	font-family: var(--secondary-font);
+	font-weight: 500;
+	transition: color var(--duration-medium);
+	
+	font-size: adapt(18, 14);
+	span {
+		z-index: 2;
+	}
+
+	@include circleHover(var(--color-dark));
+	@include hover {
+		color: var(--color-accent);
+	}
+}
+
 .btn {
 }
 
@@ -20,20 +46,8 @@
 }
 
 .btn-label {
-	@include square(adapt(180, 140));
-	background: var(--color-accent);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding-top: 60px;
-	margin-top: rem(-104);
-	border-radius: 50%;
-	color: var(--color-sub-accent);
-	font-family: var(--secondary-font);
-	font-weight: 500;
-	transition: color var(--duration-medium);
+	@include label-btn-core;
 	position: relative;
-	font-size: adapt(18, 14);
 
 	.header-bg & {
 		@include label-btn;
@@ -43,11 +57,7 @@
 		z-index: 2;
 	}
 
-	@include circleHover(var(--color-dark));
-
-	@include hover {
-		color: var(--color-accent);
-	}
+	
 
 	@include media($tablet) {
 		@include label-btn;
@@ -59,7 +69,7 @@
 	//padding-block: rem(30);
 	font-family: var(--secondary-font);
 	font-weight: 500;
-	font-size: adapt(24, 18);
+	font-size: adapt(24, 16);
 	line-height: 120%;
 	text-transform: uppercase;
 	max-width: rem(485);
@@ -71,7 +81,7 @@
 	transition: all var(--duration-medium);
 	hyphens: auto; // для правильного переноса слов
 	text-wrap: balance; // выравнивает текста, чтобы они хорошо смотрелись
-	
+
 	@include hover {
 		padding-left: rem(30);
 		span::after {
@@ -92,7 +102,7 @@
 		flex-shrink: 0;
 
 		&::after {
-			content: '';
+			content: "";
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -105,15 +115,15 @@
 		}
 	}
 
-	&:after{ 
-		content: '';
+	&:after {
+		content: "";
 		position: absolute;
 		top: 50%;
 		right: 0;
 		transform: translateY(-50%) translateX(-30%);
 		width: adapt(100, 60);
 		height: adapt(60, 20);
-		background-image: url('public/images/arrow.svg');
+		background-image: url("../images/arrow.svg");
 		background-position: center center; /* x y */
 		background-size: 100%;
 		background-repeat: no-repeat;

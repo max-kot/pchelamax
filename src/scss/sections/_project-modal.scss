@@ -1,0 +1,63 @@
+[data-modal-box-container] {
+	padding: rem(10) adapt(30, 10);
+}
+.project-modal {
+	overflow: hidden;
+	.modal-btn-close {
+		@include label-btn-core;
+		border: unset;
+		position: absolute;
+		top: 0;
+		margin-top: rem(-80);
+		right: adapt(40, 0);
+	}
+
+	&__image {
+		position: relative;
+		width: 100%;
+		min-height: adapt(240, 200);
+
+		@include bgimg;
+	}
+
+	&__inner {
+		background: var(--color-light);
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		padding: adapt(60, 30) adapt(40, 20);
+		gap: rem(30);
+
+		@include media($mobile) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__title {
+		font-size: adapt(36, 18);
+		&:not(:last-child) {
+			margin-bottom: unset;
+		}
+	}
+
+	&__content {
+		grid-column: 2;
+		grid-row: 1 / 3;
+
+		@include media($mobile) {
+			grid-column: unset;
+			grid-row: unset;
+		}
+	}
+
+	&__btn-box {
+		align-content: end;
+	}
+
+	&__subtitle {
+		color: var(--color-dark);
+		max-width: rem(383);
+		&:not(:last-child) {
+			margin-bottom: rem(30);
+		}
+	}
+}

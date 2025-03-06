@@ -1,5 +1,5 @@
 import { Home } from "../../layouts/Home";
-import {en as locale} from "../../locales/en.jsx";
+import {en as locale} from "../../locales/en";
 
 export const metadata = {
 	title: locale.meta.title,

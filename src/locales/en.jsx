@@ -139,5 +139,34 @@ export const en = {
 		buttonDescription: "Is there a project that needs effective advertising?Let's promote him together!",
 		buttonText: "Let's discuss your project",
 		buttonModalDescription: "Do you want advertising to work effectively?"
+	},
+	process: {
+		title: 'Work process',
+		subtitle: 'I set up advertising on a clear strategy',
+		description: 'I launch advertising according to the proven process: I study the audience, select effective creatives, test, optimize and scalit successful ligaments.',
+		steps: [
+			{
+				title: 'Briefing and discussion of the project',
+				text: 'I spend a briefing with you to set tasks, determine the advertising budget, understand the features of your business and discuss the audience.'
+			},
+			{
+				title: 'Analysis',
+				text: 'I conduct an analysis of your landing pages, competitors, as well as your past advertising campaigns (if available).'
+			},
+			{
+				title: 'Strategy',
+				text: 'I am forming groups of the target audience and hypotheses for launching an advertising campaign, I distribute the budget.'
+			},
+			{
+				title: 'Preparation for launch',
+				text: 'I check and prepare an advertising room, as well as create creatives.'
+			},
+			{
+				title: 'Launching advertising and monitoring',
+				text: 'I launch an advertising campaign, analyze the results, conduct daily reporting and optimize the strategy to achieve your goals.'
+			}
+		],
+		inputTitle: 'Need details?',
+		placeholder: 'Ask me, I\'m always in touch!'
 	}
 }

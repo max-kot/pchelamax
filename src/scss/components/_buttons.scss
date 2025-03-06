@@ -19,7 +19,7 @@
 	font-family: var(--secondary-font);
 	font-weight: 500;
 	transition: color var(--duration-medium);
-	
+
 	font-size: adapt(18, 14);
 	span {
 		z-index: 2;
@@ -56,8 +56,6 @@
 	span {
 		z-index: 2;
 	}
-
-	
 
 	@include media($tablet) {
 		@include label-btn;
@@ -128,5 +126,42 @@
 		background-size: 100%;
 		background-repeat: no-repeat;
 		transition: all var(--duration-medium);
+	}
+
+	&--small {
+		@include hover {
+			padding-left: unset;
+		}
+	}
+}
+
+.button-tab {
+	color: inherit;
+	display: flex;
+	align-items: center;
+	transition: all var(--duration-medium);
+
+	&:not(.active),
+	:not(.spoiler-active) &{
+		@include hover {
+			color: var(--color-dark);
+		}
+	}
+
+	&::before {
+		content: "";
+		height: rem(4);
+		background: var(--color-accent);
+		transition: all var(--duration-medium);
+	}
+
+	&.active,
+	.spoiler-active &{
+		color: var(--color-dark);
+
+		&::before {
+			margin-right: adapt(30, 20, 768);
+			width: adapt(40, 20, 768);
+		}
 	}
 }

@@ -8,16 +8,18 @@
 	height: var(--top);
 	padding-block: rem(30) var(--btn-contacts-height);
 	padding-right: max(calc(var(--container-padding) + #{rem(10)}), calc((100% - var(--container-width)) / 2));
-	//padding-right: adapt(100, 30, $finishBreakpoint, $tablet);
 	padding-left: adapt(60, 15, $finishBreakpoint, $tablet);
 	overflow: auto;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
 	visibility: hidden;
+	transform: translateY(-100%);
+	transition: all var(--duration-medium);
 
 	.menu-open & {
 		visibility: visible;
+		transform: translateY(0);
 	}
 }
 
@@ -27,6 +29,7 @@
 	font-size: adapt(80, 30, $finishBreakpoint, $tablet);
 	text-align: right;
 	align-items: flex-end;
+	transition: all 0.3s;
 }
 
 @mixin _menu-link {
@@ -41,6 +44,7 @@
 }
 
 .menu {
+	transition: all 0.8s;
 	.header-bg & {
 		@include _menu;
 	}
@@ -77,6 +81,17 @@
 
 .burger-btn {
 	display: none;
+
+	@include hover {
+		span {
+			&::before {
+				transform: translateX(-3px);
+			}
+			&::after {
+				transform: translateX(3px);
+			}
+		}
+	}
 	.header-bg & {
 		display: block;
 	}
@@ -103,11 +118,12 @@
 		background: var(--color-accent);
 		z-index: -1;
 		border-radius: 50%;
+		border: 1px solid var(--color-light);
 		transition: all ease-in-out var(--duration-medium);
 	}
 
 	.menu-open &::after {
-		transform: scale(50);
+		transform: scale(80);
 	}
 
 	span {

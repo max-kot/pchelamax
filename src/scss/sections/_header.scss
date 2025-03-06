@@ -4,6 +4,11 @@
 	right: max(var(--container-padding), calc((100% - var(--container-width)) / 2));
 }
 
+@keyframes slideDown {
+	0% {bottom: 100%;}
+	100% {bottom: 0;}
+}
+
 .header {
 	padding: adapt(30, 5) 0 adapt(20, 10);
 	z-index: 100;
@@ -43,6 +48,7 @@
 
 		.header-bg & {
 			@include contact-btn;
+			animation: slideDown var(--duration-medium);
 		}
 		
 		.menu-open & {

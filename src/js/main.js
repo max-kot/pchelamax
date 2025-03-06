@@ -4,6 +4,7 @@ import { HideHeader } from "./modules/HideHeader.js";
 import { RunningLine } from "./modules/RunningLine.js";
 import { Tabs } from "./modules/Tabs.js";
 import { Modal } from "./modules/Modal.js";
+import { Spoiler } from "./modules/Spoiler.js";
 const langRu = document.querySelector('html').classList.contains('ru');
 
 new AutoCalc();
@@ -26,3 +27,5 @@ new Modal('[data-modal]', {
 		ariaLabel: langRu ? 'Закрыть модальное окно' :'Close modal'
 	},
 });
+
+new Spoiler();

@@ -1,13 +1,5 @@
 .projects {
 	&__container {
-		padding-block: adapt(120, 60);
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: rem(30);
-
-		@include media($mobile) {
-			grid-template-columns: 1fr;
-		}
 	}
 	&__column {
 		display: grid;
@@ -28,26 +20,22 @@
 			}
 		}
 	}
+	&__heading {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+	
 	&__item {
 		display: flex;
 		flex-direction: column;
 
-		&--title-box {
-
-			align-items: flex-end;
-		}
 		&--btn-box {
 			justify-content: flex-end;
 		}
 	}
 
-	&__subtitle {
-		max-width: rem(482);
-	}
-
-	&__description {
-		max-width: rem(482);
-	}
+	
 
 	&__text {
 		max-width: rem(482);

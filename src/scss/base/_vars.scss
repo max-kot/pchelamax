@@ -6,9 +6,12 @@ $finishBreakpoint: 320;
 $unitsDefault: ""; // px / rem / ''
 
 $laptop: 1440.98;
+$laptop-s: 1280.98;
 $tablet: 1024.98;
+$tablet-s: 768.98;
 $mobile: 768.98;
-$mobile-s: 481.98;
+$mobile-m: 460.98;
+$mobile-s: 320.98;
 
 :root {
 	// Adaptive

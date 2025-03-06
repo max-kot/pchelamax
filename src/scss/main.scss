@@ -8,14 +8,16 @@
 @import "base/utils";
 
 // Components
-@import "components/_menu.scss";
+@import "components/_section.scss";
 @import "components/_buttons.scss";
-@import "components/_lang-switcher.scss";
 @import "components/_typography.scss";
+@import "components/_menu.scss";
+@import "components/_lang-switcher.scss";
 @import "components/_running-line.scss";
 @import "components/_tabs.scss";
 @import "components/_text-content.scss";
 @import "components/_heading.scss";
+@import "components/_btn-box.scss";
 
 
 // Sections
@@ -25,3 +27,4 @@
 @import "sections/_projects.scss";
 @import "sections/_project-modal.scss";
 @import "sections/_process.scss";
+@import "sections/_about.scss";

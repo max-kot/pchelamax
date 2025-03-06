@@ -11,11 +11,11 @@ export default defineConfig({
 		images: {
 			outName: "[name]", //"[name]_[hash]" <== отвечает за css имена картинок и может добавить хэш
 			outDir: "assets/images/",
-			optimize: {
-				layout: "fixed", // "fixed", "constrained"
-				breakpoints: undefined, // [320, 400, 640, 800, 1024, 1280, 1440, 1920, 2560, 2880, 3840,]
-				resolution: [1],
-			},
+			//optimize: {
+			//	layout: "fixed", // "fixed", "constrained"
+			//	//breakpoints: undefined, // [320, 400, 640, 800, 1024, 1280, 1440, 1920, 2560, 2880, 3840,]
+			//	//resolution: [1],
+			//},
 		},
 	},
 	resolve: {

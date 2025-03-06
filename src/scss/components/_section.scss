@@ -1,0 +1,10 @@
+.section {
+	padding-block: adapt(120, 60);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: rem(60) rem(30);
+
+	@include media($mobile) {
+		grid-template-columns: 1fr;
+	}
+}

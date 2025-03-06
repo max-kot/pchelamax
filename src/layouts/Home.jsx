@@ -3,6 +3,7 @@ import { Hero } from "./Hero";
 import { Services } from "./Services";
 import { Projects } from "./Projects";
 import { Process } from "./Process";
+import { About } from "./About.jsx";
 
 export const Home = ({ locale }) => {
 	return (
@@ -13,6 +14,7 @@ export const Home = ({ locale }) => {
 				<Services data={locale.services}/>
 				<Projects data={locale.projects}/>
 				<Process data={locale.process}/>
+				<About data={locale.about}/>
 			</main>
 		</>
 	)

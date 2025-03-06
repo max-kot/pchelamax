@@ -168,5 +168,32 @@ export const en = {
 		],
 		inputTitle: 'Need details?',
 		placeholder: 'Ask me, I\'m always in touch!'
+	},
+	about: {
+		title: 'About me',
+		subtitle: <>Hello!<br />I am faith<br />— Your Targetologist</>,
+		description: 'My experience in various fields allows me not just to configure advertising, but to build it so that it works for you and your business.',
+		alt: 'Hello!I am Vera - your targetologist',
+		list: [
+			{
+				title: 'I understand complex tasks and bring projects to the result',
+				text: 'Experience in the factory taught me endurance and a systematic approach, so I cope with projects of any complexity.',
+			},
+			{
+				title: 'I know how to interact with customers and increase sales',
+				text: 'A year in sales helped me understand what is important for customers.Therefore, it will be easy and comfortable for me to work with me, and I, in turn, can give recommendations on sales scripts that will strengthen your business.',
+			},
+			{
+				title: 'I create a service that brings the result',
+				text: 'Work in the casino taught me responsibility and customer orientation.Launching an advertisement with me, you are betting on stable growth and profit.',
+			},
+			{
+				title: 'Expert approach to your advertising',
+				text: 'Having passed the training “more than just a targetologist”, I combined my love of analytics and numbers with practical experience.Now I do not just set up advertising, but build a marketing strategy, starting with the analysis of landing pages and ending with an improvement in customer service.',
+			}
+		],
+		buttonTitle: 'Do you want advertising to work effectively?',
+		buttonDescription: 'Let\'s discuss your project!',
+		buttonText: 'Discuss the project'
 	}
 }

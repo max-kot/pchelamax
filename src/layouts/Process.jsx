@@ -12,7 +12,7 @@ export const Process = ({ data }) => {
 		<section class="process" id="process">
 			<h2 className="visually-hidden">{title}</h2>
 			<RunningLine speed="50s">{title}</RunningLine>
-			<div class="container section process__container ">
+			<div class="container section process__container">
 				<Heading className="process__heading" title={subtitle}>{description}</Heading>
 				<ul className="process__list">
 					{steps.map((step, index) => <Step key={index} index={index} data={step} />)}

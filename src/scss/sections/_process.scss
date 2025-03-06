@@ -50,6 +50,7 @@
 		padding:adapt(30, 20) adapt(10, 0);
 		border: none;
 		border-bottom: 1px solid var(--color-gray);
+		background: transparent;
 		&::placeholder {
 			font-size: adapt(18, 12);
 		}

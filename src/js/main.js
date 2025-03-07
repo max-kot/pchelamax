@@ -5,6 +5,8 @@ import { RunningLine } from "./modules/RunningLine.js";
 import { Tabs } from "./modules/Tabs.js";
 import { Modal } from "./modules/Modal.js";
 import { Spoiler } from "./modules/Spoiler.js";
+import Swiper from 'swiper/bundle';
+
 const langRu = document.querySelector('html').classList.contains('ru');
 
 new AutoCalc();
@@ -24,8 +26,17 @@ new Tabs();
 new Modal('[data-modal]', {
 	closeBtn: {
 		innerHTML: `<span>${langRu ? 'Закрыть' : 'Close'}</span>`,
-		ariaLabel: langRu ? 'Закрыть модальное окно' :'Close modal'
+		ariaLabel: langRu ? 'Закрыть модальное окно' : 'Close modal'
 	},
 });
 
 new Spoiler();
+
+new Swiper('.reviews-slider', {
+	slidesPerView: 'auto',
+	grabCursor: true,
+	scrollbar: {
+		el: ".reviews-slider__scrollbar",
+		draggable: true,
+	}
+})

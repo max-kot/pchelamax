@@ -1,4 +1,5 @@
 //@use "base";
+@import "../../node_modules/swiper/swiper-bundle";
 @import "base/normalize";
 @import "base/fontsAutoGen";
 @import "base/functions";
@@ -28,3 +29,4 @@
 @import "sections/_project-modal.scss";
 @import "sections/_process.scss";
 @import "sections/_about.scss";
+@import "sections/_reviews.scss";

@@ -23,6 +23,7 @@ $mobile-s: 320.98;
 	--color-sub-accent: #212529;
 	--color-dark: #212529;
 	--color-gray: #495057;
+	--color-gray-light: #cdcfd1;
 
 	// CONTAINER
 	--container-width: #{rem(1200)};
@@ -33,7 +34,6 @@ $mobile-s: 320.98;
 	--font-size: #{adapt(18, 16)};
 	--main-font: "Racama", sans-serif;
 	--secondary-font: "Unbounded-VF", sans-serif;
-
 
 	// TRANSITION
 	--duration-fast: 0.3s;

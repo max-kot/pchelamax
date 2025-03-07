@@ -1,0 +1,118 @@
+.reviews {
+	&__container {
+		--width: #{rem(482)};
+		padding-block: adapt(120, 60);
+
+		@include uncontainer(var(--width), rem(30), rem(60));
+		@include media($laptop-s) {
+			--width: 50%;
+		}
+
+		@include media($mobile) {
+			--width: #{rem(482)};
+			flex-wrap: wrap;
+			justify-content: flex-end;
+			padding-right: var(--container-padding);
+
+			& > *:first-child {
+				flex: 0 1 rem(482);
+			}
+		}
+	}
+	&__slider {
+		@include media($mobile) {
+			flex: 0 1 100% !important;
+		}
+	}
+}
+.reviews-slider {
+	display: flex;
+	flex-direction: column;
+	gap: rem(60);
+
+	&__wrapper {
+		
+	}
+	&__scrollbar-container {
+		margin-right: max(var(--container-padding), calc((100vw - var(--container-width)) / 2));
+	}
+	&__scrollbar {
+		position: relative !important;
+		left: 0 !important;
+		background: var(--color-gray-light);
+		height: 2px !important;
+		cursor: pointer;
+
+		.swiper-scrollbar-drag {
+			background: var(--color-accent);
+			height: 6px;
+			top: -2px;
+		}
+	}
+}
+
+.reviews-slide {
+	max-width: adapt(640, 340);
+	height: 100%;
+
+	&__wrapper {
+		padding-right: adapt(60, 20);
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+	}
+
+	&__title {
+		display: flex;
+		gap: rem(30);
+		font-size: adapt(28, 18);
+		color: var(--color-dark);
+
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+
+		svg {
+			flex-shrink: 0;
+			color: var(--color-accent);
+			max-width: adapt(79, 40);
+			height: 100%;
+			padding-top: 0.4em;
+		}
+	}
+
+	&__text {
+		padding-left: adapt(108, 90, $tablet);
+		padding-bottom: rem(20);
+
+		border-bottom: 1px solid var(--color-gray);
+		flex-grow: 1;
+
+		@include media($tablet) {
+			padding-left: unset;
+		}
+	}
+
+	&__meta {
+		padding-top: rem(20);
+		display: flex;
+		gap: adapt(60, 30);
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__author {
+	}
+
+	&__name {
+		font-size: adapt(24, 18);
+		color: var(--color-dark);
+
+		&:not(:last-child) {
+			margin-bottom: rem(8);
+		}
+	}
+
+	&__position {
+	}
+}

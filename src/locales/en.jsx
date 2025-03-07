@@ -171,9 +171,9 @@ export const en = {
 	},
 	about: {
 		title: 'About me',
-		subtitle: <>Hello!<br />I am faith<br />— Your Targetologist</>,
+		subtitle: <>Hello!<br />I am Vera<br />— Your Targetologist</>,
 		description: 'My experience in various fields allows me not just to configure advertising, but to build it so that it works for you and your business.',
-		alt: 'Hello!I am Vera - your targetologist',
+		alt: 'Hello! I am Vera - your targetologist',
 		list: [
 			{
 				title: 'I understand complex tasks and bring projects to the result',
@@ -195,5 +195,26 @@ export const en = {
 		buttonTitle: 'Do you want advertising to work effectively?',
 		buttonDescription: 'Let\'s discuss your project!',
 		buttonText: 'Discuss the project'
+	},
+	reviews: {
+		title: 'Reviews',
+		subtitle: 'Satisfied customers are the best success indicator',
+		description: 'They have already received the result.Now you!',
+		list: [
+			{
+				title: 'Very easy and pleasant to work',
+				text: 'Verochka, thank you very much for your consultation, I chewed everything clearly, showed it, helped in the future, it’s very pleasant and easy to work with you, thanks 🙏❤',
+				name: 'Elena',
+				position: 'Master of permanent makeup',
+				link: '#',
+			},
+			{
+				title: 'Thanks for the cool result!',
+				text: 'Before working with Vera, our applications were expensive, and sales are unstable. After the launch of advertising, we reduced the value of the application by 40% and increased the conversion!Everything is clear, transparent and with understandable reports.Thanks for the cool result!',
+				name: 'Dmitry',
+				position: 'Owner of the online clothing store',
+				link: '#',
+			}
+		]
 	}
 }

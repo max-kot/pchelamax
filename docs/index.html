@@ -424,7 +424,129 @@
             </div>
           </div>
         </section>
+        <section class="contacts" id="contacts">
+          <h2 class="visually-hidden">Контакты</h2>
+          <div class="running-line" style="--running-line-speed:30s" data-running-line="true">
+            <ul class="running-line__list" data-running-line-list="true">
+              <li class="running-line__item">Контакты</li>
+            </ul>
+          </div>
+          <div class="container section contacts__container">
+            <div class="heading contacts__heading">
+              <h3 class="heading__title title-2">Давайте обсудим вашу стратегию продвижения</h3>
+              <p class="heading__description">Оставьте ваши контакты или напишите мне, и я помогу вам запустить рекламу.</p>
+            </div>
+            <form class="contacts__form form" data-validator="true">
+              <div class="form-field">
+                <input class="form-field__input" id="name" name="name" type="text" required="" autocomplete="off">
+                <label for="name" class="form-field__label">Ваше имя</label>
+              </div>
+              <div class="form-field form-field--select">
+                <input class="form-field__input" id="contact-data" name="contact-data" type="text" required="" autocomplete="off">
+                <select class="form-field__select" name="contact-value" id="contact-value" data-select="true">
+                  <option value="phone">телефон</option>
+                  <option value="instagram">инстаграм</option>
+                  <option value="telegram">телеграм</option>
+                  <option value="whatsapp">ватсап</option>
+                  <option value="viber">вайбер</option>
+                  <option value="email">эл-почта</option>
+                </select>
+                <label for="contact-data" class="form-field__label">Контактные данные</label>
+              </div>
+              <div class="form-field">
+                <textarea class="form-field__input form-field__textarea" name="message" id="message"></textarea>
+                <label for="message" class="form-field__label">Ваше сообщение</label>
+              </div><small class="form__description">*Отправляя заявку, вы соглашаетесь <a class="btn link-policy" href="#policy" data-modal-btn="#policy">с политикой обработки персональных данных</a></small>
+              <button class="btn btn-arrow form__btn" type="submit">Отправить<span></span></button>
+            </form>
+            <div class="contacts__social social">
+              <h3 class="title-3 social__title">Вы также можете связаться со мной через соцсети:</h3>
+              <ul class="social__list">
+                <li class="social__item">
+                  <a href="#" class="social__link link" target="_blank">Instagram</a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link link" target="_blank">Telegram</a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link link" target="_blank">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </main>
+      <footer class="footer">
+        <div class="container section footer__container">
+          <a class="logo" href="/">VeraTarget</a>
+          <a class="btn btn-arrow btn-arrow--up" href="#">Наверх</a><small class="footer__copyrights"> ©<span class="year" data-year="true">2024</span> <!-- -->Все права принадлежат правообладателю.</small>
+          <p class="footer__developer">Разработка сайта<!-- --> - <a class="btn link" href="https://t.me/maxkot_web" target="_blank">MAX-KOT</a>
+          </p>
+        </div>
+      </footer>
+      <div class="project-modal" data-modal="#policy" id="policy">
+        <div class="project-modal__inner">
+          <h3 class="project-modal__title title-2">Политика обработки персональных данных</h3>
+          <div class="project-modal__content">
+            <div class="text-content">
+              <h4 class="title-3">Общие положения</h4>
+              <ol>
+                <li>Настоящая Политика обработки персональных данных (далее — Политика) описывает, как обрабатываются персональные данные пользователей на сайте VeraTarget (далее — Сайт).</li>
+                <li>Владелец Сайта: Гуринович Вера Николаевна.</li>
+                <li>Использование Сайта означает согласие пользователя с настоящей Политикой.</li>
+              </ol>
+            </div>
+            <div class="text-content">
+              <h4 class="title-3">Какие данные собираются и для чего</h4>
+              <ol>
+                <li>На Сайте могут обрабатываться следующие данные:<ul>
+                    <li>Имя (если пользователь указывает его в форме);</li>
+                    <li>Электронная почта;</li>
+                    <li>Номер телефона;</li>
+                    <li>Другая информация, предоставленная пользователем.</li>
+                  </ul>
+                </li>
+                <li>Эти данные используются исключительно для:<ul>
+                    <li>Обратной связи с пользователем;</li>
+                    <li>Ответа на запросы через форму обратной связи.</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+            <div class="text-content">
+              <h4 class="title-3">Как обрабатываются данные</h4>
+              <ol>
+                <li>Персональные данные передаются пользователем добровольно через формы на Сайте.</li>
+                <li>Данные не передаются третьим лицам и не используются в рекламных целях.</li>
+                <li>Хранение данных осуществляется в течение времени, необходимого для выполнения целей, ради которых они были переданы.</li>
+              </ol>
+            </div>
+            <div class="text-content">
+              <h4 class="title-3">Права пользователя</h4>
+              <p>Пользователь имеет право:</p>
+              <ul>
+                <li>Запросить информацию о своих персональных данных;</li>
+                <li>Требовать удаления своих данных, отправив запрос по адресу <a class="btn" href="mailto:i.veratarget@gmail.com">i.veratarget@gmail.com</a>.</li>
+              </ul>
+            </div>
+            <div class="text-content">
+              <h4 class="title-3">Защита данных</h4>
+              <ol>
+                <li>Владелец сайта принимает необходимые меры для защиты персональных данных от несанкционированного доступа.</li>
+              </ol>
+            </div>
+            <div class="text-content">
+              <h4 class="title-3">Контактная информация</h4>
+              <ol>
+                <li>По вопросам обработки персональных данных можно связаться по email: <a class="btn" href="mailto:i.veratarget@gmail.com">i.veratarget@gmail.com</a>.</li>
+              </ol>
+            </div>
+            <div class="text-content">
+              <h4 class="title-3">Настоящая Политика вступает в силу с момента публикации на Сайте.</h4>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

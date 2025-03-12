@@ -1,3 +1,5 @@
+import Swiper from 'swiper/bundle';
+
 import { Menu } from "./modules/Menu";
 import { AutoCalc } from "./modules/AutoCalc.js";
 import { HideHeader } from "./modules/HideHeader.js";
@@ -5,7 +7,10 @@ import { RunningLine } from "./modules/RunningLine.js";
 import { Tabs } from "./modules/Tabs.js";
 import { Modal } from "./modules/Modal.js";
 import { Spoiler } from "./modules/Spoiler.js";
-import Swiper from 'swiper/bundle';
+import { Select } from "./modules/Select.js";
+import { ValueChecker } from "./modules/ValueChecker.js";
+import { FormValidator } from "./modules/FormValidator.js";
+import { CurrentYear } from "./modules/CurrentYear.js";
 
 const langRu = document.querySelector('html').classList.contains('ru');
 
@@ -40,3 +45,9 @@ new Swiper('.reviews-slider', {
 		draggable: true,
 	}
 })
+
+new Select();
+new ValueChecker();
+new FormValidator();
+new CurrentYear();
+

@@ -73,7 +73,7 @@ export class HideHeader {
 
 	init() {
 		if (!this.elements.length) {
-			console.warn(`[Header]: Selector ${this.selector} is not found!`);
+			console.warn(`[HideHeader]: Selector ${this.selector} is not found!`);
 			return
 		}
 		let { offset, backgroundClass, showScrollEnd } = this.options;

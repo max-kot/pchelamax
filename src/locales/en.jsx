@@ -1,3 +1,4 @@
+import { Button } from "../components/Button.jsx"
 import { TextContent } from "../components/TextContent.jsx"
 
 export const en = {
@@ -216,5 +217,120 @@ export const en = {
 				link: '#',
 			}
 		]
+	},
+	contacts: {
+		title: 'Contacts',
+		subtitle: 'Let\'s discuss your promotion strategy',
+		description: 'Leave your contacts or write to me, and I will help you start advertising.',
+		socialTitle: 'You can also contact me through social networks:',
+		socialLinks: [
+			{
+				text: 'Instagram',
+				href: '#'
+			},
+			{
+				text: 'Telegram',
+				href: '#'
+			},
+			{
+				text: 'LinkedIn',
+				href: '#'
+			}
+		],
+		formName: 'Your name',
+		formContacts: 'Contact details',
+		select: [
+			{
+				text: 'phone',
+				value: 'phone',
+			},
+			{
+				text: 'instagram',
+				value: 'instagram',
+			},
+			{
+				text: 'telegram',
+				value: 'telegram',
+			},
+			{
+				text: 'whatsapp',
+				value: 'whatsapp',
+			},
+			{
+				text: 'viber',
+				value: 'viber',
+			},
+			{
+				text: 'email',
+				value: 'email',
+			}
+		],
+		formMessage: 'Your message',
+		formDescription: <>*By sending an application, you agree <Button href="#policy" data-modal-btn="#policy" className="link-policy">with personal data processing policy</Button></>,
+		buttonText: 'Send'
+	},
+	policy: {
+		title: 'Personal data processing policy',
+		content: <>
+			<TextContent title="General provisions">
+				<ol>
+					<li>This Personal Data Processing Policy (hereinafter referred to as Policy) describes how the personal data of users are processed on the Veratarget website (hereinafter - the site).</li>
+					<li>Site owner: Gurinovich Vera Nikolaevna.</li>
+					<li>Using the site means the consent of the user with this policy.</li>
+				</ol>
+			</TextContent>
+			<TextContent title="What data is collected and why">
+				<ol>
+					<li>
+						The following data can be processed on the site:
+						<ul>
+							<li>Name (if the user indicates it in the form);</li>
+							<li>E-mail;</li>
+							<li>Phone number;</li>
+							<li>Another information provided by the user.</li>
+						</ul>
+					</li>
+					<li>
+						These data are used exclusively for:
+						<ul>
+							<li>Feedback with the user;</li>
+							<li>Reply to requests through the feedback form.</li>
+						</ul>
+					</li>
+				</ol>
+			</TextContent>
+			<TextContent title="How the data is processed">
+				<ol>
+					<li>Personal data is transmitted by the user voluntarily through forms on the site.</li>
+					<li>Data is not transmitted to third parties and are not used for advertising purposes.</li>
+					<li>Data storage is carried out during the time necessary for fulfilling the goals for which they were transferred.</li>
+				</ol>
+			</TextContent>
+			<TextContent title="User rights">
+				<p>The user has the right:</p>
+				<ul>
+					<li>Request information about your personal data;</li>
+					<li>Demand the deletion of your data by sending a request to the address <Button href="mailto:i.veratarget@gmail.com">i.veratarget@gmail.com</Button>.</li>
+				</ul>
+			</TextContent>
+			<TextContent title="Data protection">
+				<ol>
+					<li>The site owner takes the necessary measures to protect personal data from unauthorized access.</li>
+				</ol>
+			</TextContent>
+			<TextContent title="Contact information">
+				<ol>
+					<li>On issues of processing personal data, you can contact by email: <Button href="mailto:i.veratarget@gmail.com">i.veratarget@gmail.com</Button>.</li>
+				</ol>
+			</TextContent>
+			<TextContent title="This policy comes into force from the moment of publication on the site.">
+			</TextContent>
+		</>
+	},
+	footer: {
+		url: '/',
+		buttonUp: 'To top',
+		copyrights: 'All rights belong to the copyright holder.',
+		developer: 'Site development'
 	}
 }

@@ -424,7 +424,129 @@
             </div>
           </div>
         </section>
+        <section class="contacts" id="contacts">
+          <h2 class="visually-hidden">Contacts</h2>
+          <div class="running-line" style="--running-line-speed:30s" data-running-line="true">
+            <ul class="running-line__list" data-running-line-list="true">
+              <li class="running-line__item">Contacts</li>
+            </ul>
+          </div>
+          <div class="container section contacts__container">
+            <div class="heading contacts__heading">
+              <h3 class="heading__title title-2">Let&#x27;s discuss your promotion strategy</h3>
+              <p class="heading__description">Leave your contacts or write to me, and I will help you start advertising.</p>
+            </div>
+            <form class="contacts__form form" data-validator="true">
+              <div class="form-field">
+                <input class="form-field__input" id="name" name="name" type="text" required="" autocomplete="off">
+                <label for="name" class="form-field__label">Your name</label>
+              </div>
+              <div class="form-field form-field--select">
+                <input class="form-field__input" id="contact-data" name="contact-data" type="text" required="" autocomplete="off">
+                <select class="form-field__select" name="contact-value" id="contact-value" data-select="true">
+                  <option value="phone">phone</option>
+                  <option value="instagram">instagram</option>
+                  <option value="telegram">telegram</option>
+                  <option value="whatsapp">whatsapp</option>
+                  <option value="viber">viber</option>
+                  <option value="email">email</option>
+                </select>
+                <label for="contact-data" class="form-field__label">Contact details</label>
+              </div>
+              <div class="form-field">
+                <textarea class="form-field__input form-field__textarea" name="message" id="message"></textarea>
+                <label for="message" class="form-field__label">Your message</label>
+              </div><small class="form__description">*By sending an application, you agree <a class="btn link-policy" href="#policy" data-modal-btn="#policy">with personal data processing policy</a></small>
+              <button class="btn btn-arrow form__btn" type="submit">Send<span></span></button>
+            </form>
+            <div class="contacts__social social">
+              <h3 class="title-3 social__title">You can also contact me through social networks:</h3>
+              <ul class="social__list">
+                <li class="social__item">
+                  <a href="#" class="social__link link" target="_blank">Instagram</a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link link" target="_blank">Telegram</a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link link" target="_blank">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </main>
+      <footer class="footer">
+        <div class="container section footer__container">
+          <a class="logo" href="/">VeraTarget</a>
+          <a class="btn btn-arrow btn-arrow--up" href="#">To top</a><small class="footer__copyrights"> ©<span class="year" data-year="true">2024</span> <!-- -->All rights belong to the copyright holder.</small>
+          <p class="footer__developer">Site development<!-- --> - <a class="btn link" href="https://t.me/maxkot_web" target="_blank">MAX-KOT</a>
+          </p>
+        </div>
+      </footer>
+      <div class="project-modal" data-modal="#policy" id="policy">
+        <div class="project-modal__inner">
+          <h3 class="project-modal__title title-2">Personal data processing policy</h3>
+          <div class="project-modal__content">
+            <div class="text-content">
+              <h4 class="title-3">General provisions</h4>
+              <ol>
+                <li>This Personal Data Processing Policy (hereinafter referred to as Policy) describes how the personal data of users are processed on the Veratarget website (hereinafter - the site).</li>
+                <li>Site owner: Gurinovich Vera Nikolaevna.</li>
+                <li>Using the site means the consent of the user with this policy.</li>
+              </ol>
+            </div>
+            <div class="text-content">
+              <h4 class="title-3">What data is collected and why</h4>
+              <ol>
+                <li>The following data can be processed on the site:<ul>
+                    <li>Name (if the user indicates it in the form);</li>
+                    <li>E-mail;</li>
+                    <li>Phone number;</li>
+                    <li>Another information provided by the user.</li>
+                  </ul>
+                </li>
+                <li>These data are used exclusively for:<ul>
+                    <li>Feedback with the user;</li>
+                    <li>Reply to requests through the feedback form.</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+            <div class="text-content">
+              <h4 class="title-3">How the data is processed</h4>
+              <ol>
+                <li>Personal data is transmitted by the user voluntarily through forms on the site.</li>
+                <li>Data is not transmitted to third parties and are not used for advertising purposes.</li>
+                <li>Data storage is carried out during the time necessary for fulfilling the goals for which they were transferred.</li>
+              </ol>
+            </div>
+            <div class="text-content">
+              <h4 class="title-3">User rights</h4>
+              <p>The user has the right:</p>
+              <ul>
+                <li>Request information about your personal data;</li>
+                <li>Demand the deletion of your data by sending a request to the address <a class="btn" href="mailto:i.veratarget@gmail.com">i.veratarget@gmail.com</a>.</li>
+              </ul>
+            </div>
+            <div class="text-content">
+              <h4 class="title-3">Data protection</h4>
+              <ol>
+                <li>The site owner takes the necessary measures to protect personal data from unauthorized access.</li>
+              </ol>
+            </div>
+            <div class="text-content">
+              <h4 class="title-3">Contact information</h4>
+              <ol>
+                <li>On issues of processing personal data, you can contact by email: <a class="btn" href="mailto:i.veratarget@gmail.com">i.veratarget@gmail.com</a>.</li>
+              </ol>
+            </div>
+            <div class="text-content">
+              <h4 class="title-3">This policy comes into force from the moment of publication on the site.</h4>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

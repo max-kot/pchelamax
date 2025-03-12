@@ -4,7 +4,10 @@ import { Services } from "./Services";
 import { Projects } from "./Projects";
 import { Process } from "./Process";
 import { About } from "./About";
-import { Reviews } from "./Reviews.jsx";
+import { Reviews } from "./Reviews";
+import { Contacts } from "./Contacts";
+import { Policy } from "./Policy";
+import { Footer } from "./Footer";
 
 export const Home = ({ locale }) => {
 	return (
@@ -17,7 +20,10 @@ export const Home = ({ locale }) => {
 				<Process data={locale.process}/>
 				<About data={locale.about}/>
 				<Reviews data={locale.reviews}/>
+				<Contacts data={locale.contacts}/>
 			</main>
+			<Footer data={locale.footer}/>
+			<Policy data={locale.policy}/>
 		</>
 	)
 };

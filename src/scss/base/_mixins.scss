@@ -437,3 +437,32 @@
 	scrollbar-color: $color $bg;
 	scrollbar-width: $width;
 }
+
+@mixin floating-label($inputSelector: "input", $labelSelector: "label", $hasPlaceholder: true) {
+	@if $hasPlaceholder {
+		#{$inputSelector}:focus ~ #{$labelSelector},
+		#{$inputSelector}:not(:placeholder-shown) ~ #{$labelSelector},
+		#{$inputSelector}[required]:valid ~ #{$labelSelector},
+		#{$inputSelector}.has-value ~ #{$labelSelector}{
+			@content;
+		}
+
+		#{$inputSelector}::placeholder {
+			opacity: 0;
+			transition: opacity 0.3s;
+		}
+
+		#{$inputSelector}:focus {
+			&::placeholder {
+				opacity: 1;
+			}
+		}
+	} @else {
+		// При фокусе или если input заполнен без placeholder
+		#{$inputSelector}:focus ~ #{$labelSelector},
+		#{$inputSelector}[required]:valid ~ #{$labelSelector},
+		#{$inputSelector}.has-value ~ #{$labelSelector}{
+			@content;
+		}
+	}
+}

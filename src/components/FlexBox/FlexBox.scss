@@ -1,0 +1,20 @@
+.flex-box {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.no-wrap {
+	flex-wrap: nowrap;
+}
+
+.col-2 {
+	* {
+		flex: 0 1 50%;
+	}
+}
+
+.col-3 {
+	* {
+		flex: 0 1 33.3%;
+	}
+}

@@ -1,0 +1,33 @@
+.contacts {
+	&__container {
+		@include media($tablet) {
+			
+		}
+	}
+	&__heading {
+		grid-column: 2;
+		
+		@include media($mobile) {
+			grid-column: initial;
+			justify-self: end;
+		}
+	}
+	&__social {
+		grid-column: 2;
+		align-self: end;
+		
+		@include media($mobile) {
+			grid-column: initial;
+		}
+	}
+	&__form {
+		grid-column: 1;
+		grid-row: 1 / 3;
+		
+		@include media($mobile) {
+			grid-column: initial;
+			grid-row: initial;
+		}
+	}
+}
+

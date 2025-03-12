@@ -1,5 +1,8 @@
-//@use "base";
+// Libs
 @import "../../node_modules/swiper/swiper-bundle";
+
+// Base
+//@use "base";
 @import "base/normalize";
 @import "base/fontsAutoGen";
 @import "base/functions";
@@ -19,6 +22,10 @@
 @import "components/_text-content.scss";
 @import "components/_heading.scss";
 @import "components/_btn-box.scss";
+@import "components/_social.scss";
+@import "components/_form.scss";
+@import "components/_Select.scss";
+@import "components/_FormValidator.scss";
 
 
 // Sections
@@ -30,3 +37,5 @@
 @import "sections/_process.scss";
 @import "sections/_about.scss";
 @import "sections/_reviews.scss";
+@import "sections/_contacts.scss";
+@import "sections/_footer.scss";

@@ -12,6 +12,8 @@ export const Button = (props) => {
 	} = props;
 
 	className = className ? "btn " + className : "btn";
+	type = type ? type : 'button';
+	
 	const isLink = href !== undefined;
 	const linkProps = { href, target };
 	const buttonProps = { type };

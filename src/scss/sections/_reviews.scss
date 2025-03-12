@@ -3,7 +3,7 @@
 		--width: #{rem(482)};
 		padding-block: adapt(120, 60);
 
-		@include uncontainer(var(--width), rem(30), rem(60));
+		@include uncontainer(var(--width), adapt(60, 30), rem(60));
 		@include media($laptop-s) {
 			--width: 50%;
 		}

@@ -1,0 +1,21 @@
+.social {
+	&__title {
+		color: var(--color-dark);
+		&:not(:last-child) {
+			margin-bottom: rem(30);
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: rem(30) rem(30);
+	}
+
+	&__item {
+	}
+
+	&__link {
+		font-size: adapt(24, 16);
+	}
+}

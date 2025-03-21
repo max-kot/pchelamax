@@ -10,7 +10,7 @@ export const About = ({ data }) => {
 
 	return (
 		<Section className="about" title={title}>
-			<Heading className="about__heading" title={subtitle}>{description}</Heading>
+			<Heading className="about__heading" title={subtitle} hasIcon={true}>{description}</Heading>
 			<div className="about__image">
 				<Img src="src/assets/images/photo-1.jpg" alt={alt} />
 			</div>

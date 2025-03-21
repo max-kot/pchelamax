@@ -1,5 +1,9 @@
 .image-box {
-	position: relative;
+	--img-fit: cover;
+	--img-position: center;
+	--position: relative;
+
+	position: var(--position);
 
 	img,
 	video,
@@ -10,7 +14,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		object-fit: cover;
-		object-position: center;
+		object-fit: var(--img-fit);
+		object-position: var(--img-position);
 	}
 }

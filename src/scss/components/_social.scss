@@ -9,7 +9,7 @@
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
-		gap: rem(30) rem(30);
+		gap: adapt(30, 16);
 	}
 
 	&__item {

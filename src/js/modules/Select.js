@@ -10,6 +10,7 @@ export class Select {
 				item: 'custom-select__item',
 				button: 'custom-select__button',
 			},
+			syncAttr: 'data-select-sync',
 			buttonAttr: 'data-select-value',
 		};
 
@@ -36,11 +37,39 @@ export class Select {
 		newEl.setAttribute('type', 'text');
 	}
 
+	syncInputs(syncId, newValue, currentInput) {
+		const { className, syncAttr } = this.options;
+		const syncedInputs = document.querySelectorAll(`[${syncAttr}="${syncId}"]`);
+
+		syncedInputs.forEach(input => {
+			const wrapper = input.parentElement;
+
+			if (input !== currentInput) {
+				input.value = newValue;
+				// Убираем старое активное состояние
+				wrapper.querySelectorAll(`.${className.activeButton}`).forEach(btn => {
+					btn.classList.remove(className.activeButton);
+					btn.setAttribute('aria-selected', false);
+				});
+
+				// Выделяем нужную кнопку
+				const buttons = wrapper.querySelectorAll(`.${className.button}`);
+				buttons.forEach(btn => {
+					if (btn.textContent === newValue) {
+						btn.classList.add(className.activeButton);
+						btn.setAttribute('aria-selected', true);
+					}
+				});
+			}
+		});
+	}
+
 	changeCurrentValue(button, input, wrapper) {
-		const { className } = this.options;
+		const { className, syncAttr } = this.options;
 
 		button.addEventListener('pointerdown', () => {
-			input.value = button.innerText;
+			const newValue = button.innerText;
+			input.value = newValue;
 			wrapper.classList.toggle(className.active);
 			wrapper.setAttribute('aria-expanded', wrapper.classList.contains(className.active));
 
@@ -51,6 +80,15 @@ export class Select {
 
 			button.classList.add(className.activeButton);
 			button.setAttribute('aria-selected', true);
+
+			if (syncAttr) {
+				const syncId = input.getAttribute(syncAttr);
+
+				if (syncId) {
+					this.syncInputs(syncId, newValue, input);
+				}
+			}
+
 		});
 	}
 
@@ -159,6 +197,7 @@ export class Select {
 		input.setAttribute('aria-controls', listId);
 
 		this.copyClass(select, wrapper);
+		this.copyAttrs(select, input);
 		wrapper.classList.add(className.wrapper)
 
 		this.addDefaultAttrs(select, input);

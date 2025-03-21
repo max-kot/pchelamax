@@ -1,7 +1,6 @@
 .custom-select {
 	position: relative;
 
-	
 	&::after {
 		content: "🢓";
 		position: absolute;
@@ -16,10 +15,10 @@
 		//transition: transform 0.3s;
 	}
 	&.custom-select-active {
-			&::after {
-				transform-origin: top;
-				transform: rotate(180deg);
-			}
+		&::after {
+			transform-origin: top;
+			transform: rotate(180deg);
+		}
 	}
 	&__input {
 		height: 100%;
@@ -55,6 +54,7 @@
 
 		&.custom-select-button-active {
 			background: var(--color-accent);
+			color: var(--color-text-accent);
 		}
 	}
 }

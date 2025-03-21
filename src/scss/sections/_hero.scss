@@ -11,7 +11,7 @@
 	}
 
 	&__title {
-		@include media($mobile-s) {
+		@include media($mobile) {
 			&:not(:last-child) {
 				margin-bottom: rem(30);
 			}
@@ -30,8 +30,6 @@
 		}
 		@include media($mobile) {
 			justify-content: flex-end;
-		}
-		@include media($mobile-s) {
 			gap: rem(60) rem(60);
 		}
 	}

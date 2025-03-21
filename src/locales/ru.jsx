@@ -267,7 +267,9 @@ export const ru = {
 		],
 		formMessage: 'Ваше сообщение',
 		formDescription: <>*Отправляя заявку, вы соглашаетесь <Button href="#policy" data-modal-btn="#policy" className="link-policy">с политикой обработки персональных данных</Button></>,
-		buttonText: 'Отправить'
+		buttonText: 'Отправить',
+		modalTitle: 'Уточняющие детали перед отправкой',
+		modalDescription: 'Оставьте ваши контакты и я свяжусь с вами в ближайшее время.'
 	},
 	policy: {
 		title: 'Политика обработки персональных данных',
@@ -282,7 +284,7 @@ export const ru = {
 			<TextContent title="Какие данные собираются и для чего">
 				<ol>
 					<li>
-						На Сайте могут обрабатываться следующие данные:
+						<p>На Сайте могут обрабатываться следующие данные:</p>
 						<ul>
 							<li>Имя (если пользователь указывает его в форме);</li>
 							<li>Электронная почта;</li>
@@ -291,7 +293,7 @@ export const ru = {
 						</ul>
 					</li>
 					<li>
-						Эти данные используются исключительно для:
+						<p>Эти данные используются исключительно для:</p>
 						<ul>
 							<li>Обратной связи с пользователем;</li>
 							<li>Ответа на запросы через форму обратной связи.</li>
@@ -332,5 +334,42 @@ export const ru = {
 		buttonUp: 'Наверх',
 		copyrights: 'Все права принадлежат правообладателю.',
 		developer: 'Разработка сайта'
+	},
+	error: {
+		title: 'Такая страница не найдена. Куда дальше?',
+		links: [
+			{
+				text: 'На главную',
+				href: 'https://max-kot.github.io/veratarget/'
+			},
+			{
+				text: 'Связаться со мной',
+				href: 'https://max-kot.github.io/veratarget/#contacts'
+			},
+			{
+				text: 'Посмотреть кейсы',
+				href: 'https://max-kot.github.io/veratarget/#projects'
+			}
+		]
+	},
+	success: {
+		title: 'Спасибо за заявку!',
+		text: 'Я свяжусь с вами в ближайшее время!',
+		image: 'src/assets/images/kiss-kitty.gif',
+		socialTitle: 'Вы также можете связаться со мной через соцсети:',
+		socialLinks: [
+			{
+				text: 'Instagram',
+				href: '#'
+			},
+			{
+				text: 'Telegram',
+				href: '#'
+			},
+			{
+				text: 'LinkedIn',
+				href: '#'
+			}
+		],
 	}
 }

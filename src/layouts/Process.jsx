@@ -20,8 +20,8 @@ export const Process = ({ data }) => {
 				<div className="process__form">
 					<h3 className="process__form-title title-3">{inputTitle}</h3>
 					<div className="process__field">
-						<input className="process__input" type="text" placeholder={placeholder}/>
-						<Button href="#contacts" className="btn-arrow btn-arrow--small"><span></span></Button>
+						<input className="process__input" type="text" placeholder={placeholder} data-value-sync="message"/>
+						<Button href="#modal-form" className="btn-arrow btn-arrow--small" data-modal-btn="#modal-form"><span></span></Button>
 					</div>
 				</div>
 			</div>

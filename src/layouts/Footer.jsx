@@ -2,10 +2,10 @@ import { Button } from "../components/Button";
 import { Logo } from "../components/Logo";
 import { Year } from "../components/Year/Year";
 
-export const Footer = ({ data }) => {
+export const Footer = ({ data, className }) => {
 	const { url, buttonUp, copyrights, developer } = data;
 	return (
-		<footer className="footer">
+		<footer className={`footer ${className || ''}`.trim()}>
 			<div className="container section footer__container">
 				<Logo href={url} />
 				<Button href="#" className="btn-arrow btn-arrow--up">{buttonUp}</Button>

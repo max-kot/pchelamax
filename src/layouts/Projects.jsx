@@ -1,7 +1,7 @@
 import { Button } from "../components/Button";
 import { RunningLine } from "../components/RunningLine";
 import { Case } from "../components/Case";
-import { Modal } from "../components/Modal";
+import { ModalCase } from "../components/ModalCase";
 import { Heading } from "../components/Heading";
 
 export const Projects = ({ data }) => {
@@ -24,7 +24,7 @@ export const Projects = ({ data }) => {
 				</div>
 			</div>
 			<div className="project__modals">
-				{cases.map((item, index) => <Modal data={item} key={index} extra={{buttonModalDescription, buttonText}}/>)}
+				{cases.map((item, index) => <ModalCase data={item} key={index} extra={{buttonModalDescription, buttonText}}/>)}
 			</div>
 		</section>
 	)

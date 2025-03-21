@@ -1,6 +1,6 @@
 [data-running-line] {
 	--running-line-gap: 20px;
-	--running-line-speed: 25s;
+	--running-line-speed: 30s;
 	--running-line-direction: forwards; // reverse
 
 	overflow: hidden;
@@ -53,16 +53,13 @@
 		display: flex;
 		align-items: center;
 		gap: rem(24);
+	}
 
-		&::after {
-			content: '';
-			@include square(rem(18));
-
-			background-image: url('../images/star.svg');
-			background-position: center center;
-			background-size: 100%;
-			background-repeat: no-repeat;
-			
+	&__icon {
+		svg {
+			width: 0.7em;
+			height: 0.7em;
+			padding-bottom: 0.1em;
 		}
 	}
 }

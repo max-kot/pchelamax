@@ -20,16 +20,6 @@
 			position: relative;
 			display: grid;
 			gap: rem(10);
-
-			&::after {
-				content: "";
-				width: 100%;
-				height: rem(38);
-				background-image: url("../images/curve-line.svg");
-				background-position: center;
-				background-size: contain;
-				background-repeat: no-repeat;
-			}
 		}
 
 		@include media($mobile) {

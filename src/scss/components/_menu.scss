@@ -22,6 +22,7 @@
 	.menu-open & {
 		visibility: visible;
 		transform: translateY(0);
+		color: var(--color-text-accent);
 	}
 }
 
@@ -146,7 +147,7 @@
 			z-index: 5;
 			width: 100%;
 			height: rem(4);
-			background: var(--color-dark);
+			background: var(--color-sub-accent);;
 			right: 0;
 			transition: all var(--duration-medium);
 		}

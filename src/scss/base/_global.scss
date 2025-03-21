@@ -56,8 +56,6 @@ source {
 	height: auto;
 }
 
-
-
 body {
 	min-width: rem($finishBreakpoint); // ! сайт будет масштабироваться
 	min-height: 100dvh;
@@ -72,7 +70,8 @@ body {
 		line-height: 140%;
 	}
 
-	.menu-open & {
+	.menu-open &,
+	.loader-shown & {
 		overflow: hidden;
 	}
 }

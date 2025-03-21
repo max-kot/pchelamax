@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru" class="ru">
+<html lang="ru" class="ru loader-shown">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,17 @@
   </head>
   <body>
     <div class="wrapper">
+      <div class="loader" data-loader="true">
+        <div class="running-line loader__running-line" style="--running-line-speed:60s" data-running-line="true">
+          <ul class="running-line__list" data-running-line-list="true">
+            <li class="running-line__item">VeraTarget<span class="running-line__icon">
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.08 11.5121H12.788L16.568 15.2921L14.372 17.4161L10.628 13.6721V19.0001L7.56802 18.9641V13.6721L3.78802 17.4521L1.66402 15.2561L5.40802 11.5121H0.0800171V8.45211H5.40802L1.62802 4.67211L3.78802 2.51211L7.56802 6.29211V0.964111H10.628V6.29211L14.408 2.51211L16.568 4.67211L12.788 8.45211H18.08V11.5121Z" fill="#212529"></path>
+                </svg>
+              </span></li>
+          </ul>
+        </div>
+      </div>
       <header class="header" data-auto-calc="header, height">
         <div class="container header__container">
           <a class="logo" href="#">VeraTarget</a>
@@ -70,7 +81,11 @@
           <h2 class="visually-hidden">Услуги</h2>
           <div class="running-line" data-running-line="true">
             <ul class="running-line__list" data-running-line-list="true">
-              <li class="running-line__item">Услуги</li>
+              <li class="running-line__item">Услуги<span class="running-line__icon">
+                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.08 11.5121H12.788L16.568 15.2921L14.372 17.4161L10.628 13.6721V19.0001L7.56802 18.9641V13.6721L3.78802 17.4521L1.66402 15.2561L5.40802 11.5121H0.0800171V8.45211H5.40802L1.62802 4.67211L3.78802 2.51211L7.56802 6.29211V0.964111H10.628V6.29211L14.408 2.51211L16.568 4.67211L12.788 8.45211H18.08V11.5121Z" fill="#212529"></path>
+                  </svg>
+                </span></li>
             </ul>
           </div>
           <div class="container services__container section">
@@ -104,7 +119,11 @@
           <h2 class="visually-hidden">Кейсы</h2>
           <div class="running-line" data-running-line="true">
             <ul class="running-line__list" data-running-line-list="true">
-              <li class="running-line__item">Кейсы</li>
+              <li class="running-line__item">Кейсы<span class="running-line__icon">
+                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.08 11.5121H12.788L16.568 15.2921L14.372 17.4161L10.628 13.6721V19.0001L7.56802 18.9641V13.6721L3.78802 17.4521L1.66402 15.2561L5.40802 11.5121H0.0800171V8.45211H5.40802L1.62802 4.67211L3.78802 2.51211L7.56802 6.29211V0.964111H10.628V6.29211L14.408 2.51211L16.568 4.67211L12.788 8.45211H18.08V11.5121Z" fill="#212529"></path>
+                  </svg>
+                </span></li>
             </ul>
           </div>
           <div class="container projects__container section">
@@ -170,15 +189,15 @@
             </div>
           </div>
           <div class="project__modals">
-            <div class="project-modal" data-modal="#case-1">
-              <div class="project-modal__image" aria-hidden="true">
+            <div class="modal project-modal" data-modal="#case-1" id="case-1">
+              <figure class="image-box modal__image" aria-hidden="true">
                 <picture>
                   <source srcset="assets/images/case-1-320x285.avif 320w, assets/images/case-1-400x356.avif 400w, assets/images/case-1-585x520.avif 585w" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" type="image/avif">
                   <source srcset="assets/images/case-1-320x285.webp 320w, assets/images/case-1-400x356.webp 400w, assets/images/case-1-585x520.webp 585w" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" type="image/webp">
                   <img srcset="assets/images/case-1-320x285.jpg 320w, assets/images/case-1-400x356.jpg 400w, assets/images/case-1-585x520.jpg 585w" src="assets/images/case-1-585x520.jpg" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" alt="Мастер перманентного макияжа" decoding="async" loading="lazy" title="Мастер перманентного макияжа">
                 </picture>
-              </div>
-              <div class="project-modal__inner">
+              </figure>
+              <div class="modal__inner">
                 <h3 class="project-modal__title title-2">Мастер перманентного макияжа</h3>
                 <div class="project-modal__content">
                   <div class="text-content">
@@ -207,15 +226,15 @@
                 </div>
               </div>
             </div>
-            <div class="project-modal" data-modal="#case-2">
-              <div class="project-modal__image" aria-hidden="true">
+            <div class="modal project-modal" data-modal="#case-2" id="case-2">
+              <figure class="image-box modal__image" aria-hidden="true">
                 <picture>
                   <source srcset="assets/images/case-2-320x285.avif 320w, assets/images/case-2-400x356.avif 400w, assets/images/case-2-585x520.avif 585w" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" type="image/avif">
                   <source srcset="assets/images/case-2-320x285.webp 320w, assets/images/case-2-400x356.webp 400w, assets/images/case-2-585x520.webp 585w" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" type="image/webp">
                   <img srcset="assets/images/case-2-320x285.jpg 320w, assets/images/case-2-400x356.jpg 400w, assets/images/case-2-585x520.jpg 585w" src="assets/images/case-2-585x520.jpg" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" alt="Стартап по установке натяжных потолков" decoding="async" loading="lazy" title="Стартап по установке натяжных потолков">
                 </picture>
-              </div>
-              <div class="project-modal__inner">
+              </figure>
+              <div class="modal__inner">
                 <h3 class="project-modal__title title-2">Стартап по установке натяжных потолков</h3>
                 <div class="project-modal__content"></div>
                 <div class="project-modal__btn-box">
@@ -224,15 +243,15 @@
                 </div>
               </div>
             </div>
-            <div class="project-modal" data-modal="#case-3">
-              <div class="project-modal__image" aria-hidden="true">
+            <div class="modal project-modal" data-modal="#case-3" id="case-3">
+              <figure class="image-box modal__image" aria-hidden="true">
                 <picture>
                   <source srcset="assets/images/case-3-320x285.avif 320w, assets/images/case-3-400x356.avif 400w, assets/images/case-3-585x520.avif 585w" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" type="image/avif">
                   <source srcset="assets/images/case-3-320x285.webp 320w, assets/images/case-3-400x356.webp 400w, assets/images/case-3-585x520.webp 585w" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" type="image/webp">
                   <img srcset="assets/images/case-3-320x285.jpg 320w, assets/images/case-3-400x356.jpg 400w, assets/images/case-3-585x520.jpg 585w" src="assets/images/case-3-585x520.jpg" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" alt="Стартап по разработке сайтов и веб-приложений" decoding="async" loading="lazy" title="Стартап по разработке сайтов и веб-приложений">
                 </picture>
-              </div>
-              <div class="project-modal__inner">
+              </figure>
+              <div class="modal__inner">
                 <h3 class="project-modal__title title-2">Стартап по разработке сайтов и веб-приложений</h3>
                 <div class="project-modal__content"></div>
                 <div class="project-modal__btn-box">
@@ -241,15 +260,15 @@
                 </div>
               </div>
             </div>
-            <div class="project-modal" data-modal="#case-4">
-              <div class="project-modal__image" aria-hidden="true">
+            <div class="modal project-modal" data-modal="#case-4" id="case-4">
+              <figure class="image-box modal__image" aria-hidden="true">
                 <picture>
                   <source srcset="assets/images/case-4-320x285.avif 320w, assets/images/case-4-400x356.avif 400w, assets/images/case-4-585x520.avif 585w" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" type="image/avif">
                   <source srcset="assets/images/case-4-320x285.webp 320w, assets/images/case-4-400x356.webp 400w, assets/images/case-4-585x520.webp 585w" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" type="image/webp">
                   <img srcset="assets/images/case-4-320x285.jpg 320w, assets/images/case-4-400x356.jpg 400w, assets/images/case-4-585x520.jpg 585w" src="assets/images/case-4-585x520.jpg" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" alt="Компания по импорту рыбной продукции из Норвегии" decoding="async" loading="lazy" title="Компания по импорту рыбной продукции из Норвегии">
                 </picture>
-              </div>
-              <div class="project-modal__inner">
+              </figure>
+              <div class="modal__inner">
                 <h3 class="project-modal__title title-2">Компания по импорту рыбной продукции из Норвегии</h3>
                 <div class="project-modal__content"></div>
                 <div class="project-modal__btn-box">
@@ -264,7 +283,11 @@
           <h2 class="visually-hidden">Процесс работы</h2>
           <div class="running-line" style="--running-line-speed:50s" data-running-line="true">
             <ul class="running-line__list" data-running-line-list="true">
-              <li class="running-line__item">Процесс работы</li>
+              <li class="running-line__item">Процесс работы<span class="running-line__icon">
+                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.08 11.5121H12.788L16.568 15.2921L14.372 17.4161L10.628 13.6721V19.0001L7.56802 18.9641V13.6721L3.78802 17.4521L1.66402 15.2561L5.40802 11.5121H0.0800171V8.45211H5.40802L1.62802 4.67211L3.78802 2.51211L7.56802 6.29211V0.964111H10.628V6.29211L14.408 2.51211L16.568 4.67211L12.788 8.45211H18.08V11.5121Z" fill="#212529"></path>
+                  </svg>
+                </span></li>
             </ul>
           </div>
           <div class="container section process__container">
@@ -307,8 +330,8 @@
             <div class="process__form">
               <h3 class="process__form-title title-3">Нужны детали?</h3>
               <div class="process__field">
-                <input class="process__input" type="text" placeholder="Спрашивайте, я всегда на связи!">
-                <a class="btn btn-arrow btn-arrow--small" href="#contacts"><span></span></a>
+                <input class="process__input" type="text" placeholder="Спрашивайте, я всегда на связи!" data-value-sync="message">
+                <a class="btn btn-arrow btn-arrow--small" href="#modal-form" data-modal-btn="#modal-form"><span></span></a>
               </div>
             </div>
           </div>
@@ -317,12 +340,27 @@
           <h2 class="visually-hidden">Обо мне</h2>
           <div class="running-line" data-running-line="true">
             <ul class="running-line__list" data-running-line-list="true">
-              <li class="running-line__item">Обо мне</li>
+              <li class="running-line__item">Обо мне<span class="running-line__icon">
+                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.08 11.5121H12.788L16.568 15.2921L14.372 17.4161L10.628 13.6721V19.0001L7.56802 18.9641V13.6721L3.78802 17.4521L1.66402 15.2561L5.40802 11.5121H0.0800171V8.45211H5.40802L1.62802 4.67211L3.78802 2.51211L7.56802 6.29211V0.964111H10.628V6.29211L14.408 2.51211L16.568 4.67211L12.788 8.45211H18.08V11.5121Z" fill="#212529"></path>
+                  </svg>
+                </span></li>
             </ul>
           </div>
           <div class="container section about__container">
             <div class="heading about__heading">
-              <h3 class="heading__title title-2">Привет!<br>Я Вера<br>— ваш таргетолог</h3>
+              <h3 class="heading__title title-2">Привет!<br>Я Вера<br>— ваш таргетолог<span class="heading__icon">
+                  <svg width="320" height="32" viewBox="0 0 320 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <path d="M323 13L318.314 8.31374C312.065 2.06535 301.935 2.06535 295.686 8.31374L286.314 17.6863C280.065 23.9347 269.935 23.9347 263.686 17.6863L254.314 8.31372C248.065 2.06534 237.935 2.06534 231.686 8.31373L222.314 17.6863C216.065 23.9347 205.935 23.9347 199.686 17.6863L190.314 8.31372C184.065 2.06533 173.935 2.06534 167.686 8.31373L158.314 17.6863C152.065 23.9347 141.935 23.9347 135.686 17.6863L126.314 8.31371C120.065 2.06532 109.935 2.06533 103.686 8.31372L94.3137 17.6863C88.0653 23.9347 77.9347 23.9347 71.6863 17.6863L62.3137 8.31371C56.0653 2.06532 45.9347 2.06533 39.6863 8.31372L30.3137 17.6863C24.0653 23.9347 13.9347 23.9347 7.68629 17.6863L3 13" stroke="#FFD43B" stroke-width="6">
+                        <animateTransform attributeName="transform" type="translate" from="0 0" to="-256 0" dur="8s" repeatCount="indefinite"></animateTransform>
+                      </path>
+                      <path d="M323 13L318.314 8.31374C312.065 2.06535 301.935 2.06535 295.686 8.31374L286.314 17.6863C280.065 23.9347 269.935 23.9347 263.686 17.6863L254.314 8.31372C248.065 2.06534 237.935 2.06534 231.686 8.31373L222.314 17.6863C216.065 23.9347 205.935 23.9347 199.686 17.6863L190.314 8.31372C184.065 2.06533 173.935 2.06534 167.686 8.31373L158.314 17.6863C152.065 23.9347 141.935 23.9347 135.686 17.6863L126.314 8.31371C120.065 2.06532 109.935 2.06533 103.686 8.31372L94.3137 17.6863C88.0653 23.9347 77.9347 23.9347 71.6863 17.6863L62.3137 8.31371C56.0653 2.06532 45.9347 2.06533 39.6863 8.31372L30.3137 17.6863C24.0653 23.9347 13.9347 23.9347 7.68629 17.6863L3 13" stroke="#FFD43B" stroke-width="6">
+                        <animateTransform attributeName="transform" type="translate" from="256 0" to="0 0" dur="8s" repeatCount="indefinite"></animateTransform>
+                      </path>
+                    </g>
+                  </svg>
+                </span></h3>
               <p class="heading__description">Мой опыт в разных сферах позволяет мне не просто настраивать рекламу, а выстраивать её так, чтобы она работала на вас и ваш бизнес.</p>
             </div>
             <div class="about__image">
@@ -373,7 +411,11 @@
           <h2 class="visually-hidden">Отзывы</h2>
           <div class="running-line" style="--running-line-speed:30s" data-running-line="true">
             <ul class="running-line__list" data-running-line-list="true">
-              <li class="running-line__item">Отзывы</li>
+              <li class="running-line__item">Отзывы<span class="running-line__icon">
+                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.08 11.5121H12.788L16.568 15.2921L14.372 17.4161L10.628 13.6721V19.0001L7.56802 18.9641V13.6721L3.78802 17.4521L1.66402 15.2561L5.40802 11.5121H0.0800171V8.45211H5.40802L1.62802 4.67211L3.78802 2.51211L7.56802 6.29211V0.964111H10.628V6.29211L14.408 2.51211L16.568 4.67211L12.788 8.45211H18.08V11.5121Z" fill="#212529"></path>
+                  </svg>
+                </span></li>
             </ul>
           </div>
           <div class="reviews__container reviews__container">
@@ -428,7 +470,11 @@
           <h2 class="visually-hidden">Контакты</h2>
           <div class="running-line" style="--running-line-speed:30s" data-running-line="true">
             <ul class="running-line__list" data-running-line-list="true">
-              <li class="running-line__item">Контакты</li>
+              <li class="running-line__item">Контакты<span class="running-line__icon">
+                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.08 11.5121H12.788L16.568 15.2921L14.372 17.4161L10.628 13.6721V19.0001L7.56802 18.9641V13.6721L3.78802 17.4521L1.66402 15.2561L5.40802 11.5121H0.0800171V8.45211H5.40802L1.62802 4.67211L3.78802 2.51211L7.56802 6.29211V0.964111H10.628V6.29211L14.408 2.51211L16.568 4.67211L12.788 8.45211H18.08V11.5121Z" fill="#212529"></path>
+                  </svg>
+                </span></li>
             </ul>
           </div>
           <div class="container section contacts__container">
@@ -438,12 +484,12 @@
             </div>
             <form class="contacts__form form" data-validator="true">
               <div class="form-field">
-                <input class="form-field__input" id="name" name="name" type="text" required="" autocomplete="off">
+                <input class="form-field__input" id="name" name="name" type="text" required="" autocomplete="off" data-value-sync="name">
                 <label for="name" class="form-field__label">Ваше имя</label>
               </div>
               <div class="form-field form-field--select">
-                <input class="form-field__input" id="contact-data" name="contact-data" type="text" required="" autocomplete="off">
-                <select class="form-field__select" name="contact-value" id="contact-value" data-select="true">
+                <input class="form-field__input" id="contact-data" name="contact-data" type="text" required="" autocomplete="off" data-value-sync="contact-data">
+                <select class="form-field__select" name="contact-value" id="contact-value" data-select="true" data-value-sync="select">
                   <option value="phone">телефон</option>
                   <option value="instagram">инстаграм</option>
                   <option value="telegram">телеграм</option>
@@ -454,12 +500,12 @@
                 <label for="contact-data" class="form-field__label">Контактные данные</label>
               </div>
               <div class="form-field">
-                <textarea class="form-field__input form-field__textarea" name="message" id="message"></textarea>
+                <textarea class="form-field__input form-field__textarea" name="message" id="message" data-value-sync="message"></textarea>
                 <label for="message" class="form-field__label">Ваше сообщение</label>
               </div><small class="form__description">*Отправляя заявку, вы соглашаетесь <a class="btn link-policy" href="#policy" data-modal-btn="#policy">с политикой обработки персональных данных</a></small>
               <button class="btn btn-arrow form__btn" type="submit">Отправить<span></span></button>
             </form>
-            <div class="contacts__social social">
+            <div class="social contacts__social">
               <h3 class="title-3 social__title">Вы также можете связаться со мной через соцсети:</h3>
               <ul class="social__list">
                 <li class="social__item">
@@ -484,10 +530,10 @@
           </p>
         </div>
       </footer>
-      <div class="project-modal" data-modal="#policy" id="policy">
-        <div class="project-modal__inner">
-          <h3 class="project-modal__title title-2">Политика обработки персональных данных</h3>
-          <div class="project-modal__content">
+      <div class="modal policy" data-modal="policy" id="policy">
+        <div class="modal__inner">
+          <h3 class="policy__title title-2">Политика обработки персональных данных</h3>
+          <div class="policy__content">
             <div class="text-content">
               <h4 class="title-3">Общие положения</h4>
               <ol>
@@ -499,14 +545,18 @@
             <div class="text-content">
               <h4 class="title-3">Какие данные собираются и для чего</h4>
               <ol>
-                <li>На Сайте могут обрабатываться следующие данные:<ul>
+                <li>
+                  <p>На Сайте могут обрабатываться следующие данные:</p>
+                  <ul>
                     <li>Имя (если пользователь указывает его в форме);</li>
                     <li>Электронная почта;</li>
                     <li>Номер телефона;</li>
                     <li>Другая информация, предоставленная пользователем.</li>
                   </ul>
                 </li>
-                <li>Эти данные используются исключительно для:<ul>
+                <li>
+                  <p>Эти данные используются исключительно для:</p>
+                  <ul>
                     <li>Обратной связи с пользователем;</li>
                     <li>Ответа на запросы через форму обратной связи.</li>
                   </ul>
@@ -543,6 +593,66 @@
             </div>
             <div class="text-content">
               <h4 class="title-3">Настоящая Политика вступает в силу с момента публикации на Сайте.</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal modal-form" data-modal="modal-form" id="modal-form">
+        <div class="modal__inner">
+          <div class="heading">
+            <h3 class="heading__title title-2">Уточняющие детали перед отправкой</h3>
+            <p class="heading__description">Оставьте ваши контакты и я свяжусь с вами в ближайшее время.</p>
+          </div>
+          <div class="modal__form form" data-validator="true">
+            <div class="form-field">
+              <input class="form-field__input" id="name-2" name="name" type="text" required="" autocomplete="off" data-value-sync="name">
+              <label for="name-2" class="form-field__label">Ваше имя</label>
+            </div>
+            <div class="form-field form-field--select">
+              <input class="form-field__input" id="contact-data-2" name="contact-data" type="text" required="" autocomplete="off" data-value-sync="contact-data">
+              <select class="form-field__select" name="contact-value" id="contact-value" data-value-sync="select" data-select="true">
+                <option value="phone">телефон</option>
+                <option value="instagram">инстаграм</option>
+                <option value="telegram">телеграм</option>
+                <option value="whatsapp">ватсап</option>
+                <option value="viber">вайбер</option>
+                <option value="email">эл-почта</option>
+              </select>
+              <label for="contact-data-2" class="form-field__label">Контактные данные</label>
+            </div>
+            <div class="form-field">
+              <textarea class="form-field__input form-field__textarea" name="message" id="message-2" data-value-sync="message"></textarea>
+              <label for="message-2" class="form-field__label">Ваше сообщение</label>
+            </div><small class="form__description">*Отправляя заявку, вы соглашаетесь <a class="btn link-policy" href="#policy" data-modal-btn="#policy">с политикой обработки персональных данных</a></small>
+            <button class="btn btn-arrow form__btn" type="button">Отправить<span></span></button>
+          </div>
+        </div>
+      </div>
+      <div class="modal success" data-modal="success" id="success">
+        <div class="modal__inner">
+          <figure class="image-box success__image">
+            <picture>
+              <source srcset="assets/images/kiss-kitty-320x294.avif 320w, assets/images/kiss-kitty-400x368.avif 400w, assets/images/kiss-kitty-498x458.avif 498w" sizes="(min-width: 498px) 498px, 100vw" width="498" height="458" type="image/avif">
+              <source srcset="assets/images/kiss-kitty-320x294.webp 320w, assets/images/kiss-kitty-400x368.webp 400w, assets/images/kiss-kitty-498x458.webp 498w" sizes="(min-width: 498px) 498px, 100vw" width="498" height="458" type="image/webp">
+              <img srcset="assets/images/kiss-kitty-320x294.jpg 320w, assets/images/kiss-kitty-400x368.jpg 400w, assets/images/kiss-kitty-498x458.jpg 498w" src="assets/images/kiss-kitty-498x458.jpg" sizes="(min-width: 498px) 498px, 100vw" width="498" height="458" alt decoding="async" loading="lazy">
+            </picture>
+          </figure>
+          <div class="success__content">
+            <h3 class="success__title title-2">Спасибо за заявку!</h3>
+            <p class="success__text title-3">Я свяжусь с вами в ближайшее время!</p>
+            <div class="social success__social">
+              <h3 class="title-3 social__title">Вы также можете связаться со мной через соцсети:</h3>
+              <ul class="social__list">
+                <li class="social__item">
+                  <a href="#" class="social__link link" target="_blank">Instagram</a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link link" target="_blank">Telegram</a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link link" target="_blank">LinkedIn</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

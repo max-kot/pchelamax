@@ -282,7 +282,7 @@ export const en = {
 			<TextContent title="What data is collected and why">
 				<ol>
 					<li>
-						The following data can be processed on the site:
+						<p>The following data can be processed on the site:</p>
 						<ul>
 							<li>Name (if the user indicates it in the form);</li>
 							<li>E-mail;</li>
@@ -291,7 +291,7 @@ export const en = {
 						</ul>
 					</li>
 					<li>
-						These data are used exclusively for:
+						<p>These data are used exclusively for:</p>
 						<ul>
 							<li>Feedback with the user;</li>
 							<li>Reply to requests through the feedback form.</li>
@@ -329,8 +329,45 @@ export const en = {
 	},
 	footer: {
 		url: '/',
-		buttonUp: 'To top',
+		buttonUp: 'To the top',
 		copyrights: 'All rights belong to the copyright holder.',
 		developer: 'Site development'
+	},
+	error: {
+		title: 'Page is not found. Where will you go next?',
+		links: [
+			{
+				text: 'Home',
+				href: 'https://max-kot.github.io/veratarget/'
+			},
+			{
+				text: 'Contact me',
+				href: 'https://max-kot.github.io/veratarget/#contacts'
+			},
+			{
+				text: 'View cases',
+				href: 'https://max-kot.github.io/veratarget/#projects'
+			}
+		]
+	},
+	success: {
+		title: 'Thanks for the application!',
+		text: 'I will contact you in the near future!',
+		image: 'src/assets/images/kiss-kitty.gif',
+		socialTitle: 'You can also contact me through social networks:',
+		socialLinks: [
+			{
+				text: 'Instagram',
+				href: '#'
+			},
+			{
+				text: 'Telegram',
+				href: '#'
+			},
+			{
+				text: 'LinkedIn',
+				href: '#'
+			}
+		],
 	}
 }

@@ -7,15 +7,20 @@
 }
 
 @mixin label-btn-core {
+	--bg: var(--color-accent);
+	--color: var(--color-sub-accent);
+	--hover-bg: var(--color-sub-accent);
+	--hover-color: var(--color-accent);
+
 	@include square(adapt(180, 140));
-	background: var(--color-accent);
+	background: var(--bg);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding-top: 60px;
 	margin-top: rem(-104);
 	border-radius: 50%;
-	color: var(--color-sub-accent);
+	color: var(--color);
 	font-family: var(--secondary-font);
 	font-weight: 500;
 	transition: color var(--duration-medium);
@@ -25,23 +30,42 @@
 		z-index: 2;
 	}
 
-	@include circleHover(var(--color-dark));
+	@include circleHover(var(--hover-bg));
 	@include hover {
-		color: var(--color-accent);
+		color: var(--hover-color);
+	}
+
+	.error-page & {
+	}
+
+	.error-page &,
+	.menu-open & {
+		--bg: var(--color-sub-accent);
+		--color: var(--color-accent);
+		--hover-color: var(--color-sub-accent);
+		--hover-bg: var(--color-light);
 	}
 }
 
 .btn {
 }
 
-.link[href] {
+.link {
+	--color: var(--color-accent);
+
 	color: inherit;
 	transition: color var(--duration-fast);
 
-	@include hoverLine(var(--color-accent), 4px, 4px, width var(--duration-fast));
+	@include hoverLine(var(--color), 0.15em, 0.15em, width var(--duration-fast));
 
 	@include hover {
 		color: var(--color-dark);
+	}
+
+	.error-page &,
+	.menu-open &,
+	&--dark-line {
+		--color: var(--color-sub-accent);
 	}
 }
 
@@ -145,7 +169,6 @@
 			top: -10px;
 			width: rem(60);
 			height: rem(40);
-			
 		}
 
 		@include hover {

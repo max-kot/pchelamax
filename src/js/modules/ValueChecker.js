@@ -1,7 +1,8 @@
 export class ValueChecker {
 	constructor(selector, options) {
 		const defaultOptions = {
-			className: 'has-value'
+			className: 'has-value',
+			watchAll: false, // нужен для синхронного плагина ValueSync
 		}
 		this.selector = selector || 'input, textarea';
 		this.options = { ...defaultOptions, ...options };
@@ -9,7 +10,7 @@ export class ValueChecker {
 		this.init()
 	}
 
-	checkValue(input) {
+	compareValue(input) {
 		const { className } = this.options;
 
 		if (input.value.trim()) {
@@ -17,6 +18,17 @@ export class ValueChecker {
 		} else {
 			input.classList.remove(className)
 		}
+	}
+	checkValue(input) {
+		const { watchAll } = this.options;
+
+		if (watchAll) {
+			this.allInputs.forEach(inputItem => {
+				this.compareValue(inputItem)
+			})
+		}
+
+		this.compareValue(input);
 	}
 
 	init() {

@@ -25,6 +25,6 @@ export class Loader {
 			document.documentElement.classList.remove(htmlClass);
 			document.documentElement.classList.add(hiddenClass);
 			setTimeout(() => this.loader.remove(), 5000);
-		}, 1000))
+		}, 500))
 	}
 }

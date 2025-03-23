@@ -15,6 +15,7 @@ export const Header = ({ data, className }) => {
 					href="#contacts"
 					className="btn-label header__btn"
 					data-auto-calc="btn-contacts, height"
+					data-menu-close-btn
 					>
 					<span>{btn}</span>
 				</Button>

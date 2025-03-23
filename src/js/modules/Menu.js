@@ -9,7 +9,8 @@ export class Menu {
 				mediaScreen: 'max-width: 1024px',
 				role: 'dialog',
 				aria: 'aria-modal'
-			}
+			},
+			additionalCloseButton: '[data-menu-close-btn]',
 		}
 
 		this.options = Object.assign(defaultOptions, options);
@@ -69,7 +70,7 @@ export class Menu {
 	}
 
 	init() {
-		const { btnSelector, listSelector, parents, activeClass, accessibility } = this.options;
+		const { btnSelector, listSelector, parents, activeClass, accessibility, additionalCloseButton } = this.options;
 
 		if (!this.elements) {
 			console.warn(`Selector ${this.elements} is not found!`)
@@ -92,8 +93,15 @@ export class Menu {
 				})
 			}
 
-			document.addEventListener('keydown', ({ code: key }) => key === 'Escape' && this.closeMenu(parents, activeClass))
 			allLinks.forEach(link => link.addEventListener('pointerdown', () => this.closeMenu(parents, activeClass)))
+		})
+
+		document.addEventListener('keydown', ({ code: key }) => key === 'Escape' && this.closeMenu(parents, activeClass))
+		document.addEventListener('click', e => {
+			const closeTrigger = e.target.closest(additionalCloseButton);
+			if (closeTrigger) {
+				this.menuOpen && this.toggleMenu(parents, activeClass)
+			}
 		})
 	}
 }

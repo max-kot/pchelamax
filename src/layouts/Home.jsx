@@ -10,11 +10,12 @@ import { Policy } from "./Policy";
 import { Footer } from "./Footer";
 import { ModalForm } from "./ModalForm";
 import { ModalSuccess } from "./ModalSuccess";
+import { ModalError } from "./ModalError.jsx";
 
 export const Home = ({ locale }) => {
 	return (
 		<>
-			<Header data={locale.header} />
+			<Header data={locale.header}/>
 			<main className="main">
 				<Hero data={locale.hero} url={locale.header.url} />
 				<Services data={locale.services} />
@@ -29,6 +30,7 @@ export const Home = ({ locale }) => {
 			<Policy data={locale.policy} />
 			<ModalForm data={locale.contacts} />
 			<ModalSuccess data={locale.success} />
+			<ModalError data={locale.errorForm} />
 		</>
 	)
 };

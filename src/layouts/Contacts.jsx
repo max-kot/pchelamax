@@ -10,7 +10,7 @@ export const Contacts = ({ data }) => {
 	return (
 		<Section title={title} className="contacts" speed="30s">
 			<Heading title={subtitle} className="contacts__heading">{description}</Heading>
-			<form className="contacts__form form" data-validator>
+			<form className="contacts__form form" data-validator data-send-form>
 				<FloatingLabel label={formName} labelFor="name">
 					<input className="form-field__input" id="name" name="name" type="text" required autocomplete="off" data-value-sync="name" />
 				</FloatingLabel>

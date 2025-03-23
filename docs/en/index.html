@@ -132,7 +132,7 @@
                 <h3 class="heading__title title-2">From clicks to sales - real cases</h3>
                 <p class="heading__description">Targeted advertising is not luck, but a strategy.We analyze the cases where the right solutions led to high results.</p>
               </div>
-              <article class="projects__item project">
+              <article class="projects__item project" data-aos="fade-down" data-aos-delay="200">
                 <a class="project__link" href="#case-2" data-modal-btn="#case-2">
                   <div class="project__image">
                     <picture>
@@ -144,7 +144,7 @@
                   <h4 class="project__title title-3">Startup installation of stretch ceilings</h4>
                 </a>
               </article>
-              <article class="projects__item project">
+              <article class="projects__item project" data-aos="fade-down" data-aos-delay="400">
                 <a class="project__link" href="#case-4" data-modal-btn="#case-4">
                   <div class="project__image">
                     <picture>
@@ -158,7 +158,7 @@
               </article>
             </div>
             <div class="projects__column projects__column--right">
-              <article class="projects__item project">
+              <article class="projects__item project" data-aos="fade-down" data-aos-delay="100">
                 <a class="project__link" href="#case-1" data-modal-btn="#case-1">
                   <div class="project__image">
                     <picture>
@@ -170,7 +170,7 @@
                   <h4 class="project__title title-3">Master of permanent makeup</h4>
                 </a>
               </article>
-              <article class="projects__item project">
+              <article class="projects__item project" data-aos="fade-down" data-aos-delay="300">
                 <a class="project__link" href="#case-3" data-modal-btn="#case-3">
                   <div class="project__image">
                     <picture>
@@ -222,7 +222,7 @@
                 </div>
                 <div class="project-modal__btn-box">
                   <p class="project-modal__subtitle title-3">Do you want advertising to work effectively?</p>
-                  <a class="btn btn-arrow" href="#contacts">Let&#x27;s discuss your project<span></span></a>
+                  <a class="btn btn-arrow" href="#contacts" data-modal-close-btn="true">Let&#x27;s discuss your project<span></span></a>
                 </div>
               </div>
             </div>
@@ -239,7 +239,7 @@
                 <div class="project-modal__content"></div>
                 <div class="project-modal__btn-box">
                   <p class="project-modal__subtitle title-3">Do you want advertising to work effectively?</p>
-                  <a class="btn btn-arrow" href="#contacts">Let&#x27;s discuss your project<span></span></a>
+                  <a class="btn btn-arrow" href="#contacts" data-modal-close-btn="true">Let&#x27;s discuss your project<span></span></a>
                 </div>
               </div>
             </div>
@@ -256,7 +256,7 @@
                 <div class="project-modal__content"></div>
                 <div class="project-modal__btn-box">
                   <p class="project-modal__subtitle title-3">Do you want advertising to work effectively?</p>
-                  <a class="btn btn-arrow" href="#contacts">Let&#x27;s discuss your project<span></span></a>
+                  <a class="btn btn-arrow" href="#contacts" data-modal-close-btn="true">Let&#x27;s discuss your project<span></span></a>
                 </div>
               </div>
             </div>
@@ -273,7 +273,7 @@
                 <div class="project-modal__content"></div>
                 <div class="project-modal__btn-box">
                   <p class="project-modal__subtitle title-3">Do you want advertising to work effectively?</p>
-                  <a class="btn btn-arrow" href="#contacts">Let&#x27;s discuss your project<span></span></a>
+                  <a class="btn btn-arrow" href="#contacts" data-modal-close-btn="true">Let&#x27;s discuss your project<span></span></a>
                 </div>
               </div>
             </div>
@@ -438,7 +438,7 @@
                         <p class="reviews-slide__name">Elena</p>
                         <p class="reviews-slide__position">Master of permanent makeup</p>
                       </div>
-                      <a class="btn btn-arrow btn-arrow--small" href="#"><span></span></a>
+                      <a class="btn btn-arrow btn-arrow--small" href="#case-1"><span></span></a>
                     </div>
                   </div>
                 </div>
@@ -455,7 +455,7 @@
                         <p class="reviews-slide__name">Dmitry</p>
                         <p class="reviews-slide__position">Owner of the online clothing store</p>
                       </div>
-                      <a class="btn btn-arrow btn-arrow--small" href="#"><span></span></a>
+                      <a class="btn btn-arrow btn-arrow--small" href="#case-2"><span></span></a>
                     </div>
                   </div>
                 </div>
@@ -482,7 +482,7 @@
               <h3 class="heading__title title-2">Let&#x27;s discuss your promotion strategy</h3>
               <p class="heading__description">Leave your contacts or write to me, and I will help you start advertising.</p>
             </div>
-            <form class="contacts__form form" data-validator="true">
+            <form class="contacts__form form" data-validator="true" data-send-form="true">
               <div class="form-field">
                 <input class="form-field__input" id="name" name="name" type="text" required="" autocomplete="off" data-value-sync="name">
                 <label for="name" class="form-field__label">Your name</label>
@@ -624,18 +624,14 @@
               <textarea class="form-field__input form-field__textarea" name="message" id="message-2" data-value-sync="message"></textarea>
               <label for="message-2" class="form-field__label">Your message</label>
             </div><small class="form__description">*By sending an application, you agree <a class="btn link-policy" href="#policy" data-modal-btn="#policy">with personal data processing policy</a></small>
-            <button class="btn btn-arrow form__btn" type="button">Send<span></span></button>
+            <button class="btn btn-arrow form__btn" type="button" data-send-form-btn="true">Send<span></span></button>
           </div>
         </div>
       </div>
       <div class="modal success" data-modal="success" id="success">
         <div class="modal__inner">
           <figure class="image-box success__image">
-            <picture>
-              <source srcset="../assets/images/kiss-kitty-320x294.avif 320w, ../assets/images/kiss-kitty-400x368.avif 400w, ../assets/images/kiss-kitty-498x458.avif 498w" sizes="(min-width: 498px) 498px, 100vw" width="498" height="458" type="image/avif">
-              <source srcset="../assets/images/kiss-kitty-320x294.webp 320w, ../assets/images/kiss-kitty-400x368.webp 400w, ../assets/images/kiss-kitty-498x458.webp 498w" sizes="(min-width: 498px) 498px, 100vw" width="498" height="458" type="image/webp">
-              <img srcset="../assets/images/kiss-kitty-320x294.jpg 320w, ../assets/images/kiss-kitty-400x368.jpg 400w, ../assets/images/kiss-kitty-498x458.jpg 498w" src="../assets/images/kiss-kitty-498x458.jpg" sizes="(min-width: 498px) 498px, 100vw" width="498" height="458" alt decoding="async" loading="lazy">
-            </picture>
+            <img src="../images/kiss-kitty.gif" loading="lazy">
           </figure>
           <div class="success__content">
             <h3 class="success__title title-2">Thanks for the application!</h3>
@@ -655,6 +651,14 @@
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="modal error-modal" data-modal="error-modal" id="error-modal">
+        <div class="modal__inner">
+          <div class="error-modal__content">
+            <h3 class="error-modal__title title-2">Error when sending a form</h3>
+          </div>
+          <p class="error-modal__text title-3">Try again, or check the Internet connection</p>
         </div>
       </div>
     </div>

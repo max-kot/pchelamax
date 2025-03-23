@@ -195,6 +195,7 @@ export class Select {
 		const listId = `${className.list}-${Math.random().toString(36).slice(2, 9)}`;
 		list.setAttribute('id', listId);
 		input.setAttribute('aria-controls', listId);
+		input.setAttribute('data-select-input', true);
 
 		this.copyClass(select, wrapper);
 		this.copyAttrs(select, input);

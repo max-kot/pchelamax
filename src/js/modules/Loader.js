@@ -23,7 +23,8 @@ export class Loader {
 		window.addEventListener('load', () => setTimeout(() => {
 			this.loader.classList.add(hiddenClass);
 			document.documentElement.classList.remove(htmlClass);
+			document.documentElement.classList.add(hiddenClass);
 			setTimeout(() => this.loader.remove(), 5000);
-		}, 1500))
+		}, 1000))
 	}
 }

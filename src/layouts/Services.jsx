@@ -9,7 +9,7 @@ export const Services = ({ data }) => {
 			<RunningLine>{title}</RunningLine>
 			<div className="container services__container section">
 				<ul className="services__tab-buttons tab-buttons">
-					{tabs.map(({button, id}) => <li className="tab-buttons__item" key={button}><a className="tab-buttons__button title-4 button-tab" href={"#" + id} data-tab-button>{button}</a></li>)}
+					{tabs.map(({button, id}, index) => <li className="tab-buttons__item" key={button}><a className="tab-buttons__button title-4 button-tab" href={"#" + id} data-tab-button>{button}</a></li>)}
 				</ul>
 				<ol className="services__tabs tabs">
 					{tabs.map(({text, id}) => <li className="tabs__item" key={id} data-tab={id} id={id}>{text}</li>)}

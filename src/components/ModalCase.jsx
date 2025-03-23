@@ -11,7 +11,7 @@ export const ModalCase = ({ data, extra }) => {
 			<div className="project-modal__content">{content}</div>
 			<div className="project-modal__btn-box">
 				<p className="project-modal__subtitle title-3">{buttonModalDescription}</p>
-				<Button href="#contacts" className="btn-arrow">{buttonText}<span></span></Button>
+				<Button href="#contacts" className="btn-arrow" data-modal-close-btn>{buttonText}<span></span></Button>
 			</div>
 		</Modal>
 	)

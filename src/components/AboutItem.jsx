@@ -1,6 +1,6 @@
 import { TextContent } from "./TextContent";
 
-export const AboutItem = ({ data }) => {
+export const AboutItem = ({ data, index }) => {
 	const { title, text } = data;
 
 	return (

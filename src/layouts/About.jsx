@@ -16,10 +16,10 @@ export const About = ({ data }) => {
 			</div>
 			<div className="about__columns">
 				<ul className="about__col">
-					{list.map((item, index) => ((index + 1) % 2) ? <AboutItem key={index} data={item} /> : '')}
+					{list.map((item, index) => ((index + 1) % 2) ? <AboutItem key={index} data={item} index={index}/> : '')}
 				</ul>
 				<ul className="about__col">
-					{list.map((item, index) => !((index + 1) % 2) ? <AboutItem key={index} data={item} /> : '')}
+					{list.map((item, index) => !((index + 1) % 2) ? <AboutItem key={index} data={item} index={index}/> : '')}
 				</ul>
 			</div>
 			<div className="about__btn-box btn-box">

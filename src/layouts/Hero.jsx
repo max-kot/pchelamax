@@ -24,12 +24,11 @@ export const Hero = ({ data, url }) => {
 				</h1>
 				<div className="hero__box">
 					<p className="hero__text">{text}</p>
-
-					<a className="hero__link" href="#services" aria-label={scrollBtnTitle} title={scrollBtnTitle}>
+					<a className="hero__link" href="#services" aria-label={scrollBtnTitle} title={scrollBtnTitle} >
 						<Icon iconId="arrow-down" />
 						<span></span>
 					</a>
-					<ul className="hero__lang lang-switcher">
+					<ul className="hero__lang lang-switcher" >
 						{langList && langList.map((item) => {
 							let { text, href, isActive, title } = item;
 							const className = isActive ? "lang-switcher__link link active" : "lang-switcher__link link";

@@ -13,10 +13,10 @@ export const Projects = ({ data }) => {
 			<div class="container projects__container section">
 				<div className="projects__column projects__column--left">
 					<Heading className="projects__heading" title={subtitle}>{description}</Heading>
-					{cases.map((item, index) => !((index + 1) % 2) ? <Case data={item} key={index} /> : '')}
+					{cases.map((item, index) => !((index + 1) % 2) ? <Case data={item} key={index} index={index}/> : '')}
 				</div>
 				<div className="projects__column projects__column--right">
-					{cases.map((item, index) => (index + 1) % 2 ? <Case data={item} key={index} /> : '')}
+					{cases.map((item, index) => (index + 1) % 2 ? <Case data={item} key={index} index={index}/> : '')}
 					<div className="projects__item projects__item--btn-box">
 						<p className="projects__text">{buttonDescription}</p>
 						<Button href="#contacts" className="btn-arrow">{buttonText}<span></span></Button>

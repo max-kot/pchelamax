@@ -21,6 +21,8 @@
 		"semi": false
 	},
 	"devDependencies": {
+		"animate.css": "^4.1.1",
+		"aos": "^2.3.4",
 		"autoprefixer": "^10.4.20",
 		"fontmin": "^2.0.0",
 		"minista": "^3.1.12",
@@ -29,7 +31,8 @@
 		"postcss-pxtorem": "^6.1.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"sass": "^1.83.4"
+		"sass": "^1.83.4",
+		"wowjs": "^1.1.3"
 	},
 	"dependencies": {
 		"swiper": "^11.2.5"

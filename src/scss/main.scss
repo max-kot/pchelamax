@@ -28,6 +28,7 @@
 @import "components/_FormValidator.scss";
 @import "components/_Modal.scss";
 @import "components/_Loader.scss";
+//@import "components/_ColorChanger.scss";
 
 
 // Sections
@@ -42,40 +43,3 @@
 @import "sections/_contacts.scss";
 @import "sections/_footer.scss";
 @import "sections/_error-page.scss";
-
-.color-changer {
-	position: fixed;
-	bottom: 15px;
-	left: max(var(--container-padding), calc((100% - var(--container-width)) / 2));
-	display: grid;
-	padding: 16px;
-	background: var(--color-gray-light);
-	opacity: 0.2;
-	max-width: 290px;
-	font-size: 14px;
-	z-index: 1000;
-
-	&:hover {
-		opacity: 1;
-	}
-	&__list {
-		list-style-type: none;
-		display: flex;
-		gap: 15px;
-		overflow-y: auto;
-		scrollbar-width: thin;
-	} 
-	&__item {
-	}
-
-	&__btn {
-		@include square(30px);
-		border-radius: 50%;
-		border: 1px solid #000;
-		background: var(--color);
-	}
-
-	&__label {
-		
-	}
-}

@@ -231,7 +231,7 @@ export class Spoiler {
 			}
 
 		} else {
-			console.warn(`${selector} is not found!`);
+			console.warn(`${this.selector} is not found!`);
 		}
 	}
 }

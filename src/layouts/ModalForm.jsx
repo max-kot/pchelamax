@@ -23,7 +23,7 @@ export const ModalForm = ({ data }) => {
 					<textarea className="form-field__input form-field__textarea" name="message" id="message-2" data-value-sync="message"></textarea>
 				</FloatingLabel>
 				<small className="form__description">{formDescription}</small>
-				<Button type="button" className="btn-arrow form__btn">{buttonText}<span></span></Button>
+				<Button type="button" className="btn-arrow form__btn" data-send-form-btn>{buttonText}<span></span></Button>
 			</div>
 		</Modal>
 	)

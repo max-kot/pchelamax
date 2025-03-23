@@ -207,14 +207,14 @@ export const en = {
 				text: 'Verochka, thank you very much for your consultation, I chewed everything clearly, showed it, helped in the future, it’s very pleasant and easy to work with you, thanks 🙏❤',
 				name: 'Elena',
 				position: 'Master of permanent makeup',
-				link: '#',
+				link: '#case-1',
 			},
 			{
 				title: 'Thanks for the cool result!',
 				text: 'Before working with Vera, our applications were expensive, and sales are unstable. After the launch of advertising, we reduced the value of the application by 40% and increased the conversion!Everything is clear, transparent and with understandable reports.Thanks for the cool result!',
 				name: 'Dmitry',
 				position: 'Owner of the online clothing store',
-				link: '#',
+				link: '#case-2',
 			}
 		]
 	},
@@ -353,7 +353,7 @@ export const en = {
 	success: {
 		title: 'Thanks for the application!',
 		text: 'I will contact you in the near future!',
-		image: 'src/assets/images/kiss-kitty.gif',
+		image: 'images/kiss-kitty.gif',
 		socialTitle: 'You can also contact me through social networks:',
 		socialLinks: [
 			{
@@ -369,5 +369,9 @@ export const en = {
 				href: '#'
 			}
 		],
+	},
+	errorForm: {
+		title: 'Error when sending a form',
+		text: 'Try again, or check the Internet connection',
 	}
 }

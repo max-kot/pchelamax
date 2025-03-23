@@ -6,7 +6,7 @@ export const ModalSuccess = ({ data }) => {
 	const { title, image, text, socialLinks, socialTitle } = data;
 	return (
 		<Modal className="success" href="success">
-			<ImageBox src={image} className="success__image" />
+			<ImageBox src={image} className="success__image" simpleImg={true}/>
 			<div className="success__content">
 				<h3 className="success__title title-2">{title}</h3>
 				<p className="success__text title-3">{text}</p>

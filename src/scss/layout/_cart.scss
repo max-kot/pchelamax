@@ -1,0 +1,222 @@
+.cart {
+	max-width: rem(1140);
+	border-radius: rem(16);
+	padding: adapt(40, 20) adapt(40, 10);
+	width: 100%;
+	background-color: var(--color-light);
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: adapt(30, 20);
+		}
+	}
+
+	&__list {
+		display: grid;
+		height: 53dvh;
+		overflow-y: auto;
+		gap: rem(30);
+		@extend .gray-border;
+	}
+
+	&__product {
+		&:not(:first-child) {
+			padding-top: rem(30);
+			border-top: 1px solid var(--color-gray-dark);
+		}
+		&:last-child {
+			padding-bottom: rem(30);
+		}
+	}
+
+	&__order-box {
+		@extend .gray-border;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: rem(50);
+			background: linear-gradient(0deg, var(--color-light) 0%, rgba(237, 221, 83, 0) 100%);
+			transform: translateY(calc(-100% - 1px));
+			pointer-events: none;
+		}
+		.cart-empty & {
+			display: none;
+		}
+	}
+
+	&__info {
+		font-size: adapt(16, 14);
+		line-height: 110%;
+		display: inline-flex;
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+		}
+	}
+
+	&__total {
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+		}
+	}
+
+	&__btn {
+		flex: 1 1 100%;
+		width: 100%;
+		text-align: center;
+		justify-content: center;
+	}
+}
+.small-descr {
+}
+.total {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__text {
+		font-size: adapt(24, 18);
+		color: var(--color-dark);
+		font-weight: 500;
+	}
+
+	&__price {
+	}
+}
+.btn {
+}
+.cart-product {
+	display: flex;
+	align-items: flex-start;
+	gap: adapt(30, 10);
+
+	&__image {
+		flex: 0 1 rem(140);
+		overflow: hidden;
+		border-radius: rem(8);
+		max-height: rem(160);
+
+		@include media($mobile) {
+			max-height: unset;
+		}
+	}
+
+	&__content {
+		//height: rem(160);
+		flex: 1 1 auto;
+		display: flex;
+		justify-content: space-between;
+		gap: rem(30);
+
+		@include media($mobile) {
+			flex-direction: column;
+			gap: adapt(30, 10);
+		}
+	}
+
+	&__content-col {
+		display: flex;
+		flex-direction: column;
+
+		&:last-child {
+			justify-content: space-between;
+
+			@include media($mobile) {
+				flex-direction: row-reverse;
+				//height: 100%;
+			}
+		}
+	}
+
+	&__name {
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+		}
+	}
+
+	&__descr-list {
+		flex: 1 1 auto;
+	}
+
+	&__counter-box {
+	}
+
+	&__price-for-one {
+		display: flex;
+		font-size: adapt(14, 14);
+		color: var(--color-gray-dark);
+		&:not(:last-child) {
+			margin-bottom: rem(4);
+		}
+	}
+
+	&__counter {
+	}
+
+	&__remove-btn {
+		@include reset;
+		background: transparent;
+		border: none;
+		color: var(--color-gray-light);
+		transition: color var(--duration-fast);
+
+		position: relative;
+		@include tip("left-center");
+
+		@include hover {
+			color: var(--color-dark);
+		}
+	}
+
+	&__price {
+	}
+}
+
+.counter {
+	display: flex;
+
+	&__btn {
+		border: none;
+		@include square(rem(50));
+		text-align: center;
+		font-size: rem(24);
+		font-weight: 500;
+		color: var(--color-dark);
+		border-radius: 8px;
+		background-color: var(--color-gray-light-2);
+		transition: all var(--duration-fast);
+		@include hover {
+			background: var(--color-dark);
+			color: var(--color-light);
+		}
+		position: relative;
+		@include tip;
+	}
+
+	&__btn--remove {
+	}
+	&__btn--add {
+		background: var(--color-accent);
+	}
+	&__input {
+		border: none;
+		width: rem(64);
+		text-align: center;
+		padding: rem(10);
+		background: var(--color-light);
+		color: var(--color-dark);
+	}
+}
+
+[data-modal-container] {
+	padding: rem(10) adapt(30, 10);
+}
+
+[data-modal] .modal-close-button {
+	top: adapt(40, 18);
+	right: adapt(40, 10);
+}

@@ -1,0 +1,55 @@
+.review {
+	display: flex;
+	align-items: flex-end;
+	gap: adapt(30, 16);
+
+	&__icon {
+		flex-shrink: 0;
+		font-size: rem(24);
+		font-weight: 700;
+		color: var(--color-dark);
+		background-color: var(--color-accent);
+		line-height: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 16px;
+		@include square(adapt(60, 45));
+	}
+
+	&__content {
+		background: var(--color-light);
+		border: 1px solid var(--color-gray-light);
+		border-radius: 16px;
+		padding: adapt(30, 10);
+	}
+
+	&__text {
+		&:not(:last-child) {
+			margin-bottom: rem(30);
+		}
+	}
+
+	&__meta {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		gap: rem(30);
+	}
+
+	&__name {
+		font-weight: 700;
+		color: var(--color-dark);
+		font-size: adapt(18, 16);
+		line-height: 1;
+	}
+
+	&__link {
+		color: var(--color-gray);
+		transition: all var(--duration-fast);
+
+		@include hover {
+			color: var(--color-accent);
+		}
+	}
+}

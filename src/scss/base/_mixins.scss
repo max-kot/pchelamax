@@ -57,15 +57,34 @@
 	}
 }
 
-@mixin hoverLine($hoverColor: var(--color-accent), $height: 2px, $paddingBottom: $height, $transition: width 0.3s) {
+@mixin hoverLine(
+	$mode: slide,
+	$hoverColor: var(--color-accent),
+	$height: 0.2em,
+	$paddingBottom: $height,
+	$transition: all var(--duration-medium)
+) {
 	position: relative;
-	padding-bottom: $paddingBottom;
+	padding-block: $paddingBottom;
+	overflow: hidden;
+	//margin-bottom: -$paddingBottom;
 
 	&::before {
 		content: "";
 		position: absolute;
 		bottom: 0;
-		width: 0;
+		@if ($mode == slide) {
+			width: 0;
+		}
+		@if ($mode == center) {
+			left: 50%;
+			right: 50%;
+		}
+		@if ($mode == up) {
+			left: 0;
+			right: 0;
+			transform: translateY(200%);
+		}
 		height: $height;
 		background: $hoverColor;
 		transition: $transition;
@@ -74,7 +93,16 @@
 	@include hover {
 		@content;
 		&::before {
-			width: 100%;
+			@if ($mode == slide) {
+				width: 100%;
+			}
+			@if ($mode == center) {
+				left: 0;
+				right: 0;
+			}
+			@if ($mode == up) {
+				transform: translateY(0);
+			}
 		}
 	}
 }
@@ -443,7 +471,7 @@
 		#{$inputSelector}:focus ~ #{$labelSelector},
 		#{$inputSelector}:not(:placeholder-shown) ~ #{$labelSelector},
 		#{$inputSelector}[required]:valid ~ #{$labelSelector},
-		#{$inputSelector}.has-value ~ #{$labelSelector}{
+		#{$inputSelector}.has-value ~ #{$labelSelector} {
 			@content;
 		}
 
@@ -461,8 +489,71 @@
 		// При фокусе или если input заполнен без placeholder
 		#{$inputSelector}:focus ~ #{$labelSelector},
 		#{$inputSelector}[required]:valid ~ #{$labelSelector},
-		#{$inputSelector}.has-value ~ #{$labelSelector}{
+		#{$inputSelector}.has-value ~ #{$labelSelector} {
 			@content;
 		}
+	}
+}
+
+@mixin tip($pos: "bottom-center", $offset: 2px, $pseudo-el: after, $attr: "aria-label") {
+	// bottom / top / left / right;
+
+	@include hover {
+		&::#{$pseudo-el} {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	&::#{$pseudo-el} {
+		content: attr(#{$attr});
+
+		@if ($pos == left) {
+			top: 0;
+			left: -$offset;
+			transform: translate(-100%, -0.1em);
+		} @else if ($pos == "left-center") {
+			top: 50%;
+			left: -$offset;
+			transform: translate(-100%, -50%);
+		} @else if ($pos == right) {
+			top: 0;
+			right: -$offset;
+			transform: translate(100%, -0.1em);
+		} @else if ($pos == "right-center") {
+			top: 50%;
+			right: -$offset;
+			transform: translate(100%, -50%);
+		} @else if ($pos == bottom) {
+			bottom: -$offset;
+			left: 0;
+			transform: translate(0, 100%);
+		} @else if ($pos == "bottom-center") {
+			bottom: -$offset;
+			left: 50%;
+			transform: translate(-50%, 100%);
+		} @else if ($pos == top) {
+			top: -$offset;
+			left: 0;
+			transform: translate(0, -100%);
+		} @else {
+			top: -$offset;
+			left: 50%;
+			transform: translate(-50%, -100%);
+		}
+
+		position: absolute;
+		z-index: 2;
+		width: max-content;
+		background: var(--color-gray);
+		padding: rem(8);
+		border-radius: 4px;
+
+		color: var(--color-light);
+		line-height: 100%;
+		font-size: rem(14);
+		font-weight: 400;
+		opacity: 0;
+		visibility: hidden;
+		transition: all var(--duration-fast);
 	}
 }

@@ -90,9 +90,8 @@ export class Modal {
 		}
 		inner.insertAdjacentElement('beforeend', modal);
 
-
 		if (isActive) {
-			this.openModal(modal)
+			this.openModal(modal);
 		}
 	}
 
@@ -140,9 +139,10 @@ export class Modal {
 
 	openModal(modal) {
 		const { activeClass, overlay, currentClass, backClass } = this.options;
+		console.log(modal, `.${overlay.className}`)
 		const currentOverlay = modal.closest(`.${overlay.className}`);
 
-		if (modal.classList.contains(activeClass)) return;
+		//if (modal.classList.contains(activeClass)) return; //? 
 
 		this.closeAllIfPrimary(modal)
 		modal.classList.add(activeClass);
@@ -174,7 +174,7 @@ export class Modal {
 
 	isPrimary(modal) {
 		const { primaryModalSelector } = this.options;
-		return !!document.querySelector(`${primaryModalSelector}#${modal.id}`);
+		return !!document.querySelector(`${primaryModalSelector}#${modal.id}` || `${primaryModalSelector}[${this.modal.replace('[', '').replace(']', '')}="${modal.dataset.modal}"]`)
 	}
 
 	closeAllIfPrimary(modal) {
@@ -263,14 +263,17 @@ export class Modal {
 		// Открытие по хэшу при загрузке страницы
 		if (window.location.hash && window.location.hash.length > 1) {
 			const hashId = window.location.hash;
-			const modal = document.querySelector(`${this.modal}${hashId}`);
-			if (modal) this.openModal(modal);
+			if (hashId !== '#' && !hashId.includes('?')) {
+				const modal = document.querySelector(`${this.modal}${hashId}`) || document.querySelector(`[${this.modal.replace('[', '').replace(']', '')}="${hashId}"]`);
+				if (modal) this.openModal(modal);
+			}
+
 		}
 
 		// Открытие при смене хэша
 		window.addEventListener('hashchange', () => {
 			const hashId = window.location.hash;
-			if (hashId.length > 1) {
+			if (hashId.length > 1 && hashId !== '#' && !hashId.includes('?')) {
 				const modal = document.querySelector(`${this.modal}${hashId}`);
 				if (modal && !modal.classList.contains(this.options.activeClass)) {
 					this.openModal(modal);

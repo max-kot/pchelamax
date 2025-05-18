@@ -12,7 +12,7 @@ h4,
 h5,
 h6 {
 	//hyphens: auto; // для правильного переноса слов
-	text-wrap: balance; // выравнивает текста, чтобы они хорошо смотрелись
+	//text-wrap: balance; // выравнивает текста, чтобы они хорошо смотрелись
 }
 
 a:where([class]),
@@ -20,15 +20,27 @@ a:where([class]):visited,
 a:where([class]):active {
 	text-decoration: none;
 }
-
+:where([fill]:not([fill="none"], [fill^="url"])) {
+	fill: currentColor;
+}
+:where([stroke]:not([stroke="none"], [stroke^="url"])) {
+	stroke: currentColor;
+}
+svg * {
+	transition-property: fill, stroke;
+}
+:where(table) {
+	border-collapse: collapse;
+	border-color: currentColor;
+}
 html {
 	box-sizing: border-box;
 	font-size: var(--font-size-html);
 	min-height: 100%;
 	scroll-behavior: smooth;
-	scrollbar-gutter: stable;
+	//scrollbar-gutter: stable;
 
-	@include custom-scroll(var(--color-gray), var(--color-accent));
+	//@include custom-scroll(var(--color-gray), var(--color-accent));
 }
 
 input,
@@ -39,11 +51,29 @@ select,
 option {
 	font: inherit;
 	color: inherit;
+}
+
+button,
+select,
+option,
+input[type="button"] {
 	cursor: pointer;
 }
 
 input::-ms-clear {
 	display: none;
+}
+
+// убирает стрелки у input[type="number"]
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
 }
 
 img,
@@ -59,16 +89,14 @@ source {
 body {
 	min-width: rem($finishBreakpoint); // ! сайт будет масштабироваться
 	min-height: 100dvh;
-	font-family: var(--main-font);
+	font-family: var(--font-family-main);
 	font-size: var(--font-size);
 	font-weight: 400;
 
 	color: var(--color-gray);
 	background: var(--color-light);
 
-	& * {
-		line-height: 140%;
-	}
+	line-height: 140%;
 
 	.menu-open &,
 	.loader-shown & {

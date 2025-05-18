@@ -1,0 +1,146 @@
+.hero {
+	padding-top: var(--header-height);
+}
+.hero-swiper {
+	//&__pagination {
+	//	--swiper-pagination-bottom: #{rem(30)};
+	//	--swiper-pagination-color: var(--color-accent);
+	//	--swiper-pagination-bullet-inactive-color: var(--color-gray-light);
+	//	--swiper-pagination-bullet-inactive-opacity: 0.5;
+
+	//	&.swiper-pagination {
+	//		display: flex;
+	//		align-items: center;
+	//		justify-content: center;
+	//		flex-wrap: wrap;
+	//		gap: rem(18);
+
+	//		.swiper-pagination-bullet {
+	//			margin: 0;
+	//			--swiper-pagination-bullet-size: #{rem(10)};
+	//			transition: all var(--duration-medium);
+	//		}
+
+	//		.swiper-pagination-bullet-active {
+	//			--swiper-pagination-bullet-size: #{rem(18)};
+	//		}
+	//	}
+	//}
+}
+.hero-pagination {
+	&__btn {
+	}
+
+	&__btn-prev {
+	}
+
+	&__btn-next {
+	}
+}
+
+.hero-slide {
+	height: unset;
+	min-height: 100%;
+
+	&__wrapper {
+		height: 100%;
+		position: relative;
+		padding-top: adapt(200, 150, $tablet);
+		padding-bottom: rem(100);
+
+		@include media($tablet) {
+			padding-block: unset;
+		}
+	}
+	&__container {
+		min-height: 100%;
+	}
+
+	&__content {
+		background: var(--color-light);
+		padding: adapt(40, 30);
+		border-radius: rem(16);
+		max-width: rem(500);
+		border: 1px solid var(--color-gray-light);
+		position: relative;
+
+		@include media($tablet) {
+			padding-inline: adapt(30, 0, $mobile);
+			max-width: 100%;
+			border-radius: unset;
+			border: none;
+			padding-block: rem(60) rem(80);
+		}
+	}
+
+	&__media {
+		--position: absolute !important;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+
+		@include media($tablet) {
+			--position: relative !important;
+			height: adapt(250, 150, $finishBreakpoint, $tablet);
+		}
+	}
+	&__label {
+		position: absolute;
+		top: 0;
+		right: 0;
+		@include square(adapt(100, 64));
+		font-size: adapt(16, 12);
+		text-transform: uppercase;
+		color: var(--color-accent);
+		background-image: url("images/icons/sota-black.svg");
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		padding: rem(20);
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transform: translate(51%, -55%);
+
+		@include media($tablet) {
+			transform: translate(10%, -55%);
+		}
+	}
+
+	&__title {
+		padding-right: rem(10);
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+		@include media($tablet) {
+			max-width: rem(580);
+		}
+	}
+
+	&__text {
+		font-size: adapt(22, 16);
+		&:not(:last-child) {
+			margin-bottom: adapt(40, 30);
+		}
+		@include media($tablet) {
+		}
+	}
+
+	&__btn-box {
+		gap: rem(16);
+		@include media($tablet) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__btn {
+	}
+
+	&__link {
+	}
+}
+.btn--link {
+}

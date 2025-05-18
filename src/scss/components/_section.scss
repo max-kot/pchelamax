@@ -1,10 +1,12 @@
 .section {
 	padding-block: adapt(120, 60);
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: rem(60) adapt(60, 30);
-
-	@include media($mobile) {
-		grid-template-columns: 1fr;
+	&--accent {
+		background: var(--color-accent);
+	}
+	&--light {
+		background-image: url('../images/section-bg.jpg');
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
 }

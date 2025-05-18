@@ -1,8 +1,16 @@
 @use "sass:math";
 
+@function sum($num1, $num2) {
+	@return $num1 + $num2;
+}
+
+@function container-padding($containerWidth: var(--container-width), $containerPadding: var(--container-padding)) {
+	@return max($containerPadding, calc((100% - $containerWidth) / 2));
+}
+
 // url from var
 @function url-var($var) {
-	@return #{'url("'} + $var + #{'")'}
+	@return #{'url("'} + $var + #{'")'};
 }
 
 // PERCENTAGE LINE-HEIGHT

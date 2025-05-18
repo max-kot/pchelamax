@@ -1,664 +1,865 @@
 <!doctype html>
-<html lang="ru" class="ru loader-shown">
+<html lang="ru" class=" //loader-shown">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вера Таргет</title>
-    <script src="assets/main.js" type="module" defer="true"></script>
-    <link rel="stylesheet" href="assets/bundle.css">
+    <title>Пчеловод и экофермер — Сергей Котляренко</title>
+    <script src="/assets/main.js" type="module" defer="true"></script>
+    <link rel="stylesheet" href="/assets/bundle.css">
   </head>
   <body>
     <div class="wrapper">
-      <div class="loader" data-loader="true">
-        <div class="running-line loader__running-line" style="--running-line-speed:60s" data-running-line="true">
-          <ul class="running-line__list" data-running-line-list="true">
-            <li class="running-line__item">VeraTarget<span class="running-line__icon">
-                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M18.08 11.5121H12.788L16.568 15.2921L14.372 17.4161L10.628 13.6721V19.0001L7.56802 18.9641V13.6721L3.78802 17.4521L1.66402 15.2561L5.40802 11.5121H0.0800171V8.45211H5.40802L1.62802 4.67211L3.78802 2.51211L7.56802 6.29211V0.964111H10.628V6.29211L14.408 2.51211L16.568 4.67211L12.788 8.45211H18.08V11.5121Z" fill="#212529"></path>
-                </svg>
-              </span></li>
-          </ul>
-        </div>
-      </div>
       <header class="header" data-auto-calc="header, height">
-        <div class="container header__container">
-          <a class="logo" href="#" data-menu-close-btn="true">VeraTarget</a>
-          <nav class="menu header__menu">
-            <ul class="menu__list">
-              <li class="menu__item">
-                <a class="menu__link link" href="#services">Услуги</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link link" href="#projects">Кейсы</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link link" href="#about">Обо мне</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link link" href="#process">Процесс работы</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link link" href="#reviews">Отзывы</a>
-              </li>
-            </ul>
+        <div class="container header__container flex flex-ai-c flex-jc-sb">
+          <a class="logo header__logo" href="#">
+            <div class="logo__icon" aria-hidden="true">
+              <svg width="62" height="68" viewBox="0 0 62 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27 3.6188C29.4752 2.18974 32.5248 2.18974 35 3.6188L55.3109 15.3453C57.7861 16.7744 59.3109 19.4154 59.3109 22.2735V45.7265C59.3109 48.5846 57.7861 51.2256 55.3109 52.6547L35 64.3812C32.5248 65.8103 29.4752 65.8103 27 64.3812L6.68911 52.6547C4.2139 51.2256 2.68911 48.5846 2.68911 45.7265V22.2735C2.68911 19.4154 4.2139 16.7744 6.68911 15.3453L27 3.6188Z" fill="#F8F9FA" stroke="#FCD34D" stroke-width="4"></path>
+              </svg>
+              <img src="images/icons/logo.svg" alt="Пчёлка">
+            </div>
+            <div class="logo__text">
+              <p class="logo__name">Сергей Котляренко</p>
+              <p class="logo__position">пчеловод и экофермер</p>
+            </div>
+          </a>
+          <nav class="menu header__menu" data-menu="1023.98, .menu__list">
+            <div class="menu__box">
+              <ul class="menu__list" aria-label="Меню сайта">
+                <li class="menu__item">
+                  <a class="menu__link" href="#about">Кто я</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#products">Продукция</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#benefits">Польза</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#reviews">Отзывы</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#contacts">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <button class="menu__burger-btn" type="button" aria-label="Открыть / закрыть меню"><span></span></button>
           </nav>
-          <a class="btn btn-label header__btn" href="#contacts" data-auto-calc="btn-contacts, height" data-menu-close-btn="true"><span>Контакты</span></a>
-          <button class="burger-btn" aria-label="Открыть / закрыть меню" title="Открыть / закрыть меню"><span></span></button>
+          <div class="header__btn-box flex flex-ai-c">
+            <a class="button header__btn btn" href="#contacts" data-adaptive-mover=".menu__box, max-width: 1024.98px">Написать</a>
+            <a class="button header__cart-btn cart-btn" href="#cart">
+              <div class="cart-btn__quantity" data-cart-quantity="true">0</div>
+              <div class="cart-btn__icon">
+                <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6M10 21C10 21.5523 9.55228 22 9 22C8.44772 22 8 21.5523 8 21C8 20.4477 8.44772 20 9 20C9.55228 20 10 20.4477 10 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21Z" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <div class="cart-btn__text">корзина</div>
+            </a>
+          </div>
         </div>
       </header>
       <main class="main">
-        <section class="hero" id="hero">
-          <div class="container hero__container">
-            <h1 class="hero__title title-1"><span class="title-1__word title-1__word--1">Настрою рекламу<svg width="320" height="32" viewBox="0 0 320 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g>
-                    <path d="M323 13L318.314 8.31374C312.065 2.06535 301.935 2.06535 295.686 8.31374L286.314 17.6863C280.065 23.9347 269.935 23.9347 263.686 17.6863L254.314 8.31372C248.065 2.06534 237.935 2.06534 231.686 8.31373L222.314 17.6863C216.065 23.9347 205.935 23.9347 199.686 17.6863L190.314 8.31372C184.065 2.06533 173.935 2.06534 167.686 8.31373L158.314 17.6863C152.065 23.9347 141.935 23.9347 135.686 17.6863L126.314 8.31371C120.065 2.06532 109.935 2.06533 103.686 8.31372L94.3137 17.6863C88.0653 23.9347 77.9347 23.9347 71.6863 17.6863L62.3137 8.31371C56.0653 2.06532 45.9347 2.06533 39.6863 8.31372L30.3137 17.6863C24.0653 23.9347 13.9347 23.9347 7.68629 17.6863L3 13" stroke="#FFD43B" stroke-width="6">
-                      <animateTransform attributeName="transform" type="translate" from="0 0" to="-256 0" dur="8s" repeatCount="indefinite"></animateTransform>
-                    </path>
-                    <path d="M323 13L318.314 8.31374C312.065 2.06535 301.935 2.06535 295.686 8.31374L286.314 17.6863C280.065 23.9347 269.935 23.9347 263.686 17.6863L254.314 8.31372C248.065 2.06534 237.935 2.06534 231.686 8.31373L222.314 17.6863C216.065 23.9347 205.935 23.9347 199.686 17.6863L190.314 8.31372C184.065 2.06533 173.935 2.06534 167.686 8.31373L158.314 17.6863C152.065 23.9347 141.935 23.9347 135.686 17.6863L126.314 8.31371C120.065 2.06532 109.935 2.06533 103.686 8.31372L94.3137 17.6863C88.0653 23.9347 77.9347 23.9347 71.6863 17.6863L62.3137 8.31371C56.0653 2.06532 45.9347 2.06533 39.6863 8.31372L30.3137 17.6863C24.0653 23.9347 13.9347 23.9347 7.68629 17.6863L3 13" stroke="#FFD43B" stroke-width="6">
-                      <animateTransform attributeName="transform" type="translate" from="256 0" to="0 0" dur="8s" repeatCount="indefinite"></animateTransform>
-                    </path>
-                  </g>
-                </svg></span><span class="title-1__word title-1__word--2">в Instagram</span><span class="title-1__word title-1__word--3">без лишних</span><span class="title-1__word title-1__word--4">затрат</span></h1>
-            <div class="hero__box">
-              <p class="hero__text">Получите индивидуальную стратегию и добейтесь высокого охвата аудитории!</p>
-              <a class="hero__link" href="#services" aria-label="Прокрутите, чтобы узнать больше" title="Прокрутите, чтобы узнать больше">
-                <svg>
-                  <use href="assets/images/icons.svg#arrow-down"></use>
-                </svg><span></span>
-              </a>
-              <ul class="hero__lang lang-switcher">
-                <li class="lang-switcher__item">
-                  <a class="lang-switcher__link link" href="https://max-kot.github.io/veratarget/en" aria-label="switch site on english version" title="switch site on english version">eng</a>
-                </li>
-                <li class="lang-switcher__item">
-                  <a class="lang-switcher__link link active" href="https://max-kot.github.io/veratarget/" aria-label="переключить сайт на русский язык" title="переключить сайт на русский язык">рус</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <section class="services" id="services">
-          <h2 class="visually-hidden">Услуги</h2>
-          <div class="running-line" data-running-line="true">
-            <ul class="running-line__list" data-running-line-list="true">
-              <li class="running-line__item">Услуги<span class="running-line__icon">
-                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.08 11.5121H12.788L16.568 15.2921L14.372 17.4161L10.628 13.6721V19.0001L7.56802 18.9641V13.6721L3.78802 17.4521L1.66402 15.2561L5.40802 11.5121H0.0800171V8.45211H5.40802L1.62802 4.67211L3.78802 2.51211L7.56802 6.29211V0.964111H10.628V6.29211L14.408 2.51211L16.568 4.67211L12.788 8.45211H18.08V11.5121Z" fill="#212529"></path>
-                  </svg>
-                </span></li>
-            </ul>
-          </div>
-          <div class="container services__container section">
-            <ul class="services__tab-buttons tab-buttons">
-              <li class="tab-buttons__item">
-                <a class="tab-buttons__button title-4 button-tab" href="#tab-1" data-tab-button="true">Разработка стратегии</a>
-              </li>
-              <li class="tab-buttons__item">
-                <a class="tab-buttons__button title-4 button-tab" href="#tab-2" data-tab-button="true">Создание креативов</a>
-              </li>
-              <li class="tab-buttons__item">
-                <a class="tab-buttons__button title-4 button-tab" href="#tab-3" data-tab-button="true">Настройка рекламы</a>
-              </li>
-              <li class="tab-buttons__item">
-                <a class="tab-buttons__button title-4 button-tab" href="#tab-4" data-tab-button="true">Анализ результатов</a>
-              </li>
-              <li class="tab-buttons__item">
-                <a class="tab-buttons__button title-4 button-tab" href="#tab-5" data-tab-button="true">Фокус на ваши цели</a>
-              </li>
-            </ul>
-            <ol class="services__tabs tabs">
-              <li class="tabs__item" data-tab="tab-1" id="tab-1">Рекламная компания не запускается вслепую. Каждый проект начинается с составления маркетинговой стратегии для достижения максимальных продаж.</li>
-              <li class="tabs__item" data-tab="tab-2" id="tab-2">Делаю как статичные креативы, так и видео. Помогу с подготовкой фото и видеоматериалов, если это необходимо.</li>
-              <li class="tabs__item" data-tab="tab-3" id="tab-3">Запускаю рекламные кампании на разные группы целевой аудитории и анализирую, какие дают лучший результат.</li>
-              <li class="tabs__item" data-tab="tab-4" id="tab-4">Каждый день вы получаете отчёт о результатах рекламной кампании, а также ежемесячный отчёт.</li>
-              <li class="tabs__item" data-tab="tab-5" id="tab-5">В каждый проект я погружаюсь с головой и помогаю вам достичь максимального результата!</li>
-            </ol>
-          </div>
-        </section>
-        <section class="projects" id="projects">
-          <h2 class="visually-hidden">Кейсы</h2>
-          <div class="running-line" data-running-line="true">
-            <ul class="running-line__list" data-running-line-list="true">
-              <li class="running-line__item">Кейсы<span class="running-line__icon">
-                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.08 11.5121H12.788L16.568 15.2921L14.372 17.4161L10.628 13.6721V19.0001L7.56802 18.9641V13.6721L3.78802 17.4521L1.66402 15.2561L5.40802 11.5121H0.0800171V8.45211H5.40802L1.62802 4.67211L3.78802 2.51211L7.56802 6.29211V0.964111H10.628V6.29211L14.408 2.51211L16.568 4.67211L12.788 8.45211H18.08V11.5121Z" fill="#212529"></path>
-                  </svg>
-                </span></li>
-            </ul>
-          </div>
-          <div class="container projects__container section">
-            <div class="projects__column projects__column--left">
-              <div class="heading projects__heading">
-                <h3 class="heading__title title-2">От кликов к продажам – реальные кейсы</h3>
-                <p class="heading__description">Таргетированная реклама – это не удача, а стратегия. Разбираем кейсы, где правильные решения привели к высоким результатам.</p>
-              </div>
-              <article class="projects__item project" data-aos="fade-down" data-aos-delay="200">
-                <a class="project__link" href="#case-2" data-modal-btn="#case-2">
-                  <div class="project__image">
-                    <picture>
-                      <source srcset="assets/images/case-2-320x285.avif 320w, assets/images/case-2-400x356.avif 400w, assets/images/case-2-585x520.avif 585w" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" type="image/avif">
-                      <source srcset="assets/images/case-2-320x285.webp 320w, assets/images/case-2-400x356.webp 400w, assets/images/case-2-585x520.webp 585w" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" type="image/webp">
-                      <img srcset="assets/images/case-2-320x285.jpg 320w, assets/images/case-2-400x356.jpg 400w, assets/images/case-2-585x520.jpg 585w" src="assets/images/case-2-585x520.jpg" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" alt="Стартап по установке натяжных потолков" decoding="async" loading="lazy" title="Стартап по установке натяжных потолков">
-                    </picture>
-                  </div>
-                  <h4 class="project__title title-3">Стартап по установке натяжных потолков</h4>
-                </a>
-              </article>
-              <article class="projects__item project" data-aos="fade-down" data-aos-delay="400">
-                <a class="project__link" href="#case-4" data-modal-btn="#case-4">
-                  <div class="project__image">
-                    <picture>
-                      <source srcset="assets/images/case-4-320x285.avif 320w, assets/images/case-4-400x356.avif 400w, assets/images/case-4-585x520.avif 585w" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" type="image/avif">
-                      <source srcset="assets/images/case-4-320x285.webp 320w, assets/images/case-4-400x356.webp 400w, assets/images/case-4-585x520.webp 585w" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" type="image/webp">
-                      <img srcset="assets/images/case-4-320x285.jpg 320w, assets/images/case-4-400x356.jpg 400w, assets/images/case-4-585x520.jpg 585w" src="assets/images/case-4-585x520.jpg" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" alt="Компания по импорту рыбной продукции из Норвегии" decoding="async" loading="lazy" title="Компания по импорту рыбной продукции из Норвегии">
-                    </picture>
-                  </div>
-                  <h4 class="project__title title-3">Компания по импорту рыбной продукции из Норвегии</h4>
-                </a>
-              </article>
-            </div>
-            <div class="projects__column projects__column--right">
-              <article class="projects__item project" data-aos="fade-down" data-aos-delay="100">
-                <a class="project__link" href="#case-1" data-modal-btn="#case-1">
-                  <div class="project__image">
-                    <picture>
-                      <source srcset="assets/images/case-1-320x285.avif 320w, assets/images/case-1-400x356.avif 400w, assets/images/case-1-585x520.avif 585w" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" type="image/avif">
-                      <source srcset="assets/images/case-1-320x285.webp 320w, assets/images/case-1-400x356.webp 400w, assets/images/case-1-585x520.webp 585w" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" type="image/webp">
-                      <img srcset="assets/images/case-1-320x285.jpg 320w, assets/images/case-1-400x356.jpg 400w, assets/images/case-1-585x520.jpg 585w" src="assets/images/case-1-585x520.jpg" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" alt="Мастер перманентного макияжа" decoding="async" loading="lazy" title="Мастер перманентного макияжа">
-                    </picture>
-                  </div>
-                  <h4 class="project__title title-3">Мастер перманентного макияжа</h4>
-                </a>
-              </article>
-              <article class="projects__item project" data-aos="fade-down" data-aos-delay="300">
-                <a class="project__link" href="#case-3" data-modal-btn="#case-3">
-                  <div class="project__image">
-                    <picture>
-                      <source srcset="assets/images/case-3-320x285.avif 320w, assets/images/case-3-400x356.avif 400w, assets/images/case-3-585x520.avif 585w" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" type="image/avif">
-                      <source srcset="assets/images/case-3-320x285.webp 320w, assets/images/case-3-400x356.webp 400w, assets/images/case-3-585x520.webp 585w" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" type="image/webp">
-                      <img srcset="assets/images/case-3-320x285.jpg 320w, assets/images/case-3-400x356.jpg 400w, assets/images/case-3-585x520.jpg 585w" src="assets/images/case-3-585x520.jpg" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" alt="Стартап по разработке сайтов и веб-приложений" decoding="async" loading="lazy" title="Стартап по разработке сайтов и веб-приложений">
-                    </picture>
-                  </div>
-                  <h4 class="project__title title-3">Стартап по разработке сайтов и веб-приложений</h4>
-                </a>
-              </article>
-              <div class="projects__item projects__item--btn-box">
-                <p class="projects__text">Есть проект, которому нужна эффективная реклама? Давайте продвигать его вместе!</p>
-                <a class="btn btn-arrow" href="#contacts">Обсудить проект<span></span></a>
-              </div>
-            </div>
-          </div>
-          <div class="project__modals">
-            <div class="modal project-modal" data-modal="#case-1" id="case-1">
-              <figure class="image-box modal__image" aria-hidden="true">
-                <picture>
-                  <source srcset="assets/images/case-1-320x285.avif 320w, assets/images/case-1-400x356.avif 400w, assets/images/case-1-585x520.avif 585w" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" type="image/avif">
-                  <source srcset="assets/images/case-1-320x285.webp 320w, assets/images/case-1-400x356.webp 400w, assets/images/case-1-585x520.webp 585w" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" type="image/webp">
-                  <img srcset="assets/images/case-1-320x285.jpg 320w, assets/images/case-1-400x356.jpg 400w, assets/images/case-1-585x520.jpg 585w" src="assets/images/case-1-585x520.jpg" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" alt="Мастер перманентного макияжа" decoding="async" loading="lazy" title="Мастер перманентного макияжа">
-                </picture>
-              </figure>
-              <div class="modal__inner">
-                <h3 class="project-modal__title title-2">Мастер перманентного макияжа</h3>
-                <div class="project-modal__content">
-                  <div class="text-content">
-                    <h4 class="title-3">О клиенте:</h4>
-                    <p>Мастер перманентного макияжа, которая хотела запустить рекламу, но не знала, с чего начать. У неё уже был Instagram-аккаунт, но не было четкой стратегии продвижения.</p>
-                  </div>
-                  <div class="text-content">
-                    <h4 class="title-3">Процесс работы:</h4>
-                    <p>Мы провели две консультации на которых:</p>
-                    <ul>
-                      <li>Определили позиционирование</li>
-                      <li>Провели аудит Instagram: разобрали ошибки, определили сильные стороны и улучшили профиль</li>
-                      <li>Проработали стратегию контента и взаимодействия с подписчиками</li>
-                      <li>Определили маркетинговую стратегию запуска</li>
-                      <li>Техническая часть – я объяснила, как работает реклама, помогла создать рекламный кабинет и подготовить аккаунт к запуску и вместе настроили первую рекламную кампанию</li>
-                    </ul>
-                  </div>
-                  <div class="text-content">
-                    <h4 class="title-3">Результат:</h4>
-                    <p>Клиент получил понятную стратегию продвижения и чёткое понимание развития Instagram. Полностью освоил процесс настройки рекламы и теперь может запускать её самостоятельно. Первая рекламная кампания прошла успешно, принесла первые заявки и новые записи.</p>
-                  </div>
-                </div>
-                <div class="project-modal__btn-box">
-                  <p class="project-modal__subtitle title-3">Хотите, чтобы реклама работала эффективно?</p>
-                  <a class="btn btn-arrow" href="#contacts" data-modal-close-btn="true">Обсудить проект<span></span></a>
-                </div>
-              </div>
-            </div>
-            <div class="modal project-modal" data-modal="#case-2" id="case-2">
-              <figure class="image-box modal__image" aria-hidden="true">
-                <picture>
-                  <source srcset="assets/images/case-2-320x285.avif 320w, assets/images/case-2-400x356.avif 400w, assets/images/case-2-585x520.avif 585w" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" type="image/avif">
-                  <source srcset="assets/images/case-2-320x285.webp 320w, assets/images/case-2-400x356.webp 400w, assets/images/case-2-585x520.webp 585w" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" type="image/webp">
-                  <img srcset="assets/images/case-2-320x285.jpg 320w, assets/images/case-2-400x356.jpg 400w, assets/images/case-2-585x520.jpg 585w" src="assets/images/case-2-585x520.jpg" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" alt="Стартап по установке натяжных потолков" decoding="async" loading="lazy" title="Стартап по установке натяжных потолков">
-                </picture>
-              </figure>
-              <div class="modal__inner">
-                <h3 class="project-modal__title title-2">Стартап по установке натяжных потолков</h3>
-                <div class="project-modal__content"></div>
-                <div class="project-modal__btn-box">
-                  <p class="project-modal__subtitle title-3">Хотите, чтобы реклама работала эффективно?</p>
-                  <a class="btn btn-arrow" href="#contacts" data-modal-close-btn="true">Обсудить проект<span></span></a>
-                </div>
-              </div>
-            </div>
-            <div class="modal project-modal" data-modal="#case-3" id="case-3">
-              <figure class="image-box modal__image" aria-hidden="true">
-                <picture>
-                  <source srcset="assets/images/case-3-320x285.avif 320w, assets/images/case-3-400x356.avif 400w, assets/images/case-3-585x520.avif 585w" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" type="image/avif">
-                  <source srcset="assets/images/case-3-320x285.webp 320w, assets/images/case-3-400x356.webp 400w, assets/images/case-3-585x520.webp 585w" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" type="image/webp">
-                  <img srcset="assets/images/case-3-320x285.jpg 320w, assets/images/case-3-400x356.jpg 400w, assets/images/case-3-585x520.jpg 585w" src="assets/images/case-3-585x520.jpg" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" alt="Стартап по разработке сайтов и веб-приложений" decoding="async" loading="lazy" title="Стартап по разработке сайтов и веб-приложений">
-                </picture>
-              </figure>
-              <div class="modal__inner">
-                <h3 class="project-modal__title title-2">Стартап по разработке сайтов и веб-приложений</h3>
-                <div class="project-modal__content"></div>
-                <div class="project-modal__btn-box">
-                  <p class="project-modal__subtitle title-3">Хотите, чтобы реклама работала эффективно?</p>
-                  <a class="btn btn-arrow" href="#contacts" data-modal-close-btn="true">Обсудить проект<span></span></a>
-                </div>
-              </div>
-            </div>
-            <div class="modal project-modal" data-modal="#case-4" id="case-4">
-              <figure class="image-box modal__image" aria-hidden="true">
-                <picture>
-                  <source srcset="assets/images/case-4-320x285.avif 320w, assets/images/case-4-400x356.avif 400w, assets/images/case-4-585x520.avif 585w" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" type="image/avif">
-                  <source srcset="assets/images/case-4-320x285.webp 320w, assets/images/case-4-400x356.webp 400w, assets/images/case-4-585x520.webp 585w" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" type="image/webp">
-                  <img srcset="assets/images/case-4-320x285.jpg 320w, assets/images/case-4-400x356.jpg 400w, assets/images/case-4-585x520.jpg 585w" src="assets/images/case-4-585x520.jpg" sizes="(min-width: 585px) 585px, 100vw" width="585" height="520" alt="Компания по импорту рыбной продукции из Норвегии" decoding="async" loading="lazy" title="Компания по импорту рыбной продукции из Норвегии">
-                </picture>
-              </figure>
-              <div class="modal__inner">
-                <h3 class="project-modal__title title-2">Компания по импорту рыбной продукции из Норвегии</h3>
-                <div class="project-modal__content"></div>
-                <div class="project-modal__btn-box">
-                  <p class="project-modal__subtitle title-3">Хотите, чтобы реклама работала эффективно?</p>
-                  <a class="btn btn-arrow" href="#contacts" data-modal-close-btn="true">Обсудить проект<span></span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="process" id="process">
-          <h2 class="visually-hidden">Процесс работы</h2>
-          <div class="running-line" style="--running-line-speed:50s" data-running-line="true">
-            <ul class="running-line__list" data-running-line-list="true">
-              <li class="running-line__item">Процесс работы<span class="running-line__icon">
-                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.08 11.5121H12.788L16.568 15.2921L14.372 17.4161L10.628 13.6721V19.0001L7.56802 18.9641V13.6721L3.78802 17.4521L1.66402 15.2561L5.40802 11.5121H0.0800171V8.45211H5.40802L1.62802 4.67211L3.78802 2.51211L7.56802 6.29211V0.964111H10.628V6.29211L14.408 2.51211L16.568 4.67211L12.788 8.45211H18.08V11.5121Z" fill="#212529"></path>
-                  </svg>
-                </span></li>
-            </ul>
-          </div>
-          <div class="container section process__container">
-            <div class="heading process__heading">
-              <h3 class="heading__title title-2">Настраиваю рекламу по чёткой стратегии</h3>
-              <p class="heading__description">Запускаю рекламу по проверенному процессу: изучаю аудиторию, подбираю эффективные креативы, тестирую, оптимизирую и масштабирую успешные связки.</p>
-            </div>
-            <ul class="process__list">
-              <li class="process__item step spoiler-active" data-spoiler="true">
-                <h4 class="step__title title-4 button-tab">Брифинг и обсуждение проекта</h4>
-                <div class="step__description">
-                  <p class="step__text">Провожу с вами брифинг, чтобы установить задачи, определить рекламный бюджет, понять особенности вашего бизнеса и обсудить аудиторию.</p>
-                </div>
-              </li>
-              <li class="process__item step" data-spoiler="true">
-                <h4 class="step__title title-4 button-tab">Анализ</h4>
-                <div class="step__description">
-                  <p class="step__text">Провожу анализ ваших посадочных страниц, конкурентов, а также ваших прошлых рекламных кампаний (если они имеются).</p>
-                </div>
-              </li>
-              <li class="process__item step" data-spoiler="true">
-                <h4 class="step__title title-4 button-tab">Стратегия</h4>
-                <div class="step__description">
-                  <p class="step__text">Формирую группы целевой аудитории и гипотезы для запуска рекламной кампании, распределяю бюджет.</p>
-                </div>
-              </li>
-              <li class="process__item step" data-spoiler="true">
-                <h4 class="step__title title-4 button-tab">Подготовка к запуску</h4>
-                <div class="step__description">
-                  <p class="step__text">Проверяю и подготавливаю рекламный кабинет, а также создаю креативы.</p>
-                </div>
-              </li>
-              <li class="process__item step" data-spoiler="true">
-                <h4 class="step__title title-4 button-tab">Запуск рекламы и мониторинг</h4>
-                <div class="step__description">
-                  <p class="step__text">Запускаю рекламную кампанию, анализирую результаты, веду ежедневную отчётность и оптимизирую стратегию для достижения ваших целей.</p>
-                </div>
-              </li>
-            </ul>
-            <div class="process__form">
-              <h3 class="process__form-title title-3">Нужны детали?</h3>
-              <div class="process__field">
-                <input class="process__input" type="text" placeholder="Спрашивайте, я всегда на связи!" data-value-sync="message">
-                <a class="btn btn-arrow btn-arrow--small" href="#modal-form" data-modal-btn="#modal-form"><span></span></a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="about" id="about">
-          <h2 class="visually-hidden">Обо мне</h2>
-          <div class="running-line" data-running-line="true">
-            <ul class="running-line__list" data-running-line-list="true">
-              <li class="running-line__item">Обо мне<span class="running-line__icon">
-                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.08 11.5121H12.788L16.568 15.2921L14.372 17.4161L10.628 13.6721V19.0001L7.56802 18.9641V13.6721L3.78802 17.4521L1.66402 15.2561L5.40802 11.5121H0.0800171V8.45211H5.40802L1.62802 4.67211L3.78802 2.51211L7.56802 6.29211V0.964111H10.628V6.29211L14.408 2.51211L16.568 4.67211L12.788 8.45211H18.08V11.5121Z" fill="#212529"></path>
-                  </svg>
-                </span></li>
-            </ul>
-          </div>
-          <div class="container section about__container">
-            <div class="heading about__heading">
-              <h3 class="heading__title title-2">Привет!<br>Я Вера<br>— ваш таргетолог<span class="heading__icon">
-                  <svg width="320" height="32" viewBox="0 0 320 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g>
-                      <path d="M323 13L318.314 8.31374C312.065 2.06535 301.935 2.06535 295.686 8.31374L286.314 17.6863C280.065 23.9347 269.935 23.9347 263.686 17.6863L254.314 8.31372C248.065 2.06534 237.935 2.06534 231.686 8.31373L222.314 17.6863C216.065 23.9347 205.935 23.9347 199.686 17.6863L190.314 8.31372C184.065 2.06533 173.935 2.06534 167.686 8.31373L158.314 17.6863C152.065 23.9347 141.935 23.9347 135.686 17.6863L126.314 8.31371C120.065 2.06532 109.935 2.06533 103.686 8.31372L94.3137 17.6863C88.0653 23.9347 77.9347 23.9347 71.6863 17.6863L62.3137 8.31371C56.0653 2.06532 45.9347 2.06533 39.6863 8.31372L30.3137 17.6863C24.0653 23.9347 13.9347 23.9347 7.68629 17.6863L3 13" stroke="#FFD43B" stroke-width="6">
-                        <animateTransform attributeName="transform" type="translate" from="0 0" to="-256 0" dur="8s" repeatCount="indefinite"></animateTransform>
-                      </path>
-                      <path d="M323 13L318.314 8.31374C312.065 2.06535 301.935 2.06535 295.686 8.31374L286.314 17.6863C280.065 23.9347 269.935 23.9347 263.686 17.6863L254.314 8.31372C248.065 2.06534 237.935 2.06534 231.686 8.31373L222.314 17.6863C216.065 23.9347 205.935 23.9347 199.686 17.6863L190.314 8.31372C184.065 2.06533 173.935 2.06534 167.686 8.31373L158.314 17.6863C152.065 23.9347 141.935 23.9347 135.686 17.6863L126.314 8.31371C120.065 2.06532 109.935 2.06533 103.686 8.31372L94.3137 17.6863C88.0653 23.9347 77.9347 23.9347 71.6863 17.6863L62.3137 8.31371C56.0653 2.06532 45.9347 2.06533 39.6863 8.31372L30.3137 17.6863C24.0653 23.9347 13.9347 23.9347 7.68629 17.6863L3 13" stroke="#FFD43B" stroke-width="6">
-                        <animateTransform attributeName="transform" type="translate" from="256 0" to="0 0" dur="8s" repeatCount="indefinite"></animateTransform>
-                      </path>
-                    </g>
-                  </svg>
-                </span></h3>
-              <p class="heading__description">Мой опыт в разных сферах позволяет мне не просто настраивать рекламу, а выстраивать её так, чтобы она работала на вас и ваш бизнес.</p>
-            </div>
-            <div class="about__image">
-              <picture>
-                <source srcset="assets/images/photo-1-320x461.avif 320w, assets/images/photo-1-400x576.avif 400w, assets/images/photo-1-485x700.avif 485w" sizes="(min-width: 485px) 485px, 100vw" width="485" height="700" type="image/avif">
-                <source srcset="assets/images/photo-1-320x461.webp 320w, assets/images/photo-1-400x576.webp 400w, assets/images/photo-1-485x700.webp 485w" sizes="(min-width: 485px) 485px, 100vw" width="485" height="700" type="image/webp">
-                <img srcset="assets/images/photo-1-320x461.jpg 320w, assets/images/photo-1-400x576.jpg 400w, assets/images/photo-1-485x700.jpg 485w" src="assets/images/photo-1-485x700.jpg" sizes="(min-width: 485px) 485px, 100vw" width="485" height="700" alt="Привет! Я Вера — ваш таргетолог" decoding="async" loading="lazy" title="Привет! Я Вера — ваш таргетолог">
-              </picture>
-            </div>
-            <div class="about__columns">
-              <ul class="about__col">
-                <li class="about__item">
-                  <div class="text-content">
-                    <h4 class="title-3">Понимаю сложные задачи и довожу проекты до результата</h4>
-                    <p>Опыт работы на фабрике научил меня выдержке и системному подходу, поэтому я справляюсь с проектами любой сложности.</p>
-                  </div>
-                </li>
-                <li class="about__item">
-                  <div class="text-content">
-                    <h4 class="title-3">Создаю сервис, который приносит результат</h4>
-                    <p>Работа в казино научила меня ответственности и клиентоориентированности. Запуская рекламу со мной, вы делаете ставку на стабильный рост и прибыль.</p>
-                  </div>
-                </li>
-              </ul>
-              <ul class="about__col">
-                <li class="about__item">
-                  <div class="text-content">
-                    <h4 class="title-3">Знаю, как взаимодействовать с клиентами и увеличивать продажи</h4>
-                    <p>Год в продажах помог мне понять, что важно для клиентов. Поэтому со мной вам будет легко и комфортно работать, а я, в свою очередь, смогу дать рекомендации по скриптам продаж, которые усилят ваш бизнес.</p>
-                  </div>
-                </li>
-                <li class="about__item">
-                  <div class="text-content">
-                    <h4 class="title-3">Экспертный подход к вашей рекламе</h4>
-                    <p>Пройдя обучение «Больше, чем просто таргетолог», я соединила свою любовь к аналитике и цифрам с практическим опытом. Теперь я не просто настраиваю рекламу, а выстраиваю маркетинговую стратегию, начиная с анализа посадочных страниц и заканчивая улучшением клиентского сервиса.</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="about__btn-box btn-box">
-              <h3 class="btn-box__title title-3">Хотите, чтобы реклама работала эффективно?</h3>
-              <p class="btn-box__text">Давайте обсудим ваш проект!</p>
-              <a class="btn btn-arrow" href="#contacts">Обсудить проект<span></span></a>
-            </div>
-          </div>
-        </section>
-        <section class="reviews" id="reviews">
-          <h2 class="visually-hidden">Отзывы</h2>
-          <div class="running-line" style="--running-line-speed:30s" data-running-line="true">
-            <ul class="running-line__list" data-running-line-list="true">
-              <li class="running-line__item">Отзывы<span class="running-line__icon">
-                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.08 11.5121H12.788L16.568 15.2921L14.372 17.4161L10.628 13.6721V19.0001L7.56802 18.9641V13.6721L3.78802 17.4521L1.66402 15.2561L5.40802 11.5121H0.0800171V8.45211H5.40802L1.62802 4.67211L3.78802 2.51211L7.56802 6.29211V0.964111H10.628V6.29211L14.408 2.51211L16.568 4.67211L12.788 8.45211H18.08V11.5121Z" fill="#212529"></path>
-                  </svg>
-                </span></li>
-            </ul>
-          </div>
-          <div class="reviews__container reviews__container">
-            <div class="heading">
-              <h3 class="heading__title title-2">Довольные клиенты — лучший показатель успеха</h3>
-              <p class="heading__description">Они уже получили результат. Теперь ваша очередь!</p>
-            </div>
-            <div class="swiper reviews__slider reviews-slider">
-              <div class="swiper-wrapper reviews__slider reviews-slider__wrapper">
-                <div class="swiper-slide reviews-slide">
-                  <div class="reviews-slide__wrapper">
-                    <h3 class="reviews-slide__title title-3">
-                      <svg width="79" height="60" viewBox="0 0 79 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M79 0.13916L62.2361 36.6007L60.7692 26.7519C63.9823 26.7519 66.8462 27.5202 69.3607 29.0569C71.8753 30.5936 73.901 32.6193 75.4377 35.1339C76.9744 37.5088 77.7427 40.2329 77.7427 43.3063C77.7427 46.3797 76.9744 49.1736 75.4377 51.6882C73.901 54.2028 71.8753 56.2285 69.3607 57.7652C66.8462 59.1621 63.9823 59.8606 60.7692 59.8606C57.6958 59.8606 54.832 59.1621 52.1777 57.7652C49.6631 56.2285 47.6375 54.133 46.1008 51.4787C44.5641 48.8244 43.7958 45.8907 43.7958 42.6776C43.7958 39.4645 44.4244 36.1118 45.6817 32.6193C47.0787 29.1268 49.5234 24.5866 53.0159 18.9986L64.3316 0.13916H79ZM35.2042 0.13916L18.4403 36.6007L16.9735 26.7519C20.1866 26.7519 23.0504 27.5202 25.565 29.0569C28.0796 30.5936 30.1052 32.6193 31.6419 35.1339C33.1786 37.5088 33.9469 40.2329 33.9469 43.3063C33.9469 46.3797 33.1786 49.1736 31.6419 51.6882C30.1052 54.2028 28.0796 56.2285 25.565 57.7652C23.0504 59.1621 20.1866 59.8606 16.9735 59.8606C13.9001 59.8606 11.0363 59.1621 8.38196 57.7652C5.86737 56.2285 3.84173 54.133 2.30504 51.4787C0.768346 48.8244 0 45.8907 0 42.6776C0 39.4645 0.628647 36.1118 1.88594 32.6193C3.28294 29.1268 5.72767 24.5866 9.22016 18.9986L20.5358 0.13916H35.2042Z" fill="currentColor"></path>
-                      </svg><span>Очень легко и приятно работать</span>
-                    </h3>
-                    <p class="reviews-slide__text">Верочка, спасибо тебе большое за твою консультацию, всё чётко разжевала, показала, помогла в дальнейшем, с тобой очень приятно и легко работать, спасибо 🙏❤</p>
-                    <div class="reviews-slide__meta">
-                      <div class="reviews-slide__author">
-                        <p class="reviews-slide__name">Елена</p>
-                        <p class="reviews-slide__position">Мастер перманентного макияжа</p>
+        <section class="hero">
+          <div class="swiper hero-swiper">
+            <div class="swiper-wrapper hero-swiper__wrapper&quot;">
+              <div class="swiper-slide hero-slide">
+                <div class="hero-slide__wrapper">
+                  <figure class="image-box hero-slide__media">
+                    <video loop="" autoplay="" muted="" src="video/honey-2.mov"></video>
+                  </figure>
+                  <div class="container hero-slide__container">
+                    <div class="hero-slide__content">
+                      <div class="hero-slide__label">Предзаказ 2025</div>
+                      <h3 class="hero-slide__title title">Правильный мёд от правильных пчёл</h3>
+                      <p class="hero-slide__text">Натуральный мёд с домашней пасеки для тех, кто ценит экологичность, качество и вкус</p>
+                      <div class="hero-slide__btn-box flex flex-jc-sb flex-ai-c">
+                        <a class="button hero-slide__btn btn" href="#product-1">Попробовать</a>
+                        <a class="button hero-slide__link btn btn--stroke" href="#about">Узнать подробнее<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.32219 17.2782C-0.0683342 17.6688 -0.0683342 18.3019 0.32219 18.6925C0.712714 19.083 1.34588 19.083 1.7364 18.6925L0.32219 17.2782ZM18.9999 1.01479C18.9999 0.462504 18.5521 0.0147888 17.9999 0.0147886L8.99986 0.0147894C8.44757 0.0147891 7.99986 0.462505 7.99986 1.01479C7.99986 1.56707 8.44758 2.01479 8.99986 2.01479L16.9999 2.01479L16.9999 10.0148C16.9999 10.5671 17.4476 11.0148 17.9999 11.0148C18.5521 11.0148 18.9999 10.5671 18.9999 10.0148L18.9999 1.01479ZM1.7364 18.6925L18.707 1.7219L17.2928 0.307682L0.32219 17.2782L1.7364 18.6925Z" fill="#212529"></path>
+                          </svg>
+                        </a>
                       </div>
-                      <a class="btn btn-arrow btn-arrow--small" href="#case-1"><span></span></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide reviews-slide">
-                  <div class="reviews-slide__wrapper">
-                    <h3 class="reviews-slide__title title-3">
-                      <svg width="79" height="60" viewBox="0 0 79 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M79 0.13916L62.2361 36.6007L60.7692 26.7519C63.9823 26.7519 66.8462 27.5202 69.3607 29.0569C71.8753 30.5936 73.901 32.6193 75.4377 35.1339C76.9744 37.5088 77.7427 40.2329 77.7427 43.3063C77.7427 46.3797 76.9744 49.1736 75.4377 51.6882C73.901 54.2028 71.8753 56.2285 69.3607 57.7652C66.8462 59.1621 63.9823 59.8606 60.7692 59.8606C57.6958 59.8606 54.832 59.1621 52.1777 57.7652C49.6631 56.2285 47.6375 54.133 46.1008 51.4787C44.5641 48.8244 43.7958 45.8907 43.7958 42.6776C43.7958 39.4645 44.4244 36.1118 45.6817 32.6193C47.0787 29.1268 49.5234 24.5866 53.0159 18.9986L64.3316 0.13916H79ZM35.2042 0.13916L18.4403 36.6007L16.9735 26.7519C20.1866 26.7519 23.0504 27.5202 25.565 29.0569C28.0796 30.5936 30.1052 32.6193 31.6419 35.1339C33.1786 37.5088 33.9469 40.2329 33.9469 43.3063C33.9469 46.3797 33.1786 49.1736 31.6419 51.6882C30.1052 54.2028 28.0796 56.2285 25.565 57.7652C23.0504 59.1621 20.1866 59.8606 16.9735 59.8606C13.9001 59.8606 11.0363 59.1621 8.38196 57.7652C5.86737 56.2285 3.84173 54.133 2.30504 51.4787C0.768346 48.8244 0 45.8907 0 42.6776C0 39.4645 0.628647 36.1118 1.88594 32.6193C3.28294 29.1268 5.72767 24.5866 9.22016 18.9986L20.5358 0.13916H35.2042Z" fill="currentColor"></path>
-                      </svg><span>Спасибо за крутой результат!</span>
-                    </h3>
-                    <p class="reviews-slide__text">До работы с Верой наши заявки были дорогими, а продажи нестабильными.После запуска рекламы мы снизили стоимость заявки на 40% и увеличили конверсию! Всё четко, прозрачно и с понятными отчётами. Спасибо за крутой результат!</p>
-                    <div class="reviews-slide__meta">
-                      <div class="reviews-slide__author">
-                        <p class="reviews-slide__name">Дмитрий</p>
-                        <p class="reviews-slide__position">Владелец интернет магазина одежды</p>
-                      </div>
-                      <a class="btn btn-arrow btn-arrow--small" href="#case-2"><span></span></a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="reviews__slider reviews-slider__scrollbar-container">
-                <div class="swiper-scrollbar reviews__slider reviews-slider__scrollbar"></div>
+              <div class="swiper-slide hero-slide">
+                <div class="hero-slide__wrapper">
+                  <figure class="image-box hero-slide__media">
+                    <picture>
+                      <source srcset="/assets/images/hero-2-320x144.avif 320w, /assets/images/hero-2-400x180.avif 400w, /assets/images/hero-2-640x288.avif 640w, /assets/images/hero-2-800x360.avif 800w, /assets/images/hero-2-1024x461.avif 1024w, /assets/images/hero-2-1280x576.avif 1280w, /assets/images/hero-2-1440x651.avif 1440w" sizes="(min-width: 1440px) 1440px, 100vw" width="1440" height="651" type="image/avif">
+                      <source srcset="/assets/images/hero-2-320x144.webp 320w, /assets/images/hero-2-400x180.webp 400w, /assets/images/hero-2-640x288.webp 640w, /assets/images/hero-2-800x360.webp 800w, /assets/images/hero-2-1024x461.webp 1024w, /assets/images/hero-2-1280x576.webp 1280w, /assets/images/hero-2-1440x651.webp 1440w" sizes="(min-width: 1440px) 1440px, 100vw" width="1440" height="651" type="image/webp">
+                      <img srcset="/assets/images/hero-2-320x144.jpg 320w, /assets/images/hero-2-400x180.jpg 400w, /assets/images/hero-2-640x288.jpg 640w, /assets/images/hero-2-800x360.jpg 800w, /assets/images/hero-2-1024x461.jpg 1024w, /assets/images/hero-2-1280x576.jpg 1280w, /assets/images/hero-2-1440x651.jpg 1440w" src="/assets/images/hero-2-1440x651.jpg" sizes="(min-width: 1440px) 1440px, 100vw" width="1440" height="651" alt decoding="async" loading="lazy">
+                    </picture>
+                  </figure>
+                  <div class="container hero-slide__container">
+                    <div class="hero-slide__content">
+                      <h3 class="hero-slide__title title">Маленькие да удаленькие!</h3>
+                      <p class="hero-slide__text">Домашние перепелиные яйца - натуральность и мощный источник питательных веществ</p>
+                      <div class="hero-slide__btn-box flex flex-jc-sb flex-ai-c">
+                        <a class="button hero-slide__btn btn" href="#product-1">Попробовать</a>
+                        <a class="button hero-slide__link btn btn--stroke" href="#about">Узнать подробнее<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.32219 17.2782C-0.0683342 17.6688 -0.0683342 18.3019 0.32219 18.6925C0.712714 19.083 1.34588 19.083 1.7364 18.6925L0.32219 17.2782ZM18.9999 1.01479C18.9999 0.462504 18.5521 0.0147888 17.9999 0.0147886L8.99986 0.0147894C8.44757 0.0147891 7.99986 0.462505 7.99986 1.01479C7.99986 1.56707 8.44758 2.01479 8.99986 2.01479L16.9999 2.01479L16.9999 10.0148C16.9999 10.5671 17.4476 11.0148 17.9999 11.0148C18.5521 11.0148 18.9999 10.5671 18.9999 10.0148L18.9999 1.01479ZM1.7364 18.6925L18.707 1.7219L17.2928 0.307682L0.32219 17.2782L1.7364 18.6925Z" fill="#212529"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination hero-swiper__pagination pagination pagination--accent"></div>
+          </div>
+        </section>
+        <section class="about section section--light">
+          <div class="container about__container">
+            <div class="swiper about-slider">
+              <div class="swiper-wrapper about-slider__wrapper&quot;">
+                <div class="about-slider__slide about-slide swiper-slide">
+                  <figure class="image-box">
+                    <picture>
+                      <source srcset="/assets/images/about-1-320x320.avif 320w, /assets/images/about-1-400x400.avif 400w, /assets/images/about-1-640x640.avif 640w, /assets/images/about-1-760x760.avif 760w" sizes="(min-width: 760px) 760px, 100vw" width="760" height="760" type="image/avif">
+                      <source srcset="/assets/images/about-1-320x320.webp 320w, /assets/images/about-1-400x400.webp 400w, /assets/images/about-1-640x640.webp 640w, /assets/images/about-1-760x760.webp 760w" sizes="(min-width: 760px) 760px, 100vw" width="760" height="760" type="image/webp">
+                      <img srcset="/assets/images/about-1-320x320.jpg 320w, /assets/images/about-1-400x400.jpg 400w, /assets/images/about-1-640x640.jpg 640w, /assets/images/about-1-760x760.jpg 760w" src="/assets/images/about-1-760x760.jpg" sizes="(min-width: 760px) 760px, 100vw" width="760" height="760" alt="Фото-1" decoding="async" loading="lazy" title="Фото-1">
+                    </picture>
+                  </figure>
+                </div>
+                <div class="about-slider__slide about-slide swiper-slide">
+                  <figure class="image-box">
+                    <picture>
+                      <source srcset="/assets/images/about-2-320x320.avif 320w, /assets/images/about-2-400x400.avif 400w, /assets/images/about-2-640x640.avif 640w, /assets/images/about-2-760x760.avif 760w" sizes="(min-width: 760px) 760px, 100vw" width="760" height="760" type="image/avif">
+                      <source srcset="/assets/images/about-2-320x320.webp 320w, /assets/images/about-2-400x400.webp 400w, /assets/images/about-2-640x640.webp 640w, /assets/images/about-2-760x760.webp 760w" sizes="(min-width: 760px) 760px, 100vw" width="760" height="760" type="image/webp">
+                      <img srcset="/assets/images/about-2-320x320.jpg 320w, /assets/images/about-2-400x400.jpg 400w, /assets/images/about-2-640x640.jpg 640w, /assets/images/about-2-760x760.jpg 760w" src="/assets/images/about-2-760x760.jpg" sizes="(min-width: 760px) 760px, 100vw" width="760" height="760" alt="Фото-2" decoding="async" loading="lazy" title="Фото-2">
+                    </picture>
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <div class="about__content">
+              <h2 class="about__title title">Всем привет! 👋</h2>
+              <div class="about__descr">
+                <p>Меня зовут Сергей</p>
+                <p>Я — пчеловод, экофермер и мастер на все руки</p>
+              </div>
+              <div class="swiper about-text-slider">
+                <div class="swiper-wrapper about-text-slider__wrapper&quot;">
+                  <div class="about-text-slider__slide about-text-slider-slide swiper-slide">
+                    <p class="about-text-slider-slide__text">В моём домашнем хозяйстве насчитывается: более 20 ульев с трудолюбивыми пчелками; более 30 кур несушек, которые радуют нас свежими яйцами;более 60 перепелов с их полезными и диетическими яйцами</p>
+                  </div>
+                  <div class="about-text-slider__slide about-text-slider-slide swiper-slide">
+                    <p class="about-text-slider-slide__text">Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Вскоре буквоград рекламных о рукопись маленький власти деревни текстами эта продолжил снова ручеек, скатился, не переписывается свой подпоясал дал букв. В моём домашнем хозяйстве насчитывается: более 20 ульев с трудолюбивыми пчелками; более 30 кур несушек, которые радуют нас свежими яйцами;более 60 перепелов с их полезными и диетическими яйцами.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="about__navigation">
+                <button class="about__btn about__btn-prev" type="button"><span>
+                    <svg width="61" height="68" viewBox="0 0 61 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M34.168 0.887701C35.1836 1.18463 36.1718 1.60645 37.1084 2.15528L54.5371 12.3682C58.5401 14.714 61 19.0059 61 23.6455L61 44.4092C61 49.0489 58.5401 53.3407 54.5371 55.6865L37.1084 65.8994C33.0273 68.2909 27.9727 68.2908 23.8916 65.8994L6.46289 55.6865C2.45982 53.3408 5.1221e-05 49.0489 2.03553e-06 44.4092L3.85075e-06 23.6455C5.00327e-05 19.0058 2.45982 14.7139 6.4629 12.3682L23.8916 2.15528C24.8282 1.60645 25.8164 1.18461 26.832 0.8877L34.168 0.887701Z" fill="#212529"></path>
+                      <path d="M35.3296 17.2483C36.0896 16.6273 37.2118 16.6701 37.9214 17.3782C38.6311 18.0864 38.6766 19.2087 38.0572 19.97L37.9244 20.1175L23.0982 34.9739L37.8472 48.2151C38.6427 48.9297 38.7081 50.1538 37.9937 50.9495C37.2792 51.7451 36.0551 51.8114 35.2593 51.097L19.4996 36.9475C18.3988 35.9593 18.3515 34.2497 19.396 33.2024L35.1822 17.3811L35.3296 17.2483Z" fill="#F8F9FA"></path>
+                    </svg>
+                  </span></button>
+                <div class="swiper-pagination pagination about__pagination "></div>
+                <button class="about__btn about__btn-next" type="button"><span>
+                    <svg width="61" height="68" viewBox="0 0 61 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M26.832 67.693C25.8164 67.3961 24.8282 66.9742 23.8916 66.4254L6.46289 56.2125C2.45994 53.8667 4.26377e-05 49.5748 0 44.9352V24.1715C5.02875e-05 19.5318 2.45994 15.24 6.46289 12.8942L23.8916 2.68126C27.9727 0.289807 33.0273 0.289872 37.1084 2.68126L54.5371 12.8942C58.5402 15.2399 61 19.5318 61 24.1715V44.9352C61 49.5749 58.5402 53.8667 54.5371 56.2125L37.1084 66.4254C36.1718 66.9742 35.1836 67.3961 34.168 67.693H26.832Z" fill="#212529"></path>
+                      <path d="M25.6704 51.3324C24.9104 51.9534 23.7883 51.9106 23.0786 51.2025C22.3689 50.4943 22.3234 49.3719 22.9428 48.6107L23.0756 48.4632L37.9018 33.6068L23.1528 20.3656C22.3573 19.651 22.2919 18.4269 23.0063 17.6312C23.7208 16.8356 24.9449 16.7693 25.7407 17.4837L41.5004 31.6331C42.6012 32.6214 42.6485 34.331 41.604 35.3783L25.8178 51.1995L25.6704 51.3324Z" fill="#F8F9FA"></path>
+                    </svg>
+                  </span></button>
               </div>
             </div>
           </div>
         </section>
-        <section class="contacts" id="contacts">
-          <h2 class="visually-hidden">Контакты</h2>
-          <div class="running-line" style="--running-line-speed:30s" data-running-line="true">
-            <ul class="running-line__list" data-running-line-list="true">
-              <li class="running-line__item">Контакты<span class="running-line__icon">
-                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.08 11.5121H12.788L16.568 15.2921L14.372 17.4161L10.628 13.6721V19.0001L7.56802 18.9641V13.6721L3.78802 17.4521L1.66402 15.2561L5.40802 11.5121H0.0800171V8.45211H5.40802L1.62802 4.67211L3.78802 2.51211L7.56802 6.29211V0.964111H10.628V6.29211L14.408 2.51211L16.568 4.67211L12.788 8.45211H18.08V11.5121Z" fill="#212529"></path>
+        <section class="products section section--accent">
+          <div class="container">
+            <h2 class="title products__title">Наша продукция</h2>
+            <div class="products__filter-box">
+              <button class="products-filters__btn products-filters__btn-prev" type="button"><span>
+                  <svg width="61" height="68" viewBox="0 0 61 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M34.168 0.887701C35.1836 1.18463 36.1718 1.60645 37.1084 2.15528L54.5371 12.3682C58.5401 14.714 61 19.0059 61 23.6455L61 44.4092C61 49.0489 58.5401 53.3407 54.5371 55.6865L37.1084 65.8994C33.0273 68.2909 27.9727 68.2908 23.8916 65.8994L6.46289 55.6865C2.45982 53.3408 5.1221e-05 49.0489 2.03553e-06 44.4092L3.85075e-06 23.6455C5.00327e-05 19.0058 2.45982 14.7139 6.4629 12.3682L23.8916 2.15528C24.8282 1.60645 25.8164 1.18461 26.832 0.8877L34.168 0.887701Z" fill="#212529"></path>
+                    <path d="M35.3296 17.2483C36.0896 16.6273 37.2118 16.6701 37.9214 17.3782C38.6311 18.0864 38.6766 19.2087 38.0572 19.97L37.9244 20.1175L23.0982 34.9739L37.8472 48.2151C38.6427 48.9297 38.7081 50.1538 37.9937 50.9495C37.2792 51.7451 36.0551 51.8114 35.2593 51.097L19.4996 36.9475C18.3988 35.9593 18.3515 34.2497 19.396 33.2024L35.1822 17.3811L35.3296 17.2483Z" fill="#F8F9FA"></path>
                   </svg>
-                </span></li>
+                </span></button>
+              <div class="swiper products-filters">
+                <div class="swiper-wrapper products-filters__wrapper&quot;">
+                  <div class="swiper-slide category">
+                    <div class="category__wrapper">
+                      <button class="category__btn" type="button" data-filter-btn="all">
+                        <img aria-hidden="true" loading="lazy"><span>Все</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="swiper-slide category">
+                    <div class="category__wrapper">
+                      <button class="category__btn" type="button" data-filter-btn="farm">
+                        <img aria-hidden="true" loading="lazy"><span>Фермерские продукты</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="swiper-slide category">
+                    <div class="category__wrapper">
+                      <button class="category__btn" type="button" data-filter-btn="honey">
+                        <img aria-hidden="true" loading="lazy"><span>Мёд</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="swiper-slide category">
+                    <div class="category__wrapper">
+                      <button class="category__btn" type="button" data-filter-btn="bee-products">
+                        <img aria-hidden="true" loading="lazy"><span>Пчелопродукты</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="swiper-slide category">
+                    <div class="category__wrapper">
+                      <button class="category__btn" type="button" data-filter-btn="bee-products">
+                        <img aria-hidden="true" loading="lazy"><span>Пчелопродукты</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="swiper-slide category">
+                    <div class="category__wrapper">
+                      <button class="category__btn" type="button" data-filter-btn="queen-bees">
+                        <img aria-hidden="true" loading="lazy"><span>Пчеломатки</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="swiper-slide category">
+                    <div class="category__wrapper">
+                      <button class="category__btn" type="button" data-filter-btn="bee-families">
+                        <img aria-hidden="true" loading="lazy"><span>Пчелоcемьи</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="products-filters__btn products-filters__btn-next" type="button"><span>
+                  <svg width="61" height="68" viewBox="0 0 61 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M26.832 67.693C25.8164 67.3961 24.8282 66.9742 23.8916 66.4254L6.46289 56.2125C2.45994 53.8667 4.26377e-05 49.5748 0 44.9352V24.1715C5.02875e-05 19.5318 2.45994 15.24 6.46289 12.8942L23.8916 2.68126C27.9727 0.289807 33.0273 0.289872 37.1084 2.68126L54.5371 12.8942C58.5402 15.2399 61 19.5318 61 24.1715V44.9352C61 49.5749 58.5402 53.8667 54.5371 56.2125L37.1084 66.4254C36.1718 66.9742 35.1836 67.3961 34.168 67.693H26.832Z" fill="#212529"></path>
+                    <path d="M25.6704 51.3324C24.9104 51.9534 23.7883 51.9106 23.0786 51.2025C22.3689 50.4943 22.3234 49.3719 22.9428 48.6107L23.0756 48.4632L37.9018 33.6068L23.1528 20.3656C22.3573 19.651 22.2919 18.4269 23.0063 17.6312C23.7208 16.8356 24.9449 16.7693 25.7407 17.4837L41.5004 31.6331C42.6012 32.6214 42.6485 34.331 41.604 35.3783L25.8178 51.1995L25.6704 51.3324Z" fill="#F8F9FA"></path>
+                  </svg>
+                </span></button>
+            </div>
+            <ul class="products__list">
+              <article class="products__item product" data-card-link-parent="true" data-cart-product-id="0" data-filter-category="honey">
+                <a class="image-box product__image-link" href="#product-1" data-modal-btn="#product-1" aria-label="Узнать подробнее" data-card-link="true">
+                  <picture>
+                    <source srcset="/assets/images/product-1-320x438.avif 320w, /assets/images/product-1-380x520.avif 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/avif">
+                    <source srcset="/assets/images/product-1-320x438.webp 320w, /assets/images/product-1-380x520.webp 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/webp">
+                    <img srcset="/assets/images/product-1-320x438.jpg 320w, /assets/images/product-1-380x520.jpg 380w" src="/assets/images/product-1-380x520.jpg" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" alt decoding="async" loading="lazy">
+                  </picture>
+                </a><span class="product__category">Мёд</span>
+                <div class="product__content">
+                  <div class="product__heading"><span class="product__price">8<!-- --> руб</span>
+                    <a class="product__title-link" href="#product-1">
+                      <h3 class="product__title title-3">1 Мёд 0,5л</h3>
+                    </a>
+                  </div>
+                  <ul class="product__description descr-list">
+                    <li class="descr-list__item">2024 год</li>
+                    <li class="descr-list__item">Разнотравье</li>
+                  </ul>
+                  <button class="button product__btn btn" type="button" data-cart-counter-transform-btn="1, 1, 50, 1" data-cart-btn-add="0">В корзину</button>
+                </div>
+              </article>
+              <article class="products__item product" data-card-link-parent="true" data-cart-product-id="1" data-filter-category="farm">
+                <a class="image-box product__image-link" href="#product-2" data-modal-btn="#product-2" aria-label="Узнать подробнее" data-card-link="true">
+                  <picture>
+                    <source srcset="/assets/images/product-2-320x438.avif 320w, /assets/images/product-2-380x520.avif 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/avif">
+                    <source srcset="/assets/images/product-2-320x438.webp 320w, /assets/images/product-2-380x520.webp 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/webp">
+                    <img srcset="/assets/images/product-2-320x438.jpg 320w, /assets/images/product-2-380x520.jpg 380w" src="/assets/images/product-2-380x520.jpg" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" alt decoding="async" loading="lazy">
+                  </picture>
+                </a><span class="product__category">Фермерские продукты</span>
+                <div class="product__content">
+                  <div class="product__heading"><span class="product__price">4<!-- --> руб</span>
+                    <a class="product__title-link" href="#product-2">
+                      <h3 class="product__title title-3">2 Яйца перепелиные 20 шт</h3>
+                    </a>
+                  </div>
+                  <ul class="product__description descr-list">
+                    <li class="descr-list__item">Домашние</li>
+                  </ul>
+                  <button class="button product__btn btn" type="button" data-cart-counter-transform-btn="1, 1, 20, 1" data-cart-btn-add="1">В корзину</button>
+                </div>
+              </article>
+              <article class="products__item product" data-card-link-parent="true" data-cart-product-id="2" data-filter-category="honey">
+                <a class="image-box product__image-link" href="#product-3" data-modal-btn="#product-3" aria-label="Узнать подробнее" data-card-link="true">
+                  <picture>
+                    <source srcset="/assets/images/product-1-320x438.avif 320w, /assets/images/product-1-380x520.avif 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/avif">
+                    <source srcset="/assets/images/product-1-320x438.webp 320w, /assets/images/product-1-380x520.webp 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/webp">
+                    <img srcset="/assets/images/product-1-320x438.jpg 320w, /assets/images/product-1-380x520.jpg 380w" src="/assets/images/product-1-380x520.jpg" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" alt decoding="async" loading="lazy">
+                  </picture>
+                </a><span class="product__category">Мёд</span>
+                <div class="product__content">
+                  <div class="product__heading"><span class="product__price">8<!-- --> руб</span>
+                    <a class="product__title-link" href="#product-3">
+                      <h3 class="product__title title-3">3 Мёд 0,5л</h3>
+                    </a>
+                  </div>
+                  <ul class="product__description descr-list">
+                    <li class="descr-list__item">2024 год</li>
+                    <li class="descr-list__item">Разнотравье</li>
+                  </ul>
+                  <button class="button product__btn btn" type="button" data-cart-counter-transform-btn="1, 1, 50, 1" data-cart-btn-add="2">В корзину</button>
+                </div>
+              </article>
+              <article class="products__item product" data-card-link-parent="true" data-cart-product-id="3" data-filter-category="farm">
+                <a class="image-box product__image-link" href="#product-4" data-modal-btn="#product-4" aria-label="Узнать подробнее" data-card-link="true">
+                  <picture>
+                    <source srcset="/assets/images/product-2-320x438.avif 320w, /assets/images/product-2-380x520.avif 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/avif">
+                    <source srcset="/assets/images/product-2-320x438.webp 320w, /assets/images/product-2-380x520.webp 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/webp">
+                    <img srcset="/assets/images/product-2-320x438.jpg 320w, /assets/images/product-2-380x520.jpg 380w" src="/assets/images/product-2-380x520.jpg" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" alt decoding="async" loading="lazy">
+                  </picture>
+                </a><span class="product__category">Фермерские продукты</span>
+                <div class="product__content">
+                  <div class="product__heading"><span class="product__price">4<!-- --> руб</span>
+                    <a class="product__title-link" href="#product-4">
+                      <h3 class="product__title title-3">4 Яйца перепелиные 20 шт</h3>
+                    </a>
+                  </div>
+                  <ul class="product__description descr-list">
+                    <li class="descr-list__item">Домашние</li>
+                  </ul>
+                  <button class="button product__btn btn" type="button" data-cart-counter-transform-btn="1, 1, 30, 1" data-cart-btn-add="3">В корзину</button>
+                </div>
+              </article>
+              <article class="products__item product" data-card-link-parent="true" data-cart-product-id="4" data-filter-category="farm">
+                <a class="image-box product__image-link" href="#product-5" data-modal-btn="#product-5" aria-label="Узнать подробнее" data-card-link="true">
+                  <picture>
+                    <source srcset="/assets/images/product-2-320x438.avif 320w, /assets/images/product-2-380x520.avif 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/avif">
+                    <source srcset="/assets/images/product-2-320x438.webp 320w, /assets/images/product-2-380x520.webp 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/webp">
+                    <img srcset="/assets/images/product-2-320x438.jpg 320w, /assets/images/product-2-380x520.jpg 380w" src="/assets/images/product-2-380x520.jpg" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" alt decoding="async" loading="lazy">
+                  </picture>
+                </a><span class="product__category">Фермерские продукты</span>
+                <div class="product__content">
+                  <div class="product__heading"><span class="product__price">4<!-- --> руб</span>
+                    <a class="product__title-link" href="#product-5">
+                      <h3 class="product__title title-3">5 Яйца перепелиные 20 шт</h3>
+                    </a>
+                  </div>
+                  <ul class="product__description descr-list">
+                    <li class="descr-list__item">Домашние</li>
+                  </ul>
+                  <button class="button product__btn btn" type="button" data-cart-counter-transform-btn="1, 1, 5, 1" data-cart-btn-add="4">В корзину</button>
+                </div>
+              </article>
             </ul>
-          </div>
-          <div class="container section contacts__container">
-            <div class="heading contacts__heading">
-              <h3 class="heading__title title-2">Давайте обсудим вашу стратегию продвижения</h3>
-              <p class="heading__description">Оставьте ваши контакты или напишите мне, и я помогу вам запустить рекламу.</p>
-            </div>
-            <form class="contacts__form form" data-validator="true" data-send-form="true">
-              <div class="form-field">
-                <input class="form-field__input" id="name" name="name" type="text" required="" autocomplete="off" data-value-sync="name">
-                <label for="name" class="form-field__label">Ваше имя</label>
-              </div>
-              <div class="form-field form-field--select">
-                <input class="form-field__input" id="contact-data" name="contact-data" type="text" required="" autocomplete="off" data-value-sync="contact-data">
-                <select class="form-field__select" name="contact-value" id="contact-value" data-select="true" data-value-sync="select">
-                  <option value="phone">телефон</option>
-                  <option value="instagram">инстаграм</option>
-                  <option value="telegram">телеграм</option>
-                  <option value="whatsapp">ватсап</option>
-                  <option value="viber">вайбер</option>
-                  <option value="email">эл-почта</option>
-                </select>
-                <label for="contact-data" class="form-field__label">Контактные данные</label>
-              </div>
-              <div class="form-field">
-                <textarea class="form-field__input form-field__textarea" name="message" id="message" data-value-sync="message"></textarea>
-                <label for="message" class="form-field__label">Ваше сообщение</label>
-              </div><small class="form__description">*Отправляя заявку, вы соглашаетесь <a class="btn link-policy" href="#policy" data-modal-btn="#policy">с политикой обработки персональных данных</a></small>
-              <button class="btn btn-arrow form__btn" type="submit">Отправить<span></span></button>
-            </form>
-            <div class="social contacts__social">
-              <h3 class="title-3 social__title">Вы также можете связаться со мной через соцсети:</h3>
-              <ul class="social__list">
-                <li class="social__item">
-                  <a href="#" class="social__link link" target="_blank">Instagram</a>
-                </li>
-                <li class="social__item">
-                  <a href="#" class="social__link link" target="_blank">Telegram</a>
-                </li>
-                <li class="social__item">
-                  <a href="#" class="social__link link" target="_blank">LinkedIn</a>
-                </li>
-              </ul>
-            </div>
           </div>
         </section>
       </main>
-      <footer class="footer">
-        <div class="container section footer__container">
-          <a class="logo" href="/" data-menu-close-btn="true">VeraTarget</a>
-          <a class="btn btn-arrow btn-arrow--up" href="#">Наверх</a><small class="footer__copyrights"> ©<span class="year" data-year="true">2024</span> <!-- -->Все права принадлежат правообладателю.</small>
-          <p class="footer__developer">Разработка сайта<!-- --> - <a class="btn link" href="https://t.me/maxkot_web" target="_blank">MAX-KOT</a>
-          </p>
+      <div class="product-modal modal" data-modal="#product-1" id="product-1" data-cart-product-id="0">
+        <div class="product-modal__slider slider-modal">
+          <button class="slider-modal__btn slider-modal__btn-prev" type="button"><span>
+              <svg width="61" height="68" viewBox="0 0 61 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34.168 0.887701C35.1836 1.18463 36.1718 1.60645 37.1084 2.15528L54.5371 12.3682C58.5401 14.714 61 19.0059 61 23.6455L61 44.4092C61 49.0489 58.5401 53.3407 54.5371 55.6865L37.1084 65.8994C33.0273 68.2909 27.9727 68.2908 23.8916 65.8994L6.46289 55.6865C2.45982 53.3408 5.1221e-05 49.0489 2.03553e-06 44.4092L3.85075e-06 23.6455C5.00327e-05 19.0058 2.45982 14.7139 6.4629 12.3682L23.8916 2.15528C24.8282 1.60645 25.8164 1.18461 26.832 0.8877L34.168 0.887701Z" fill="#212529"></path>
+                <path d="M35.3296 17.2483C36.0896 16.6273 37.2118 16.6701 37.9214 17.3782C38.6311 18.0864 38.6766 19.2087 38.0572 19.97L37.9244 20.1175L23.0982 34.9739L37.8472 48.2151C38.6427 48.9297 38.7081 50.1538 37.9937 50.9495C37.2792 51.7451 36.0551 51.8114 35.2593 51.097L19.4996 36.9475C18.3988 35.9593 18.3515 34.2497 19.396 33.2024L35.1822 17.3811L35.3296 17.2483Z" fill="#F8F9FA"></path>
+              </svg>
+            </span></button>
+          <div class="swiper slider-modal-swiper">
+            <div class="swiper-wrapper slider-modal-swiper__wrapper&quot;">
+              <div class="swiper-slide slider-modal-slide">
+                <figure class="image-box">
+                  <picture>
+                    <source srcset="/assets/images/product-1-320x438.avif 320w, /assets/images/product-1-380x520.avif 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/avif">
+                    <source srcset="/assets/images/product-1-320x438.webp 320w, /assets/images/product-1-380x520.webp 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/webp">
+                    <img srcset="/assets/images/product-1-320x438.jpg 320w, /assets/images/product-1-380x520.jpg 380w" src="/assets/images/product-1-380x520.jpg" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" alt="1 Мёд 0,5л" decoding="async" loading="lazy" title="1 Мёд 0,5л">
+                  </picture>
+                </figure>
+              </div>
+              <div class="swiper-slide slider-modal-slide">
+                <figure class="image-box">
+                  <picture>
+                    <source srcset="/assets/images/product-2-320x438.avif 320w, /assets/images/product-2-380x520.avif 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/avif">
+                    <source srcset="/assets/images/product-2-320x438.webp 320w, /assets/images/product-2-380x520.webp 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/webp">
+                    <img srcset="/assets/images/product-2-320x438.jpg 320w, /assets/images/product-2-380x520.jpg 380w" src="/assets/images/product-2-380x520.jpg" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" alt="1 Мёд 0,5л" decoding="async" loading="lazy" title="1 Мёд 0,5л">
+                  </picture>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <button class="slider-modal__btn slider-modal__btn-next" type="button"><span>
+              <svg width="61" height="68" viewBox="0 0 61 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26.832 67.693C25.8164 67.3961 24.8282 66.9742 23.8916 66.4254L6.46289 56.2125C2.45994 53.8667 4.26377e-05 49.5748 0 44.9352V24.1715C5.02875e-05 19.5318 2.45994 15.24 6.46289 12.8942L23.8916 2.68126C27.9727 0.289807 33.0273 0.289872 37.1084 2.68126L54.5371 12.8942C58.5402 15.2399 61 19.5318 61 24.1715V44.9352C61 49.5749 58.5402 53.8667 54.5371 56.2125L37.1084 66.4254C36.1718 66.9742 35.1836 67.3961 34.168 67.693H26.832Z" fill="#212529"></path>
+                <path d="M25.6704 51.3324C24.9104 51.9534 23.7883 51.9106 23.0786 51.2025C22.3689 50.4943 22.3234 49.3719 22.9428 48.6107L23.0756 48.4632L37.9018 33.6068L23.1528 20.3656C22.3573 19.651 22.2919 18.4269 23.0063 17.6312C23.7208 16.8356 24.9449 16.7693 25.7407 17.4837L41.5004 31.6331C42.6012 32.6214 42.6485 34.331 41.604 35.3783L25.8178 51.1995L25.6704 51.3324Z" fill="#F8F9FA"></path>
+              </svg>
+            </span></button>
+          <div class="swiper-pagination slider-modal__pagination"></div>
         </div>
-      </footer>
-      <div class="modal policy" data-modal="policy" id="policy">
-        <div class="modal__inner">
-          <h3 class="policy__title title-2">Политика обработки персональных данных</h3>
-          <div class="policy__content">
-            <div class="text-content">
-              <h4 class="title-3">Общие положения</h4>
-              <ol>
-                <li>Настоящая Политика обработки персональных данных (далее — Политика) описывает, как обрабатываются персональные данные пользователей на сайте VeraTarget (далее — Сайт).</li>
-                <li>Владелец Сайта: Гуринович Вера Николаевна.</li>
-                <li>Использование Сайта означает согласие пользователя с настоящей Политикой.</li>
-              </ol>
-            </div>
-            <div class="text-content">
-              <h4 class="title-3">Какие данные собираются и для чего</h4>
-              <ol>
-                <li>
-                  <p>На Сайте могут обрабатываться следующие данные:</p>
-                  <ul>
-                    <li>Имя (если пользователь указывает его в форме);</li>
-                    <li>Электронная почта;</li>
-                    <li>Номер телефона;</li>
-                    <li>Другая информация, предоставленная пользователем.</li>
-                  </ul>
-                </li>
-                <li>
-                  <p>Эти данные используются исключительно для:</p>
-                  <ul>
-                    <li>Обратной связи с пользователем;</li>
-                    <li>Ответа на запросы через форму обратной связи.</li>
-                  </ul>
-                </li>
-              </ol>
-            </div>
-            <div class="text-content">
-              <h4 class="title-3">Как обрабатываются данные</h4>
-              <ol>
-                <li>Персональные данные передаются пользователем добровольно через формы на Сайте.</li>
-                <li>Данные не передаются третьим лицам и не используются в рекламных целях.</li>
-                <li>Хранение данных осуществляется в течение времени, необходимого для выполнения целей, ради которых они были переданы.</li>
-              </ol>
-            </div>
-            <div class="text-content">
-              <h4 class="title-3">Права пользователя</h4>
-              <p>Пользователь имеет право:</p>
-              <ul>
-                <li>Запросить информацию о своих персональных данных;</li>
-                <li>Требовать удаления своих данных, отправив запрос по адресу <a class="btn" href="mailto:i.veratarget@gmail.com">i.veratarget@gmail.com</a>.</li>
-              </ul>
-            </div>
-            <div class="text-content">
-              <h4 class="title-3">Защита данных</h4>
-              <ol>
-                <li>Владелец сайта принимает необходимые меры для защиты персональных данных от несанкционированного доступа.</li>
-              </ol>
-            </div>
-            <div class="text-content">
-              <h4 class="title-3">Контактная информация</h4>
-              <ol>
-                <li>По вопросам обработки персональных данных можно связаться по email: <a class="btn" href="mailto:i.veratarget@gmail.com">i.veratarget@gmail.com</a>.</li>
-              </ol>
-            </div>
-            <div class="text-content">
-              <h4 class="title-3">Настоящая Политика вступает в силу с момента публикации на Сайте.</h4>
-            </div>
+        <div class="product-modal__info">
+          <h2 class="product-modal__title title-2">1 Мёд 0,5л</h2>
+          <div class="product-modal__price-box">
+            <button class="button product-modal__btn btn" type="button" data-cart-counter-transform-btn="1, 1, 50, undefined" data-cart-btn-add="0">В корзину</button>
+            <div class="product-modal__price price"><span data-cart-price="true">8</span> руб</div>
           </div>
+          <table class="product-modal__table table">
+            <tr class="table__row">
+              <td class="table__cell table__cell--key">Сбор</td>
+              <td class="table__cell table__cell--value">2024 года</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell table__cell--key">Состав</td>
+              <td class="table__cell table__cell--value">Разнотравье</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell table__cell--key">Консистенция</td>
+              <td class="table__cell table__cell--value">Жидкая</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell table__cell--key">Цвет</td>
+              <td class="table__cell table__cell--value">Ярко-янтарный</td>
+            </tr>
+          </table>
+          <p class="product-modal__description">Наша пасека предлагает высокое качество продукции. Вы можете быть уверены в натуральности и отсутствии добавок и химических веществ — пчёлы собирают нектар и пыльцу с полей и лесов.</p>
         </div>
-      </div>
-      <div class="modal modal-form" data-modal="modal-form" id="modal-form">
-        <div class="modal__inner">
-          <div class="heading">
-            <h3 class="heading__title title-2">Уточняющие детали перед отправкой</h3>
-            <p class="heading__description">Оставьте ваши контакты и я свяжусь с вами в ближайшее время.</p>
-          </div>
-          <div class="modal__form form" data-validator="true">
-            <div class="form-field">
-              <input class="form-field__input" id="name-2" name="name" type="text" required="" autocomplete="off" data-value-sync="name">
-              <label for="name-2" class="form-field__label">Ваше имя</label>
+        <div class="product-modal__reviews">
+          <h3 class="product-modal__title title-2">Отзывы</h3>
+          <ul class="product-modal__reviews-list">
+            <div class="review">
+              <div class="review__icon">А</div>
+              <div class="review__content">
+                <blockquote class="review__text">Заказывала мёд и перепелиные яйца — всё очень вкусное и свежее! Мёд ароматный, как в детстве у бабушки. Теперь покупаю только здесь.</blockquote>
+                <div class="review__meta">
+                  <h3 class="review__name">Анна-1-2</h3>
+                  <a class="review__link" href="#" aria-label="Читать оригинал">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 9.50003C19.0034 10.8199 18.6951 12.1219 18.1 13.3C17.3944 14.7118 16.3098 15.8992 14.9674 16.7293C13.6251 17.5594 12.0782 17.9994 10.5 18C9.18013 18.0035 7.87812 17.6951 6.7 17.1L1 19L2.9 13.3C2.30493 12.1219 1.99656 10.8199 2 9.50003C2.00061 7.92179 2.44061 6.37488 3.27072 5.03258C4.10083 3.69028 5.28825 2.6056 6.7 1.90003C7.87812 1.30496 9.18013 0.996587 10.5 1.00003H11C13.0843 1.11502 15.053 1.99479 16.5291 3.47089C18.0052 4.94699 18.885 6.91568 19 9.00003V9.50003Z" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="form-field form-field--select">
-              <input class="form-field__input" id="contact-data-2" name="contact-data" type="text" required="" autocomplete="off" data-value-sync="contact-data">
-              <select class="form-field__select" name="contact-value" id="contact-value" data-value-sync="select" data-select="true">
-                <option value="phone">телефон</option>
-                <option value="instagram">инстаграм</option>
-                <option value="telegram">телеграм</option>
-                <option value="whatsapp">ватсап</option>
-                <option value="viber">вайбер</option>
-                <option value="email">эл-почта</option>
-              </select>
-              <label for="contact-data-2" class="form-field__label">Контактные данные</label>
+            <div class="review">
+              <div class="review__icon">А</div>
+              <div class="review__content">
+                <blockquote class="review__text">Заказывала мёд и перепелиные яйца — всё очень вкусное и свежее! Мёд ароматный, как в детстве у бабушки. Теперь покупаю только здесь.</blockquote>
+                <div class="review__meta">
+                  <h3 class="review__name">Анна-1-2</h3>
+                  <a class="review__link" href="#" aria-label="Читать оригинал">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 9.50003C19.0034 10.8199 18.6951 12.1219 18.1 13.3C17.3944 14.7118 16.3098 15.8992 14.9674 16.7293C13.6251 17.5594 12.0782 17.9994 10.5 18C9.18013 18.0035 7.87812 17.6951 6.7 17.1L1 19L2.9 13.3C2.30493 12.1219 1.99656 10.8199 2 9.50003C2.00061 7.92179 2.44061 6.37488 3.27072 5.03258C4.10083 3.69028 5.28825 2.6056 6.7 1.90003C7.87812 1.30496 9.18013 0.996587 10.5 1.00003H11C13.0843 1.11502 15.053 1.99479 16.5291 3.47089C18.0052 4.94699 18.885 6.91568 19 9.00003V9.50003Z" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="form-field">
-              <textarea class="form-field__input form-field__textarea" name="message" id="message-2" data-value-sync="message"></textarea>
-              <label for="message-2" class="form-field__label">Ваше сообщение</label>
-            </div><small class="form__description">*Отправляя заявку, вы соглашаетесь <a class="btn link-policy" href="#policy" data-modal-btn="#policy">с политикой обработки персональных данных</a></small>
-            <button class="btn btn-arrow form__btn" type="button" data-send-form-btn="true">Отправить<span></span></button>
-          </div>
+            <div class="review">
+              <div class="review__icon">А</div>
+              <div class="review__content">
+                <blockquote class="review__text">Заказывала мёд и перепелиные яйца — всё очень вкусное и свежее! Мёд ароматный, как в детстве у бабушки. Теперь покупаю только здесь. Заказывала мёд и перепелиные яйца — всё очень вкусное и свежее! Мёд ароматный, как в детстве у бабушки. Теперь покупаю только здесь.</blockquote>
+                <div class="review__meta">
+                  <h3 class="review__name">Анна-3-1</h3>
+                  <a class="review__link" href="#" aria-label="Читать оригинал">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 9.50003C19.0034 10.8199 18.6951 12.1219 18.1 13.3C17.3944 14.7118 16.3098 15.8992 14.9674 16.7293C13.6251 17.5594 12.0782 17.9994 10.5 18C9.18013 18.0035 7.87812 17.6951 6.7 17.1L1 19L2.9 13.3C2.30493 12.1219 1.99656 10.8199 2 9.50003C2.00061 7.92179 2.44061 6.37488 3.27072 5.03258C4.10083 3.69028 5.28825 2.6056 6.7 1.90003C7.87812 1.30496 9.18013 0.996587 10.5 1.00003H11C13.0843 1.11502 15.053 1.99479 16.5291 3.47089C18.0052 4.94699 18.885 6.91568 19 9.00003V9.50003Z" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </ul>
         </div>
-      </div>
-      <div class="modal success" data-modal="success" id="success">
-        <div class="modal__inner">
-          <figure class="image-box success__image">
-            <img src="images/kiss-kitty.gif" loading="lazy">
-          </figure>
-          <div class="success__content">
-            <h3 class="success__title title-2">Спасибо за заявку!</h3>
-            <p class="success__text title-3">Я свяжусь с вами в ближайшее время!</p>
-            <div class="social success__social">
-              <h3 class="title-3 social__title">Вы также можете связаться со мной через соцсети:</h3>
-              <ul class="social__list">
-                <li class="social__item">
-                  <a href="#" class="social__link link" target="_blank">Instagram</a>
-                </li>
-                <li class="social__item">
-                  <a href="#" class="social__link link" target="_blank">Telegram</a>
-                </li>
-                <li class="social__item">
-                  <a href="#" class="social__link link" target="_blank">LinkedIn</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div class="product-modal__leave-review">
+          <h3 class="product-modal__subtitle title-2">А как вам наши продукты?</h3>
+          <p class="product-modal__reviews-text">Ваш отзыв поможет другим покупателям и вдохновит нас!</p>
+          <a class="button btn product-modal__reviews-btn" href="#">Оставить отзыв</a>
         </div>
       </div>
-      <div class="modal error-modal" data-modal="error-modal" id="error-modal">
-        <div class="modal__inner">
-          <div class="error-modal__content">
-            <h3 class="error-modal__title title-2">Ошибка при отправке формы</h3>
+      <div class="product-modal modal" data-modal="#product-2" id="product-2" data-cart-product-id="1">
+        <div class="product-modal__slider slider-modal">
+          <button class="slider-modal__btn slider-modal__btn-prev" type="button"><span>
+              <svg width="61" height="68" viewBox="0 0 61 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34.168 0.887701C35.1836 1.18463 36.1718 1.60645 37.1084 2.15528L54.5371 12.3682C58.5401 14.714 61 19.0059 61 23.6455L61 44.4092C61 49.0489 58.5401 53.3407 54.5371 55.6865L37.1084 65.8994C33.0273 68.2909 27.9727 68.2908 23.8916 65.8994L6.46289 55.6865C2.45982 53.3408 5.1221e-05 49.0489 2.03553e-06 44.4092L3.85075e-06 23.6455C5.00327e-05 19.0058 2.45982 14.7139 6.4629 12.3682L23.8916 2.15528C24.8282 1.60645 25.8164 1.18461 26.832 0.8877L34.168 0.887701Z" fill="#212529"></path>
+                <path d="M35.3296 17.2483C36.0896 16.6273 37.2118 16.6701 37.9214 17.3782C38.6311 18.0864 38.6766 19.2087 38.0572 19.97L37.9244 20.1175L23.0982 34.9739L37.8472 48.2151C38.6427 48.9297 38.7081 50.1538 37.9937 50.9495C37.2792 51.7451 36.0551 51.8114 35.2593 51.097L19.4996 36.9475C18.3988 35.9593 18.3515 34.2497 19.396 33.2024L35.1822 17.3811L35.3296 17.2483Z" fill="#F8F9FA"></path>
+              </svg>
+            </span></button>
+          <div class="swiper slider-modal-swiper">
+            <div class="swiper-wrapper slider-modal-swiper__wrapper&quot;">
+              <div class="swiper-slide slider-modal-slide">
+                <figure class="image-box">
+                  <picture>
+                    <source srcset="/assets/images/product-1-320x438.avif 320w, /assets/images/product-1-380x520.avif 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/avif">
+                    <source srcset="/assets/images/product-1-320x438.webp 320w, /assets/images/product-1-380x520.webp 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/webp">
+                    <img srcset="/assets/images/product-1-320x438.jpg 320w, /assets/images/product-1-380x520.jpg 380w" src="/assets/images/product-1-380x520.jpg" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" alt="2 Яйца перепелиные 20 шт" decoding="async" loading="lazy" title="2 Яйца перепелиные 20 шт">
+                  </picture>
+                </figure>
+              </div>
+              <div class="swiper-slide slider-modal-slide">
+                <figure class="image-box">
+                  <picture>
+                    <source srcset="/assets/images/product-2-320x438.avif 320w, /assets/images/product-2-380x520.avif 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/avif">
+                    <source srcset="/assets/images/product-2-320x438.webp 320w, /assets/images/product-2-380x520.webp 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/webp">
+                    <img srcset="/assets/images/product-2-320x438.jpg 320w, /assets/images/product-2-380x520.jpg 380w" src="/assets/images/product-2-380x520.jpg" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" alt="2 Яйца перепелиные 20 шт" decoding="async" loading="lazy" title="2 Яйца перепелиные 20 шт">
+                  </picture>
+                </figure>
+              </div>
+            </div>
           </div>
-          <p class="error-modal__text title-3">Попробуйте ещё раз, или проверьте подключение к интернету</p>
+          <button class="slider-modal__btn slider-modal__btn-next" type="button"><span>
+              <svg width="61" height="68" viewBox="0 0 61 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26.832 67.693C25.8164 67.3961 24.8282 66.9742 23.8916 66.4254L6.46289 56.2125C2.45994 53.8667 4.26377e-05 49.5748 0 44.9352V24.1715C5.02875e-05 19.5318 2.45994 15.24 6.46289 12.8942L23.8916 2.68126C27.9727 0.289807 33.0273 0.289872 37.1084 2.68126L54.5371 12.8942C58.5402 15.2399 61 19.5318 61 24.1715V44.9352C61 49.5749 58.5402 53.8667 54.5371 56.2125L37.1084 66.4254C36.1718 66.9742 35.1836 67.3961 34.168 67.693H26.832Z" fill="#212529"></path>
+                <path d="M25.6704 51.3324C24.9104 51.9534 23.7883 51.9106 23.0786 51.2025C22.3689 50.4943 22.3234 49.3719 22.9428 48.6107L23.0756 48.4632L37.9018 33.6068L23.1528 20.3656C22.3573 19.651 22.2919 18.4269 23.0063 17.6312C23.7208 16.8356 24.9449 16.7693 25.7407 17.4837L41.5004 31.6331C42.6012 32.6214 42.6485 34.331 41.604 35.3783L25.8178 51.1995L25.6704 51.3324Z" fill="#F8F9FA"></path>
+              </svg>
+            </span></button>
+          <div class="swiper-pagination slider-modal__pagination"></div>
+        </div>
+        <div class="product-modal__info">
+          <h2 class="product-modal__title title-2">2 Яйца перепелиные 20 шт</h2>
+          <div class="product-modal__price-box">
+            <button class="button product-modal__btn btn" type="button" data-cart-counter-transform-btn="1, 1, 20, undefined" data-cart-btn-add="1">В корзину</button>
+            <div class="product-modal__price price"><span data-cart-price="true">4</span> руб</div>
+          </div>
+          <table class="product-modal__table table">
+            <tr class="table__row">
+              <td class="table__cell table__cell--key">Сбор</td>
+              <td class="table__cell table__cell--value">2024 года</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell table__cell--key">Состав</td>
+              <td class="table__cell table__cell--value">Разнотравье</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell table__cell--key">Консистенция</td>
+              <td class="table__cell table__cell--value">Жидкая</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell table__cell--key">Цвет</td>
+              <td class="table__cell table__cell--value">Ярко-янтарный</td>
+            </tr>
+          </table>
+          <p class="product-modal__description">Наша пасека предлагает высокое качество продукции. Вы можете быть уверены в натуральности и отсутствии добавок и химических веществ — пчёлы собирают нектар и пыльцу с полей и лесов.</p>
+        </div>
+        <div class="product-modal__reviews">
+          <h3 class="product-modal__title title-2">Отзывы</h3>
+          <ul class="product-modal__reviews-list">
+            <div class="review">
+              <div class="review__icon">А</div>
+              <div class="review__content">
+                <blockquote class="review__text">Заказывала мёд и перепелиные яйца — всё очень вкусное и свежее! Мёд ароматный, как в детстве у бабушки. Теперь покупаю только здесь.</blockquote>
+                <div class="review__meta">
+                  <h3 class="review__name">Анна-1-2</h3>
+                  <a class="review__link" href="#" aria-label="Читать оригинал">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 9.50003C19.0034 10.8199 18.6951 12.1219 18.1 13.3C17.3944 14.7118 16.3098 15.8992 14.9674 16.7293C13.6251 17.5594 12.0782 17.9994 10.5 18C9.18013 18.0035 7.87812 17.6951 6.7 17.1L1 19L2.9 13.3C2.30493 12.1219 1.99656 10.8199 2 9.50003C2.00061 7.92179 2.44061 6.37488 3.27072 5.03258C4.10083 3.69028 5.28825 2.6056 6.7 1.90003C7.87812 1.30496 9.18013 0.996587 10.5 1.00003H11C13.0843 1.11502 15.053 1.99479 16.5291 3.47089C18.0052 4.94699 18.885 6.91568 19 9.00003V9.50003Z" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="review">
+              <div class="review__icon">А</div>
+              <div class="review__content">
+                <blockquote class="review__text">Заказывала мёд и перепелиные яйца — всё очень вкусное и свежее! Мёд ароматный, как в детстве у бабушки. Теперь покупаю только здесь.</blockquote>
+                <div class="review__meta">
+                  <h3 class="review__name">Анна-1-2</h3>
+                  <a class="review__link" href="#" aria-label="Читать оригинал">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 9.50003C19.0034 10.8199 18.6951 12.1219 18.1 13.3C17.3944 14.7118 16.3098 15.8992 14.9674 16.7293C13.6251 17.5594 12.0782 17.9994 10.5 18C9.18013 18.0035 7.87812 17.6951 6.7 17.1L1 19L2.9 13.3C2.30493 12.1219 1.99656 10.8199 2 9.50003C2.00061 7.92179 2.44061 6.37488 3.27072 5.03258C4.10083 3.69028 5.28825 2.6056 6.7 1.90003C7.87812 1.30496 9.18013 0.996587 10.5 1.00003H11C13.0843 1.11502 15.053 1.99479 16.5291 3.47089C18.0052 4.94699 18.885 6.91568 19 9.00003V9.50003Z" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="review">
+              <div class="review__icon">А</div>
+              <div class="review__content">
+                <blockquote class="review__text">Заказывала мёд и перепелиные яйца — всё очень вкусное и свежее! Мёд ароматный, как в детстве у бабушки. Теперь покупаю только здесь. Заказывала мёд и перепелиные яйца — всё очень вкусное и свежее! Мёд ароматный, как в детстве у бабушки. Теперь покупаю только здесь.</blockquote>
+                <div class="review__meta">
+                  <h3 class="review__name">Анна-2</h3>
+                  <a class="review__link" href="#" aria-label="Читать оригинал">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 9.50003C19.0034 10.8199 18.6951 12.1219 18.1 13.3C17.3944 14.7118 16.3098 15.8992 14.9674 16.7293C13.6251 17.5594 12.0782 17.9994 10.5 18C9.18013 18.0035 7.87812 17.6951 6.7 17.1L1 19L2.9 13.3C2.30493 12.1219 1.99656 10.8199 2 9.50003C2.00061 7.92179 2.44061 6.37488 3.27072 5.03258C4.10083 3.69028 5.28825 2.6056 6.7 1.90003C7.87812 1.30496 9.18013 0.996587 10.5 1.00003H11C13.0843 1.11502 15.053 1.99479 16.5291 3.47089C18.0052 4.94699 18.885 6.91568 19 9.00003V9.50003Z" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="review">
+              <div class="review__icon">А</div>
+              <div class="review__content">
+                <blockquote class="review__text">Заказывала мёд и перепелиные яйца — всё очень вкусное и свежее! Мёд ароматный, как в детстве у бабушки. Теперь покупаю только здесь. Заказывала мёд и перепелиные яйца — всё очень вкусное и свежее! Мёд ароматный, как в детстве у бабушки. Теперь покупаю только здесь.</blockquote>
+                <div class="review__meta">
+                  <h3 class="review__name">Анна-2</h3>
+                  <a class="review__link" href="#" aria-label="Читать оригинал">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 9.50003C19.0034 10.8199 18.6951 12.1219 18.1 13.3C17.3944 14.7118 16.3098 15.8992 14.9674 16.7293C13.6251 17.5594 12.0782 17.9994 10.5 18C9.18013 18.0035 7.87812 17.6951 6.7 17.1L1 19L2.9 13.3C2.30493 12.1219 1.99656 10.8199 2 9.50003C2.00061 7.92179 2.44061 6.37488 3.27072 5.03258C4.10083 3.69028 5.28825 2.6056 6.7 1.90003C7.87812 1.30496 9.18013 0.996587 10.5 1.00003H11C13.0843 1.11502 15.053 1.99479 16.5291 3.47089C18.0052 4.94699 18.885 6.91568 19 9.00003V9.50003Z" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </div>
+        <div class="product-modal__leave-review">
+          <h3 class="product-modal__subtitle title-2">А как вам наши продукты?</h3>
+          <p class="product-modal__reviews-text">Ваш отзыв поможет другим покупателям и вдохновит нас!</p>
+          <a class="button btn product-modal__reviews-btn" href="#">Оставить отзыв</a>
+        </div>
+      </div>
+      <div class="product-modal modal" data-modal="#product-3" id="product-3" data-cart-product-id="2">
+        <div class="product-modal__slider slider-modal">
+          <button class="slider-modal__btn slider-modal__btn-prev" type="button"><span>
+              <svg width="61" height="68" viewBox="0 0 61 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34.168 0.887701C35.1836 1.18463 36.1718 1.60645 37.1084 2.15528L54.5371 12.3682C58.5401 14.714 61 19.0059 61 23.6455L61 44.4092C61 49.0489 58.5401 53.3407 54.5371 55.6865L37.1084 65.8994C33.0273 68.2909 27.9727 68.2908 23.8916 65.8994L6.46289 55.6865C2.45982 53.3408 5.1221e-05 49.0489 2.03553e-06 44.4092L3.85075e-06 23.6455C5.00327e-05 19.0058 2.45982 14.7139 6.4629 12.3682L23.8916 2.15528C24.8282 1.60645 25.8164 1.18461 26.832 0.8877L34.168 0.887701Z" fill="#212529"></path>
+                <path d="M35.3296 17.2483C36.0896 16.6273 37.2118 16.6701 37.9214 17.3782C38.6311 18.0864 38.6766 19.2087 38.0572 19.97L37.9244 20.1175L23.0982 34.9739L37.8472 48.2151C38.6427 48.9297 38.7081 50.1538 37.9937 50.9495C37.2792 51.7451 36.0551 51.8114 35.2593 51.097L19.4996 36.9475C18.3988 35.9593 18.3515 34.2497 19.396 33.2024L35.1822 17.3811L35.3296 17.2483Z" fill="#F8F9FA"></path>
+              </svg>
+            </span></button>
+          <div class="swiper slider-modal-swiper">
+            <div class="swiper-wrapper slider-modal-swiper__wrapper&quot;">
+              <div class="swiper-slide slider-modal-slide">
+                <figure class="image-box">
+                  <picture>
+                    <source srcset="/assets/images/product-1-320x438.avif 320w, /assets/images/product-1-380x520.avif 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/avif">
+                    <source srcset="/assets/images/product-1-320x438.webp 320w, /assets/images/product-1-380x520.webp 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/webp">
+                    <img srcset="/assets/images/product-1-320x438.jpg 320w, /assets/images/product-1-380x520.jpg 380w" src="/assets/images/product-1-380x520.jpg" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" alt="3 Мёд 0,5л" decoding="async" loading="lazy" title="3 Мёд 0,5л">
+                  </picture>
+                </figure>
+              </div>
+              <div class="swiper-slide slider-modal-slide">
+                <figure class="image-box">
+                  <picture>
+                    <source srcset="/assets/images/product-2-320x438.avif 320w, /assets/images/product-2-380x520.avif 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/avif">
+                    <source srcset="/assets/images/product-2-320x438.webp 320w, /assets/images/product-2-380x520.webp 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/webp">
+                    <img srcset="/assets/images/product-2-320x438.jpg 320w, /assets/images/product-2-380x520.jpg 380w" src="/assets/images/product-2-380x520.jpg" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" alt="3 Мёд 0,5л" decoding="async" loading="lazy" title="3 Мёд 0,5л">
+                  </picture>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <button class="slider-modal__btn slider-modal__btn-next" type="button"><span>
+              <svg width="61" height="68" viewBox="0 0 61 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26.832 67.693C25.8164 67.3961 24.8282 66.9742 23.8916 66.4254L6.46289 56.2125C2.45994 53.8667 4.26377e-05 49.5748 0 44.9352V24.1715C5.02875e-05 19.5318 2.45994 15.24 6.46289 12.8942L23.8916 2.68126C27.9727 0.289807 33.0273 0.289872 37.1084 2.68126L54.5371 12.8942C58.5402 15.2399 61 19.5318 61 24.1715V44.9352C61 49.5749 58.5402 53.8667 54.5371 56.2125L37.1084 66.4254C36.1718 66.9742 35.1836 67.3961 34.168 67.693H26.832Z" fill="#212529"></path>
+                <path d="M25.6704 51.3324C24.9104 51.9534 23.7883 51.9106 23.0786 51.2025C22.3689 50.4943 22.3234 49.3719 22.9428 48.6107L23.0756 48.4632L37.9018 33.6068L23.1528 20.3656C22.3573 19.651 22.2919 18.4269 23.0063 17.6312C23.7208 16.8356 24.9449 16.7693 25.7407 17.4837L41.5004 31.6331C42.6012 32.6214 42.6485 34.331 41.604 35.3783L25.8178 51.1995L25.6704 51.3324Z" fill="#F8F9FA"></path>
+              </svg>
+            </span></button>
+          <div class="swiper-pagination slider-modal__pagination"></div>
+        </div>
+        <div class="product-modal__info">
+          <h2 class="product-modal__title title-2">3 Мёд 0,5л</h2>
+          <div class="product-modal__price-box">
+            <button class="button product-modal__btn btn" type="button" data-cart-counter-transform-btn="1, 1, 50, undefined" data-cart-btn-add="2">В корзину</button>
+            <div class="product-modal__price price"><span data-cart-price="true">8</span> руб</div>
+          </div>
+          <table class="product-modal__table table">
+            <tr class="table__row">
+              <td class="table__cell table__cell--key">Сбор</td>
+              <td class="table__cell table__cell--value">2024 года</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell table__cell--key">Состав</td>
+              <td class="table__cell table__cell--value">Разнотравье</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell table__cell--key">Консистенция</td>
+              <td class="table__cell table__cell--value">Жидкая</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell table__cell--key">Цвет</td>
+              <td class="table__cell table__cell--value">Ярко-янтарный</td>
+            </tr>
+          </table>
+          <p class="product-modal__description">Наша пасека предлагает высокое качество продукции. Вы можете быть уверены в натуральности и отсутствии добавок и химических веществ — пчёлы собирают нектар и пыльцу с полей и лесов.</p>
+        </div>
+        <div class="product-modal__reviews">
+          <h3 class="product-modal__title title-2">Отзывы</h3>
+          <ul class="product-modal__reviews-list">
+            <div class="review">
+              <div class="review__icon">А</div>
+              <div class="review__content">
+                <blockquote class="review__text">Заказывала мёд и перепелиные яйца — всё очень вкусное и свежее! Мёд ароматный, как в детстве у бабушки. Теперь покупаю только здесь.</blockquote>
+                <div class="review__meta">
+                  <h3 class="review__name">Анна-3</h3>
+                  <a class="review__link" href="#" aria-label="Читать оригинал">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 9.50003C19.0034 10.8199 18.6951 12.1219 18.1 13.3C17.3944 14.7118 16.3098 15.8992 14.9674 16.7293C13.6251 17.5594 12.0782 17.9994 10.5 18C9.18013 18.0035 7.87812 17.6951 6.7 17.1L1 19L2.9 13.3C2.30493 12.1219 1.99656 10.8199 2 9.50003C2.00061 7.92179 2.44061 6.37488 3.27072 5.03258C4.10083 3.69028 5.28825 2.6056 6.7 1.90003C7.87812 1.30496 9.18013 0.996587 10.5 1.00003H11C13.0843 1.11502 15.053 1.99479 16.5291 3.47089C18.0052 4.94699 18.885 6.91568 19 9.00003V9.50003Z" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="review">
+              <div class="review__icon">А</div>
+              <div class="review__content">
+                <blockquote class="review__text">Заказывала мёд и перепелиные яйца — всё очень вкусное и свежее! Мёд ароматный, как в детстве у бабушки. Теперь покупаю только здесь. Заказывала мёд и перепелиные яйца — всё очень вкусное и свежее! Мёд ароматный, как в детстве у бабушки. Теперь покупаю только здесь.</blockquote>
+                <div class="review__meta">
+                  <h3 class="review__name">Анна-3</h3>
+                  <a class="review__link" href="#" aria-label="Читать оригинал">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 9.50003C19.0034 10.8199 18.6951 12.1219 18.1 13.3C17.3944 14.7118 16.3098 15.8992 14.9674 16.7293C13.6251 17.5594 12.0782 17.9994 10.5 18C9.18013 18.0035 7.87812 17.6951 6.7 17.1L1 19L2.9 13.3C2.30493 12.1219 1.99656 10.8199 2 9.50003C2.00061 7.92179 2.44061 6.37488 3.27072 5.03258C4.10083 3.69028 5.28825 2.6056 6.7 1.90003C7.87812 1.30496 9.18013 0.996587 10.5 1.00003H11C13.0843 1.11502 15.053 1.99479 16.5291 3.47089C18.0052 4.94699 18.885 6.91568 19 9.00003V9.50003Z" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="review">
+              <div class="review__icon">А</div>
+              <div class="review__content">
+                <blockquote class="review__text">Заказывала мёд и перепелиные яйца — всё очень вкусное и свежее! Мёд ароматный, как в детстве у бабушки. Теперь покупаю только здесь. Заказывала мёд и перепелиные яйца — всё очень вкусное и свежее! Мёд ароматный, как в детстве у бабушки. Теперь покупаю только здесь.</blockquote>
+                <div class="review__meta">
+                  <h3 class="review__name">Анна-3-1</h3>
+                  <a class="review__link" href="#" aria-label="Читать оригинал">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 9.50003C19.0034 10.8199 18.6951 12.1219 18.1 13.3C17.3944 14.7118 16.3098 15.8992 14.9674 16.7293C13.6251 17.5594 12.0782 17.9994 10.5 18C9.18013 18.0035 7.87812 17.6951 6.7 17.1L1 19L2.9 13.3C2.30493 12.1219 1.99656 10.8199 2 9.50003C2.00061 7.92179 2.44061 6.37488 3.27072 5.03258C4.10083 3.69028 5.28825 2.6056 6.7 1.90003C7.87812 1.30496 9.18013 0.996587 10.5 1.00003H11C13.0843 1.11502 15.053 1.99479 16.5291 3.47089C18.0052 4.94699 18.885 6.91568 19 9.00003V9.50003Z" stroke="#495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </div>
+        <div class="product-modal__leave-review">
+          <h3 class="product-modal__subtitle title-2">А как вам наши продукты?</h3>
+          <p class="product-modal__reviews-text">Ваш отзыв поможет другим покупателям и вдохновит нас!</p>
+          <a class="button btn product-modal__reviews-btn" href="#">Оставить отзыв</a>
+        </div>
+      </div>
+      <div class="product-modal modal" data-modal="#product-4" id="product-4" data-cart-product-id="3">
+        <div class="product-modal__slider slider-modal">
+          <button class="slider-modal__btn slider-modal__btn-prev" type="button"><span>
+              <svg width="61" height="68" viewBox="0 0 61 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34.168 0.887701C35.1836 1.18463 36.1718 1.60645 37.1084 2.15528L54.5371 12.3682C58.5401 14.714 61 19.0059 61 23.6455L61 44.4092C61 49.0489 58.5401 53.3407 54.5371 55.6865L37.1084 65.8994C33.0273 68.2909 27.9727 68.2908 23.8916 65.8994L6.46289 55.6865C2.45982 53.3408 5.1221e-05 49.0489 2.03553e-06 44.4092L3.85075e-06 23.6455C5.00327e-05 19.0058 2.45982 14.7139 6.4629 12.3682L23.8916 2.15528C24.8282 1.60645 25.8164 1.18461 26.832 0.8877L34.168 0.887701Z" fill="#212529"></path>
+                <path d="M35.3296 17.2483C36.0896 16.6273 37.2118 16.6701 37.9214 17.3782C38.6311 18.0864 38.6766 19.2087 38.0572 19.97L37.9244 20.1175L23.0982 34.9739L37.8472 48.2151C38.6427 48.9297 38.7081 50.1538 37.9937 50.9495C37.2792 51.7451 36.0551 51.8114 35.2593 51.097L19.4996 36.9475C18.3988 35.9593 18.3515 34.2497 19.396 33.2024L35.1822 17.3811L35.3296 17.2483Z" fill="#F8F9FA"></path>
+              </svg>
+            </span></button>
+          <div class="swiper slider-modal-swiper">
+            <div class="swiper-wrapper slider-modal-swiper__wrapper&quot;">
+              <div class="swiper-slide slider-modal-slide">
+                <figure class="image-box">
+                  <picture>
+                    <source srcset="/assets/images/product-1-320x438.avif 320w, /assets/images/product-1-380x520.avif 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/avif">
+                    <source srcset="/assets/images/product-1-320x438.webp 320w, /assets/images/product-1-380x520.webp 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/webp">
+                    <img srcset="/assets/images/product-1-320x438.jpg 320w, /assets/images/product-1-380x520.jpg 380w" src="/assets/images/product-1-380x520.jpg" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" alt="4 Яйца перепелиные 20 шт" decoding="async" loading="lazy" title="4 Яйца перепелиные 20 шт">
+                  </picture>
+                </figure>
+              </div>
+              <div class="swiper-slide slider-modal-slide">
+                <figure class="image-box">
+                  <picture>
+                    <source srcset="/assets/images/product-2-320x438.avif 320w, /assets/images/product-2-380x520.avif 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/avif">
+                    <source srcset="/assets/images/product-2-320x438.webp 320w, /assets/images/product-2-380x520.webp 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/webp">
+                    <img srcset="/assets/images/product-2-320x438.jpg 320w, /assets/images/product-2-380x520.jpg 380w" src="/assets/images/product-2-380x520.jpg" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" alt="4 Яйца перепелиные 20 шт" decoding="async" loading="lazy" title="4 Яйца перепелиные 20 шт">
+                  </picture>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <button class="slider-modal__btn slider-modal__btn-next" type="button"><span>
+              <svg width="61" height="68" viewBox="0 0 61 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26.832 67.693C25.8164 67.3961 24.8282 66.9742 23.8916 66.4254L6.46289 56.2125C2.45994 53.8667 4.26377e-05 49.5748 0 44.9352V24.1715C5.02875e-05 19.5318 2.45994 15.24 6.46289 12.8942L23.8916 2.68126C27.9727 0.289807 33.0273 0.289872 37.1084 2.68126L54.5371 12.8942C58.5402 15.2399 61 19.5318 61 24.1715V44.9352C61 49.5749 58.5402 53.8667 54.5371 56.2125L37.1084 66.4254C36.1718 66.9742 35.1836 67.3961 34.168 67.693H26.832Z" fill="#212529"></path>
+                <path d="M25.6704 51.3324C24.9104 51.9534 23.7883 51.9106 23.0786 51.2025C22.3689 50.4943 22.3234 49.3719 22.9428 48.6107L23.0756 48.4632L37.9018 33.6068L23.1528 20.3656C22.3573 19.651 22.2919 18.4269 23.0063 17.6312C23.7208 16.8356 24.9449 16.7693 25.7407 17.4837L41.5004 31.6331C42.6012 32.6214 42.6485 34.331 41.604 35.3783L25.8178 51.1995L25.6704 51.3324Z" fill="#F8F9FA"></path>
+              </svg>
+            </span></button>
+          <div class="swiper-pagination slider-modal__pagination"></div>
+        </div>
+        <div class="product-modal__info">
+          <h2 class="product-modal__title title-2">4 Яйца перепелиные 20 шт</h2>
+          <div class="product-modal__price-box">
+            <button class="button product-modal__btn btn" type="button" data-cart-counter-transform-btn="1, 1, 30, undefined" data-cart-btn-add="3">В корзину</button>
+            <div class="product-modal__price price"><span data-cart-price="true">4</span> руб</div>
+          </div>
+          <table class="product-modal__table table">
+            <tr class="table__row">
+              <td class="table__cell table__cell--key">Сбор</td>
+              <td class="table__cell table__cell--value">2024 года</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell table__cell--key">Состав</td>
+              <td class="table__cell table__cell--value">Разнотравье</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell table__cell--key">Консистенция</td>
+              <td class="table__cell table__cell--value">Жидкая</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell table__cell--key">Цвет</td>
+              <td class="table__cell table__cell--value">Ярко-янтарный</td>
+            </tr>
+          </table>
+          <p class="product-modal__description">Наша пасека предлагает высокое качество продукции. Вы можете быть уверены в натуральности и отсутствии добавок и химических веществ — пчёлы собирают нектар и пыльцу с полей и лесов.</p>
+        </div>
+        <div class="product-modal__leave-review">
+          <h3 class="product-modal__subtitle title-2">А как вам наши продукты?</h3>
+          <p class="product-modal__reviews-text">Будьте первым, кто поделится впечатлением о нашем продукте — ваше мнение важно для нас и других покупателей!</p>
+          <a class="button btn product-modal__reviews-btn" href="#">Оставить отзыв</a>
+        </div>
+      </div>
+      <div class="product-modal modal" data-modal="#product-5" id="product-5" data-cart-product-id="4">
+        <div class="product-modal__slider slider-modal">
+          <button class="slider-modal__btn slider-modal__btn-prev" type="button"><span>
+              <svg width="61" height="68" viewBox="0 0 61 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34.168 0.887701C35.1836 1.18463 36.1718 1.60645 37.1084 2.15528L54.5371 12.3682C58.5401 14.714 61 19.0059 61 23.6455L61 44.4092C61 49.0489 58.5401 53.3407 54.5371 55.6865L37.1084 65.8994C33.0273 68.2909 27.9727 68.2908 23.8916 65.8994L6.46289 55.6865C2.45982 53.3408 5.1221e-05 49.0489 2.03553e-06 44.4092L3.85075e-06 23.6455C5.00327e-05 19.0058 2.45982 14.7139 6.4629 12.3682L23.8916 2.15528C24.8282 1.60645 25.8164 1.18461 26.832 0.8877L34.168 0.887701Z" fill="#212529"></path>
+                <path d="M35.3296 17.2483C36.0896 16.6273 37.2118 16.6701 37.9214 17.3782C38.6311 18.0864 38.6766 19.2087 38.0572 19.97L37.9244 20.1175L23.0982 34.9739L37.8472 48.2151C38.6427 48.9297 38.7081 50.1538 37.9937 50.9495C37.2792 51.7451 36.0551 51.8114 35.2593 51.097L19.4996 36.9475C18.3988 35.9593 18.3515 34.2497 19.396 33.2024L35.1822 17.3811L35.3296 17.2483Z" fill="#F8F9FA"></path>
+              </svg>
+            </span></button>
+          <div class="swiper slider-modal-swiper">
+            <div class="swiper-wrapper slider-modal-swiper__wrapper&quot;">
+              <div class="swiper-slide slider-modal-slide">
+                <figure class="image-box">
+                  <picture>
+                    <source srcset="/assets/images/product-1-320x438.avif 320w, /assets/images/product-1-380x520.avif 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/avif">
+                    <source srcset="/assets/images/product-1-320x438.webp 320w, /assets/images/product-1-380x520.webp 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/webp">
+                    <img srcset="/assets/images/product-1-320x438.jpg 320w, /assets/images/product-1-380x520.jpg 380w" src="/assets/images/product-1-380x520.jpg" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" alt="5 Яйца перепелиные 20 шт" decoding="async" loading="lazy" title="5 Яйца перепелиные 20 шт">
+                  </picture>
+                </figure>
+              </div>
+              <div class="swiper-slide slider-modal-slide">
+                <figure class="image-box">
+                  <picture>
+                    <source srcset="/assets/images/product-2-320x438.avif 320w, /assets/images/product-2-380x520.avif 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/avif">
+                    <source srcset="/assets/images/product-2-320x438.webp 320w, /assets/images/product-2-380x520.webp 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/webp">
+                    <img srcset="/assets/images/product-2-320x438.jpg 320w, /assets/images/product-2-380x520.jpg 380w" src="/assets/images/product-2-380x520.jpg" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" alt="5 Яйца перепелиные 20 шт" decoding="async" loading="lazy" title="5 Яйца перепелиные 20 шт">
+                  </picture>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <button class="slider-modal__btn slider-modal__btn-next" type="button"><span>
+              <svg width="61" height="68" viewBox="0 0 61 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26.832 67.693C25.8164 67.3961 24.8282 66.9742 23.8916 66.4254L6.46289 56.2125C2.45994 53.8667 4.26377e-05 49.5748 0 44.9352V24.1715C5.02875e-05 19.5318 2.45994 15.24 6.46289 12.8942L23.8916 2.68126C27.9727 0.289807 33.0273 0.289872 37.1084 2.68126L54.5371 12.8942C58.5402 15.2399 61 19.5318 61 24.1715V44.9352C61 49.5749 58.5402 53.8667 54.5371 56.2125L37.1084 66.4254C36.1718 66.9742 35.1836 67.3961 34.168 67.693H26.832Z" fill="#212529"></path>
+                <path d="M25.6704 51.3324C24.9104 51.9534 23.7883 51.9106 23.0786 51.2025C22.3689 50.4943 22.3234 49.3719 22.9428 48.6107L23.0756 48.4632L37.9018 33.6068L23.1528 20.3656C22.3573 19.651 22.2919 18.4269 23.0063 17.6312C23.7208 16.8356 24.9449 16.7693 25.7407 17.4837L41.5004 31.6331C42.6012 32.6214 42.6485 34.331 41.604 35.3783L25.8178 51.1995L25.6704 51.3324Z" fill="#F8F9FA"></path>
+              </svg>
+            </span></button>
+          <div class="swiper-pagination slider-modal__pagination"></div>
+        </div>
+        <div class="product-modal__info">
+          <h2 class="product-modal__title title-2">5 Яйца перепелиные 20 шт</h2>
+          <div class="product-modal__price-box">
+            <button class="button product-modal__btn btn" type="button" data-cart-counter-transform-btn="1, 1, 5, undefined" data-cart-btn-add="4">В корзину</button>
+            <div class="product-modal__price price"><span data-cart-price="true">4</span> руб</div>
+          </div>
+          <table class="product-modal__table table">
+            <tr class="table__row">
+              <td class="table__cell table__cell--key">Сбор</td>
+              <td class="table__cell table__cell--value">2024 года</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell table__cell--key">Состав</td>
+              <td class="table__cell table__cell--value">Разнотравье</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell table__cell--key">Консистенция</td>
+              <td class="table__cell table__cell--value">Жидкая</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell table__cell--key">Цвет</td>
+              <td class="table__cell table__cell--value">Ярко-янтарный</td>
+            </tr>
+          </table>
+          <p class="product-modal__description">Наша пасека предлагает высокое качество продукции. Вы можете быть уверены в натуральности и отсутствии добавок и химических веществ — пчёлы собирают нектар и пыльцу с полей и лесов.</p>
+        </div>
+        <div class="product-modal__leave-review">
+          <h3 class="product-modal__subtitle title-2">А как вам наши продукты?</h3>
+          <p class="product-modal__reviews-text">Будьте первым, кто поделится впечатлением о нашем продукте — ваше мнение важно для нас и других покупателей!</p>
+          <a class="button btn product-modal__reviews-btn" href="#">Оставить отзыв</a>
+        </div>
+      </div>
+      <div class="cart" id="cart" data-modal="#cart">
+        <h2 class="cart__title title-2">Корзина (<span data-cart-quantity="true">0</span>)</h2>
+        <ul class="cart__list" data-cart-list="true"></ul>
+        <div class="cart__order-box"><small class="cart__info small-descr">*Цена указана без доставки, финальная цена с доставкой обговаривается при контакте с продавцом</small>
+          <div class="cart__total total"><span class="total__text">Итого:</span>
+            <div class="total__price price"><span data-cart-price-sum="true">28</span> руб</div>
+          </div>
+          <button class="button cart__btn btn" type="button">Оформить заказ</button>
         </div>
       </div>
     </div>

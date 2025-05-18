@@ -1,6 +1,6 @@
-// Для myClamp
+// Для adapt()
 // - ширина полотна (макета)
-$templateWidth: 1440;
+$templateWidth: 1920;
 // - минимальная ширина страницы
 $finishBreakpoint: 320;
 $unitsDefault: ""; // px / rem / ''
@@ -8,7 +8,6 @@ $unitsDefault: ""; // px / rem / ''
 $laptop: 1440.98;
 $laptop-s: 1280.98;
 $tablet: 1024.98;
-$tablet-s: 768.98;
 $mobile: 768.98;
 $mobile-m: 460.98;
 $mobile-s: 320.98;
@@ -18,23 +17,23 @@ $mobile-s: 320.98;
 	--index: calc(1vw + 1vh);
 
 	// COLORS
-	--color-light: #f8f9fa;
-	--color-accent: #ffd43b;
-	--color-sub-accent: #212529;
-	--color-text-accent: #495057;
 	--color-dark: #212529;
 	--color-gray: #495057;
-	--color-gray-light: #cdcfd1;
+	--color-gray-light: #ced4da;
+	--color-gray-light-2: #f1f3f5;
+	--color-gray-dark: #adb5bd;
+	--color-accent: #fcd34d;
+	--color-accent-light: #fde68b;
+	--color-light: #f8f9fa;
 
 	// CONTAINER
 	--container-width: #{rem(1200)};
-	--container-padding: #{rem(15)}; //! даже если контейнер на весь экран, отсупы оставь а ширину сделай на 100%
+	--container-padding: #{rem(10)}; //! даже если контейнер на весь экран, отсупы оставь а ширину сделай на 100%
 
 	// FONTS
 	--font-size-html: 100%; // 1rem = 1px ===> calc(1 / 16 * 100%)
 	--font-size: #{adapt(18, 16)};
-	--main-font: "Racama", sans-serif;
-	--secondary-font: "Unbounded-VF", sans-serif;
+	--font-family-main: "Rubik", sans-serif;
 
 	// TRANSITION
 	--duration-fast: 0.3s;
@@ -42,5 +41,5 @@ $mobile-s: 320.98;
 	--duration-slow: 0.8s;
 
 	// Other
-	--header-height: #{adapt(151, 136)};
+	--header-height: #{rem(91)};
 }

@@ -44,3 +44,28 @@
 	padding: 0 var(--container-padding);
 	margin: 0 auto;
 }
+
+.flex {
+	display: flex;
+}
+
+.flex-jc-sb {
+	justify-content: space-between;
+}
+
+.flex-jc-c {
+	justify-content: center;
+}
+
+.flex-ai-c {
+	align-items: center;
+}
+
+.flex-cc {
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}

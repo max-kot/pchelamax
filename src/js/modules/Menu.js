@@ -36,19 +36,22 @@ export class Menu {
 	}
 
 	correctFocus(list, btn) {
-		const links = list.querySelectorAll('input, a, button, textarea, [tabindex]');
+		//const links = list.querySelectorAll('input, a, button, textarea, [tabindex]');
+		//console.log(links)
+		//if (links.length) {
+		//	links.forEach(link => {
+		//		let lastLink = links[links.length - 1];
 
-		links.forEach(link => {
-			let lastLink = links[links.length - 1];
+		//		link.addEventListener('blur', (event) => {
+		//			if (event.target === lastLink) {
+		//				btn.focus();
+		//			}
+		//		})
+		//	})
 
-			link.addEventListener('blur', (event) => {
-				if (event.target === lastLink) {
-					btn.focus();
-				}
-			})
-		})
+		//	btn.addEventListener('blur', () => links[0].focus());
+		//}
 
-		btn.addEventListener('blur', () => links[0].focus());
 	}
 
 	closeMenu(parents, activeClass) {

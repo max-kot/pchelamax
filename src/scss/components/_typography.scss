@@ -1,90 +1,19 @@
-.title-1,
-.title-2,
-.title-3,
-.title-4 {
-	font-family: var(--secondary-font);
-	text-transform: uppercase;
-}
-
-.title-1 {
+.title {
+	font-size: adapt(48, 24);
+	line-height: 110%;
 	font-weight: 700;
-	font-size: adapt(60, 22);
+	text-transform: uppercase;
 	color: var(--color-dark);
-	display: grid;
-
-	@include media($mobile) {
-		gap: rem(10);
-		letter-spacing: -1px;
-	}
-
-	&__word {
-		//grid-column: 1;
-
-		&--1 {
-			justify-self: end;
-			position: relative;
-
-			svg {
-				position: absolute;
-				bottom: 0;
-				right: 4px;
-				width: 47%;
-				transform: translateY(100%);
-				color: var(--color-accent);
-
-				.en & {
-					width: 62%;
-				}
-			}
-		}
-		&--2 {
-			//grid-column: 2;
-			padding-left: adapt(170, 0);
-
-			.en & {
-				padding-left: adapt(300, 20);
-			}
-		}
-		&--3 {
-			.en & {
-				padding-left: adapt(170, 10);
-			}
-		}
-		&--3 {
-		}
-
-		&--4 {
-		}
-		&--5 {
-		}
-	}
 }
-
 .title-2 {
-	font-size: adapt(36, 24);
-	line-height: 120%;
-	font-weight: 600;
+	font-size: adapt(28, 22);
+	line-height: 110%;
+	font-weight: 700;
+	text-transform: uppercase;
 	color: var(--color-dark);
-	text-indent: rem(59);
-
-	&:not(:last-child) {
-		margin-bottom: rem(30);
-	}
 }
-
 .title-3 {
-	font-weight: 400;
-	line-height: 120%;
 	font-size: adapt(24, 20);
-	text-transform: none;
-}
-
-.title-4 {
-	font-size: adapt(32, 20, 768);
-	line-height: 120%;
-	font-weight: 400;
-
-	@include media($tablet) {
-		font-size: adapt(20, 16, $finishBreakpoint, 768);
-	}
+	font-weight: 500;
+	color: var(--color-dark);
 }

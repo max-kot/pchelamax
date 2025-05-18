@@ -1,0 +1,17 @@
+[data-filter-category] {
+	opacity: 0;
+	transform: translateY(50px);
+	min-height: 0;
+	min-width: 0;
+	padding: 0;
+	margin: 0;
+	pointer-events: none;
+	position: absolute !important;
+	transition: transform 0.3s;
+}
+[data-filter-category].active {
+	position: relative !important;
+	opacity: 1;
+	transform: translateY(0);
+	pointer-events: auto;
+}

@@ -1,0 +1,154 @@
+.about {
+	&__container {
+		position: relative;
+		//min-height: adapt(720, 240);
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+
+		@include media($tablet) {
+			display: block;
+		}
+	}
+
+	&__content {
+		position: relative;
+		z-index: 2;
+
+		padding: adapt(40, 10);
+		background: var(--color-light);
+		border-radius: 16px;
+		border: 1px solid var(--color-gray-light);
+		margin-left: -80px;
+
+		@include media($tablet) {
+			margin-left: unset;
+			width: 80%;
+			margin-top: -45%;
+		}
+
+		@include media($tablet) {
+			width: 90%;
+		}
+	}
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+	}
+
+	&__descr {
+		* {
+			padding: 0 !important;
+			margin: 0 !important;
+		}
+		padding-bottom: rem(20);
+		border-bottom: 1px solid var(--color-gray-light);
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+	}
+
+	&__navigation {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: rem(10);
+	}
+
+	&__btn {
+		padding: 0;
+		transition: all var(--duration-fast);
+		height: 100%;
+		border: none;
+		background: transparent;
+		flex-shrink: 0;
+		position: relative;
+		z-index: 2;
+		@include square(adapt(80, 40));
+
+		svg {
+			height: 100%;
+			path:first-child {
+				fill: var(--color-dark) !important;
+			}
+			path:last-child {
+				fill: var(--color-light) !important;
+			}
+		}
+	}
+
+	&__btn-prev {
+		transform: scale(0.8);
+
+		@include hover {
+			transform: scale(0.9);
+		}
+	}
+	&__btn-next {
+		transform: scale(1.1);
+
+		@include hover {
+			transform: scale(1.2);
+		}
+	}
+
+	&__pagination {
+		position: static;
+	}
+}
+.about-slider {
+	//position: absolute;
+	//top: 0;
+	//left: 0;
+	//@include square(adapt(720, 240));
+	//max-width: 720px;
+	flex: 0 1 720px;
+
+	@include media($tablet) {
+		width: 100%;
+	}
+	&__slide {
+	}
+}
+.about-slide {
+	mask-image: url("../images/sota-shape.png");
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size: contain;
+
+	position: relative;
+	padding-bottom: 100%;
+
+	.image-box {
+		--position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+.about-text-slider {
+	//width: adapt(660, 240);
+	//flex: 0 0 660px;
+	max-width: adapt(660, 240);
+
+	@include media($tablet) {
+		max-width: 100%;
+		width: 100%;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: rem(30);
+	}
+	&__slide {
+		background: var(--color-light);
+	}
+}
+.about-text-slider-slide {
+	&__text {
+	}
+}
+.swiper-pagination {
+}

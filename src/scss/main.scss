@@ -1,8 +1,8 @@
 // Libs
+@import "../../node_modules/normalize.css/normalize";
 @import "../../node_modules/swiper/swiper-bundle";
 
 // Base
-//@use "base";
 @import "base/normalize";
 @import "base/fontsAutoGen";
 @import "base/functions";
@@ -11,35 +11,25 @@
 @import "base/global";
 @import "base/utils";
 
+// Libs
+@import "libs/_Modal.scss";
+@import "libs/_Filter.scss";
+
 // Components
-@import "components/_section.scss";
+@import "components/_components.scss";
 @import "components/_buttons.scss";
 @import "components/_typography.scss";
-@import "components/_menu.scss";
-@import "components/_lang-switcher.scss";
-@import "components/_running-line.scss";
-@import "components/_tabs.scss";
-@import "components/_text-content.scss";
-@import "components/_heading.scss";
-@import "components/_btn-box.scss";
-@import "components/_social.scss";
-@import "components/_form.scss";
-@import "components/_Select.scss";
-@import "components/_FormValidator.scss";
-@import "components/_Modal.scss";
-@import "components/_Loader.scss";
-//@import "components/_ColorChanger.scss";
-
+@import "components/_section.scss";
+@import "components/_Logo.scss";
+@import "components/_Menu.scss";
+@import "components/_review.scss";
 
 // Sections
-@import "sections/_header.scss";
-@import "sections/_hero.scss";
-@import "sections/_services.scss";
-@import "sections/_projects.scss";
-@import "sections/_modal.scss";
-@import "sections/_process.scss";
-@import "sections/_about.scss";
-@import "sections/_reviews.scss";
-@import "sections/_contacts.scss";
-@import "sections/_footer.scss";
-@import "sections/_error-page.scss";
+@import "layout/_header.scss";
+@import "layout/_hero.scss";
+@import "layout/_products.scss";
+@import "layout/_about.scss";
+
+// Modals
+@import "layout/_cart.scss";
+@import "layout/_product-modal.scss";

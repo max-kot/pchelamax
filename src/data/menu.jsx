@@ -12,6 +12,10 @@ export const menu = [
 		text: 'Польза'
 	},
 	{
+		href: '#how-we-work',
+		text: 'Как заказать?'
+	},
+	{
 		href: '#reviews',
 		text: 'Отзывы'
 	},

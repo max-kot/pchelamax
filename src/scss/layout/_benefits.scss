@@ -6,7 +6,11 @@
 
 	&__content {
 		max-width: rem(540);
+		min-height: rem(760);
 
+		@include media($tablet) {
+			min-height: adapt(640, 320, $finishBreakpoint, $tablet);
+		}
 		@include media($tablet) {
 			min-height: adapt(640, 320, $finishBreakpoint, $tablet);
 			display: flex;

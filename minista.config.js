@@ -4,6 +4,7 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
+	base: "./", //! использовать относительные пути (без начального слэша)
 	out: "docs", // dist
 	assets: {
 		outDir: "assets",
@@ -13,8 +14,8 @@ export default defineConfig({
 			//outDir: "assets/images/",
 			optimize: {
 				//layout: "fixed", // "fixed", "constrained"
-				//breakpoints: undefined, // [320, 400, 640, 800, 1024, 1280, 1440, 1920, 2560, 2880, 3840,]
-				//resolution: [1, 2],
+				breakpoints: undefined, // [320, 400, 640, 800, 1024, 1280, 1440, 1920, 2560, 2880, 3840,]
+				resolution: [1, 2],
 				quality: 95,
 			},
 		},

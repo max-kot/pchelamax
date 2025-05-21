@@ -1,0 +1,60 @@
+.how-we-work {
+	&__container {
+	}
+
+	&__title {
+		text-align: center;
+		&:not(:last-child) {
+			margin-bottom: adapt(40, 20);
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(adapt(565, 240), 1fr));
+		gap: adapt(60, 30);
+
+		@include counter;
+	}
+	&__item {
+	}
+}
+.item-how-we-work {
+	position: relative;
+	padding-top: adapt(35, 25);
+	padding-left: adapt(35, 25);
+
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include square(adapt(90, 50));
+		font-weight: 700;
+		color: var(--color-light);
+		font-size: adapt(32, 18);
+		background-image: url(images/icons/sota-black.svg);
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		//transform: translate(-50%, -50%);
+	}
+	&__wrapper {
+		padding: adapt(40, 20);
+		border-radius: adapt(16, 8);
+		border: 1px solid var(--color-gray-light);
+		background: var(--color-light);
+		display: grid;
+		gap: adapt(20, 10);
+		height: 100%;
+
+	}
+	&__title {
+		text-transform: uppercase;
+	}
+
+	&__text {
+	}
+}

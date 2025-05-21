@@ -27,8 +27,14 @@
 			margin-top: -45%;
 		}
 
+		
+
 		@include media($tablet) {
 			width: 90%;
+		}
+		@include media($mobile-m) {
+			margin-top: 0;
+			width: 100%;
 		}
 	}
 
@@ -113,11 +119,6 @@
 	}
 }
 .about-slide {
-	mask-image: url("../images/sota-shape.png");
-	mask-repeat: no-repeat;
-	mask-position: center;
-	mask-size: contain;
-
 	position: relative;
 	padding-bottom: 100%;
 

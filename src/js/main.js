@@ -170,7 +170,7 @@ document.querySelectorAll('.slider-modal-swiper').forEach(swiperEl => {
 const aboutSlider = new Swiper('.about-slider', {
 	loop: true,
 	effect: "fade",
-	allowTouchMove: false,
+	//allowTouchMove: false,
 })
 
 const aboutTextSlider = new Swiper('.about-text-slider', {
@@ -183,8 +183,107 @@ const aboutTextSlider = new Swiper('.about-text-slider', {
 		el: '.about__pagination',
 		clickable: true,
 	},
-	thumbs: {
-		swiper: aboutSlider,
-	},
+	//thumbs: {
+	//	swiper: aboutSlider,
+	//},
 })
+
+aboutSlider.controller.control = aboutTextSlider;
+aboutTextSlider.controller.control = aboutSlider;
+
+const sliderOptions = {
+	loop: true,
+	slidesPerView: 1,
+	direction: "vertical",
+	spaceBetween: 30,
+
+}
+const benefitsSlider1 = new Swiper('.benefits-slider--1', {
+	...sliderOptions,
+	...{
+
+		autoplay: {
+			delay: 3000, disableOnInteraction: false
+		}
+	}
+})
+const benefitsSlider2 = new Swiper('.benefits-slider--2', sliderOptions)
+const benefitsSlider3 = new Swiper('.benefits-slider--3', {
+	...sliderOptions, ...{
+		allowTouchMove: false
+	}
+})
+
+benefitsSlider1.controller.control = [benefitsSlider2, benefitsSlider3];
+benefitsSlider2.controller.control = [benefitsSlider1, benefitsSlider3];
+//benefitsSlider3.controller.control = [benefitsSlider1, benefitsSlider2];
+//benefitsSlider1.on('slideChange', e => {
+//	const index = benefitsSlider1.activeIndex;
+//	console.log(index)
+//	benefitsSlider2.slideTo(index);
+//	benefitsSlider3.slideTo(index);
+//});
+//let isSyncing = false;
+
+//function syncSwipers(source, targets) {
+//	source.on('slideChange', () => {
+//		if (isSyncing) return;
+
+//		isSyncing = true;
+//		const index = source.realIndex;
+//		console.log(isSyncing, index);
+
+//		targets.forEach(swiper => {
+//			if (swiper.activeIndex !== index) {
+//				swiper.slideToLoop(index);
+//			}
+//		});
+
+//		isSyncing = false;
+//	});
+//}
+
+let activeSwiper = null;
+
+function sync(source, targets) {
+	source.on('slideChange', () => {
+		if (activeSwiper && activeSwiper !== source) return;
+
+		activeSwiper = source;
+		const idx = source.realIndex;
+		targets.forEach(swiper => swiper.slideTo(idx));
+
+		// небольшой таймер, чтобы разблокировать
+		setTimeout(() => { activeSwiper = null }, 100);
+	});
+}
+
+//// Настроим взаимную синхронизацию
+//syncSwipers(benefitsSlider1, [benefitsSlider2, benefitsSlider3]);
+//syncSwipers(benefitsSlider2, [benefitsSlider1, benefitsSlider3]);
+//syncSwipers(benefitsSlider3, [benefitsSlider1, benefitsSlider2]);
+// Настроим взаимную синхронизацию
+//sync(benefitsSlider1, [benefitsSlider2, benefitsSlider3]);
+//sync(benefitsSlider2, [benefitsSlider1, benefitsSlider3]);
+//sync(benefitsSlider3, [benefitsSlider1, benefitsSlider2]);
+
+const slides = document.querySelectorAll('.benefit-slide');
+
+const getMaxHeight = () => {
+	const maxHeight = Array.from(slides).reduce((max, curr) => {
+		if (curr.children[0].scrollHeight > max) max = curr.children[0].scrollHeight;
+		return max;
+	}, slides[0].children[0].scrollHeight);
+
+	slides.forEach(slide => {
+		slide.style.height = `${maxHeight + 3}px`;
+	})
+
+	document.documentElement.style.setProperty('--slide-height', `${maxHeight + 3}px`)
+	document.querySelectorAll('.benefits-slider').forEach(slider => slider.style.height = `${maxHeight + 3}px`);
+}
+
+window.addEventListener('load', () => {
+	getMaxHeight();
+});
 new Filter();

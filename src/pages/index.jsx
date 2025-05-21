@@ -1,6 +1,7 @@
 import { Cart } from "../layouts/Cart.jsx"
 import { Products } from "../layouts/Products.jsx"
 import { About } from "../layouts/About.jsx"
+import { Benefits } from "../layouts/Benefits.jsx"
 import { Hero } from "../layouts/Hero"
 import { Header } from "../layouts/Header"
 import { ProductModal } from "../components/ProductModal.jsx"
@@ -20,6 +21,7 @@ export default () => {
 			<Hero />
 			<About />
 			<Products />
+			<Benefits />
 		</main>
 
 		{products.map((product, i) => <ProductModal key={i} data={product} reviews={reviews} />)}

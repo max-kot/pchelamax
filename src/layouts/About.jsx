@@ -17,7 +17,7 @@ export const About = () => {
 		<section className="about section section--light">
 			<div className="container about__container">
 				<Swp className="about-slider">
-					{about.map((item, i) => <div className="about-slider__slide about-slide swiper-slide" key={i}><ImageBox src={item.image} alt={`Фото-${i + 1}`} /></div>)}
+					{about.map((item, i) => <div className="about-slider__slide about-slide sota-mask swiper-slide" key={i}><ImageBox src={item.image} alt={`Фото-${i + 1}`} /></div>)}
 				</Swp>
 				<div className="about__content">
 					<h2 className="about__title title">Всем привет! 👋</h2>

@@ -68,3 +68,10 @@
 		--swiper-pagination-color: var(--color-accent);
 	}
 }
+
+.sota-mask {
+	mask-image: url("../images/sota-shape.png");
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size: contain;
+}

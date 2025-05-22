@@ -203,14 +203,14 @@ const benefitsSlider1 = new Swiper('.benefits-slider--1', {
 	...{
 
 		autoplay: {
-			delay: 3000, disableOnInteraction: false
+			delay: 3000, disableOnInteraction: true
 		}
 	}
 })
 const benefitsSlider2 = new Swiper('.benefits-slider--2', sliderOptions)
 const benefitsSlider3 = new Swiper('.benefits-slider--3', {
 	...sliderOptions, ...{
-		allowTouchMove: false
+		pauseOnMouseEnter: false
 	}
 })
 
@@ -267,9 +267,21 @@ function sync(source, targets) {
 //sync(benefitsSlider2, [benefitsSlider1, benefitsSlider3]);
 //sync(benefitsSlider3, [benefitsSlider1, benefitsSlider2]);
 
-const slides = document.querySelectorAll('.benefit-slide');
+const reviewsSlider1 = new Swiper('.reviews-slider--1', {
+	...sliderOptions,
+	...{
+		autoplay: {
+			delay: 3000, 
+			pauseOnMouseEnter: true
+		}
+	}
+})
+const reviewsSlider2 = new Swiper('.reviews-slider--2', sliderOptions);
+reviewsSlider1.controller.control = reviewsSlider2;
+reviewsSlider2.controller.control = reviewsSlider1;
 
-const getMaxHeight = () => {
+const getMaxHeight = (sliderSelector, slidesSelector, varSlide) => {
+	const slides = document.querySelectorAll(slidesSelector);
 	const maxHeight = Array.from(slides).reduce((max, curr) => {
 		if (curr.children[0].scrollHeight > max) max = curr.children[0].scrollHeight;
 		return max;
@@ -279,11 +291,13 @@ const getMaxHeight = () => {
 		slide.style.height = `${maxHeight + 3}px`;
 	})
 
-	document.documentElement.style.setProperty('--slide-height', `${maxHeight + 3}px`)
-	document.querySelectorAll('.benefits-slider').forEach(slider => slider.style.height = `${maxHeight + 3}px`);
+	if (varSlide) document.documentElement.style.setProperty(`--${varSlide}`, `${maxHeight + 3}px`);
+	document.querySelectorAll(sliderSelector).forEach(slider => slider.style.height = `${maxHeight + 3}px`);
 }
 
-window.addEventListener('load', () => {
-	getMaxHeight();
-});
+const resizeSliderHeight = () => {
+	getMaxHeight('.benefits-slider', '.benefit-slide', 'benefits-slide-height');
+	getMaxHeight('.reviews-slider', '.reviews-slide', 'reviews-slide-height');
+}
+window.addEventListener('load', resizeSliderHeight);
 new Filter();

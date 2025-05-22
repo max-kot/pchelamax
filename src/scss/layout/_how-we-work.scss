@@ -35,10 +35,12 @@
 		font-weight: 700;
 		color: var(--color-light);
 		font-size: adapt(32, 18);
-		background-image: url(images/icons/sota-black.svg);
-		background-position: center;
-		background-size: contain;
-		background-repeat: no-repeat;
+		@extend .sota-mask;
+		background: var(--color-dark);
+		//background-image: url(images/icons/sota-black.svg);
+		//background-position: center;
+		//background-size: contain;
+		//background-repeat: no-repeat;
 		//transform: translate(-50%, -50%);
 	}
 	&__wrapper {

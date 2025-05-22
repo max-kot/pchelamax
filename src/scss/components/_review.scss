@@ -1,7 +1,9 @@
 .review {
-	display: flex;
-	align-items: flex-end;
-	gap: adapt(30, 16);
+	&__wrapper {
+		display: flex;
+		//align-items: flex-end;
+		gap: adapt(30, 16);
+	}
 
 	&__icon {
 		flex-shrink: 0;
@@ -21,7 +23,7 @@
 		background: var(--color-light);
 		border: 1px solid var(--color-gray-light);
 		border-radius: 16px;
-		padding: adapt(30, 10);
+		padding: adapt(30, 20);
 	}
 
 	&__text {
@@ -52,4 +54,5 @@
 			color: var(--color-accent);
 		}
 	}
+
 }

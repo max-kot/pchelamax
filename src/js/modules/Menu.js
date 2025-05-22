@@ -96,7 +96,8 @@ export class Menu {
 				})
 			}
 
-			allLinks.forEach(link => link.addEventListener('pointerdown', () => this.closeMenu(parents, activeClass)))
+			//allLinks.forEach(link => link.addEventListener('pointerdown', () => this.closeMenu(parents, activeClass)))
+			allLinks.forEach(link => link.addEventListener('click', () => this.closeMenu(parents, activeClass)))
 		})
 
 		document.addEventListener('keydown', ({ code: key }) => key === 'Escape' && this.closeMenu(parents, activeClass))

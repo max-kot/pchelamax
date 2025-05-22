@@ -94,10 +94,8 @@
 		font-size: adapt(16, 12);
 		text-transform: uppercase;
 		color: var(--color-accent);
-		background-image: url("images/icons/sota-black.svg");
-		background-position: center;
-		background-size: contain;
-		background-repeat: no-repeat;
+		@extend .sota-mask;
+		background: var(--color-dark);
 		padding: rem(20);
 		text-align: center;
 		display: flex;

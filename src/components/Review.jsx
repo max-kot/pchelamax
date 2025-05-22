@@ -10,14 +10,17 @@ export const Review = ({ tagName, className, data, ...attrs }) => {
 
 	return (
 		<Tag className={cls('review', className)} {...attrs}>
-			<div className="review__icon">{name.slice(0, 1)}</div>
-			<div className="review__content">
-				<blockquote className="review__text">{text}</blockquote>
-				<div className="review__meta">
-					<h3 className="review__name">{name}</h3>
-					<a className="review__link" href={link} aria-label="Читать оригинал">{icon}</a>
+			<div className="review__wrapper">
+				<div className="review__icon">{name.slice(0, 1)}</div>
+				<div className="review__content">
+					<blockquote className="review__text">{text}</blockquote>
+					<div className="review__meta">
+						<h3 className="review__name">{name}</h3>
+						<a className="review__link" href={link} aria-label="Читать оригинал">{icon}</a>
+					</div>
 				</div>
 			</div>
+
 		</Tag>
 	)
 };

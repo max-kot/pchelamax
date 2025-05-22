@@ -4,7 +4,7 @@ export const Swp = ({ className, children, btnPrev, btnNext, pagination,
 	hasScrollbar, ...extraAttrs }) => {
 	return (
 		<div className={cls("swiper", className)} {...extraAttrs}>
-			<div className={cls("swiper-wrapper", `${className}__wrapper"`)}>
+			<div className={cls("swiper-wrapper", `${className}__wrapper`)}>
 				{children}
 			</div>
 			{pagination && <div className={cls("swiper-pagination", `${className}__pagination`, pagination)}></div>}

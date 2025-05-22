@@ -1,0 +1,62 @@
+.custom-select {
+	position: relative;
+	cursor: pointer;
+
+	&::after {
+		content: "🢓";
+		position: absolute;
+		top: 49%;
+		height: 100%;
+		right: 0;
+		font-size: rem(30);
+		width: rem(20);
+		line-height: 1;
+		flex-shrink: 0;
+		pointer-events: none;
+		//transition: transform 0.3s;
+	}
+	&.custom-select-active {
+		&::after {
+			transform-origin: top;
+			transform: rotate(180deg) translateY(-5%);
+		}
+	}
+	&__input {
+		height: 100%;
+		width: 100%;
+		padding-right: rem(20);
+		cursor: pointer;
+	}
+	&__list {
+		visibility: hidden;
+		position: absolute;
+		z-index: 2;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		transform: translateY(0);
+		max-height: rem(200);
+		overflow: auto;
+		opacity: 0;
+		transition:
+			//transform var(--duration-fast),
+			opacity var(--duration-fast);
+
+		.custom-select-active & {
+			transform: translateY(100%);
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	&__item {
+	}
+	&__button {
+		width: 100%;
+		text-align: left;
+
+		&.custom-select-button-active {
+			background: var(--color-accent);
+			color: var(--color-text-accent);
+		}
+	}
+}

@@ -4,7 +4,7 @@ import { ImageBox } from "./tools/ImageBox/ImageBox";
 export const Product = ({ data }) => {
 	const { id, href, image, category, categoryId, title, price, description, value = 1, max, min, steps = 1 } = data;
 	return (
-		<article className="products__item product" data-card-link-parent data-cart-product-id={id} data-filter-category={categoryId}>
+		<article className="products__item product" data-cart-product-id={id} data-filter-category={categoryId}>
 			<ImageBox className="product__image-link" src={image} href={href} data-modal-btn={href} tagName="a" aria-label="Узнать подробнее" data-card-link />
 			<span className="product__category">{category}</span>
 			<div className="product__content">

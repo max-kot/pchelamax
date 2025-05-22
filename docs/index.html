@@ -244,7 +244,7 @@
                 </span></button>
             </div>
             <ul class="products__list">
-              <article class="products__item product" data-card-link-parent="true" data-cart-product-id="0" data-filter-category="honey">
+              <article class="products__item product" data-cart-product-id="0" data-filter-category="honey">
                 <a class="image-box product__image-link" href="#product-1" data-modal-btn="#product-1" aria-label="Узнать подробнее" data-card-link="true">
                   <picture>
                     <source srcset="assets/images/product-1-380x520.avif 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/avif">
@@ -265,7 +265,7 @@
                   <button class="button product__btn btn" type="button" data-cart-counter-transform-btn="1, 1, 50, 1" data-cart-btn-add="0">В корзину</button>
                 </div>
               </article>
-              <article class="products__item product" data-card-link-parent="true" data-cart-product-id="1" data-filter-category="farm">
+              <article class="products__item product" data-cart-product-id="1" data-filter-category="farm">
                 <a class="image-box product__image-link" href="#product-2" data-modal-btn="#product-2" aria-label="Узнать подробнее" data-card-link="true">
                   <picture>
                     <source srcset="assets/images/product-2-380x520.avif 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/avif">
@@ -285,7 +285,7 @@
                   <button class="button product__btn btn" type="button" data-cart-counter-transform-btn="1, 1, 20, 1" data-cart-btn-add="1">В корзину</button>
                 </div>
               </article>
-              <article class="products__item product" data-card-link-parent="true" data-cart-product-id="2" data-filter-category="honey">
+              <article class="products__item product" data-cart-product-id="2" data-filter-category="honey">
                 <a class="image-box product__image-link" href="#product-3" data-modal-btn="#product-3" aria-label="Узнать подробнее" data-card-link="true">
                   <picture>
                     <source srcset="assets/images/product-1-380x520.avif 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/avif">
@@ -306,7 +306,7 @@
                   <button class="button product__btn btn" type="button" data-cart-counter-transform-btn="1, 1, 50, 1" data-cart-btn-add="2">В корзину</button>
                 </div>
               </article>
-              <article class="products__item product" data-card-link-parent="true" data-cart-product-id="3" data-filter-category="farm">
+              <article class="products__item product" data-cart-product-id="3" data-filter-category="farm">
                 <a class="image-box product__image-link" href="#product-4" data-modal-btn="#product-4" aria-label="Узнать подробнее" data-card-link="true">
                   <picture>
                     <source srcset="assets/images/product-2-380x520.avif 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/avif">
@@ -326,7 +326,7 @@
                   <button class="button product__btn btn" type="button" data-cart-counter-transform-btn="1, 1, 30, 1" data-cart-btn-add="3">В корзину</button>
                 </div>
               </article>
-              <article class="products__item product" data-card-link-parent="true" data-cart-product-id="4" data-filter-category="farm">
+              <article class="products__item product" data-cart-product-id="4" data-filter-category="farm">
                 <a class="image-box product__image-link" href="#product-5" data-modal-btn="#product-5" aria-label="Узнать подробнее" data-card-link="true">
                   <picture>
                     <source srcset="assets/images/product-2-380x520.avif 380w" sizes="(min-width: 380px) 380px, 100vw" width="380" height="520" type="image/avif">
@@ -750,6 +750,42 @@
             <div class="reviews__btn-box">
               <a class="button btn reviews__btn " href="#">Оставить отзыв</a>
               <p class="reviews__btn-text">Оставьте свой отзыв — нам важно ваше мнение!</p>
+            </div>
+          </div>
+        </section>
+        <section class="section section--accent order">
+          <div class="container order__container">
+            <h2 class="title order__title">Оставьте заявку и я свяжусь с вами в ближайшее время</h2>
+            <div class="order__flex-box">
+              <div class="order__cart cart">
+                <h2 class="cart__title title-2">Корзина (<span data-cart-quantity="true">0</span>)</h2>
+                <ul class="cart__list" data-cart-list="true"></ul>
+              </div>
+              <form class="order__form form" action="#" data-cart-form="true">
+                <h3 class="title-2 form__title">Ваши контактные данные</h3>
+                <div class="form__field">
+                  <input class="form__input" type="text" name="name" id="name" placeholder="Ваше имя">
+                </div>
+                <div class="form__field form__field--select">
+                  <input class="form__input form__input--select" type="text" name="contact" id="contact" placeholder="Ваши контакты">
+                  <select class="form__select" name="contact-value" id="contact-value" data-select="true">
+                    <option value="телефон">телефон</option>
+                    <option value="эл-почта">эл-почта</option>
+                    <option value="ватсап">ватсап</option>
+                    <option value="вайбер">вайбер</option>
+                    <option value="телеграм">телеграм</option>
+                  </select>
+                </div>
+                <div class="form__field">
+                  <textarea class="form__input form__textarea" name="message" id="message" placeholder="Ваше сообщение или комментарии к заказу"></textarea>
+                </div>
+                <div class="form__order-box"><small class="form__info small-descr">*Цена указана без доставки, финальная цена с доставкой обговаривается при контакте с продавцом</small>
+                  <div class="form__total total"><span class="total__text">Итого:</span>
+                    <div class="total__price price"><span data-cart-price-sum="true">0</span> руб</div>
+                  </div>
+                </div>
+                <button class="button form__btn btn" type="button">Отправить</button>
+              </form>
             </div>
           </div>
         </section>
@@ -1284,7 +1320,7 @@
         <ul class="cart__list" data-cart-list="true"></ul>
         <div class="cart__order-box"><small class="cart__info small-descr">*Цена указана без доставки, финальная цена с доставкой обговаривается при контакте с продавцом</small>
           <div class="cart__total total"><span class="total__text">Итого:</span>
-            <div class="total__price price"><span data-cart-price-sum="true">28</span> руб</div>
+            <div class="total__price price"><span data-cart-price-sum="true">0</span> руб</div>
           </div>
           <button class="button cart__btn btn" type="button">Оформить заказ</button>
         </div>

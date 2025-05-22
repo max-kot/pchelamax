@@ -1,5 +1,10 @@
+// Data
+import { products } from '../data/products.js';
+
+// Libs
 import Swiper from 'swiper/bundle';
 
+// Plugins
 import { Menu } from "./modules/Menu";
 import { AutoCalc } from "./modules/AutoCalc.js";
 import { HideHeader } from "./modules/HideHeader.js";
@@ -11,7 +16,7 @@ import { Modal } from "./modules/Modal.js";
 import { Cart } from "./modules/Cart.js";
 import { Filter } from "./modules/Filter.js";
 //import { Spoiler } from "./modules/Spoiler.js";
-//import { Select } from "./modules/Select.js";
+import { Select } from "./modules/Select.js";
 //import { ValueChecker } from "./modules/ValueChecker.js";
 //import { FormValidator } from "./modules/FormValidator.js";
 //import { CurrentYear } from "./modules/CurrentYear.js";
@@ -51,70 +56,15 @@ new Modal('[data-modal]', {
 	}
 })
 // список с базой данных товаров
-const productData = [
-	{
-		id: 0,
-		title: '1 Мёд 0,5л',
-		href: '#',
-		description: ['2024 год', 'Разнотравье'],
-		image: 'src/assets/images/product-1.jpg',
-		category: 'Мёд',
-		price: 8,
-		max: '50',
-		min: '1'
-	},
-	{
-		id: 1,
-		title: '2 Яйца перепелиные 20 шт',
-		href: '#',
-		description: ['Домашние'],
-		image: 'src/assets/images/product-2.jpg',
-		category: 'Фермерские продукты',
-		price: 4,
-		max: '20',
-		min: '1'
-	}, {
-		id: 2,
-		title: '3 Мёд 0,5л',
-		href: '#',
-		description: ['2024 год', 'Разнотравье'],
-		image: 'src/assets/images/product-1.jpg',
-		category: 'Мёд',
-		price: 8,
-		max: '50',
-		min: '1'
-	},
-	{
-		id: 3,
-		title: '4 Яйца перепелиные 20 шт',
-		href: '#',
-		description: ['Домашние'],
-		image: 'src/assets/images/product-2.jpg',
-		category: 'Фермерские продукты',
-		price: 4,
-		max: '30',
-		min: '1'
-	},
-	{
-		id: 4,
-		title: '5 Яйца перепелиные 20 шт',
-		href: '#',
-		description: ['Домашние'],
-		image: 'src/assets/images/product-2.jpg',
-		category: 'Фермерские продукты',
-		price: 4,
-		max: '5',
-		min: '1'
-	}
-];
 
-new Cart(productData, {
+new Cart(products, {
 	itemClass: ['cart__product', 'cart-product'],
 	renderItem: (item) => {
-		return `<div class="cart-product__image"><img src="${item.image}"></div>
+		return `
+					<a class="cart-product__image-link" href="${item.href}" data-modal-btn="${item.href}"><img src="${item.image}"></a>
 					<div class="cart-product__content">
 						<div class="cart-product__content-col">
-							<h3 class="cart-product__name title-3">${item.title}</h3>
+							<h3 class="cart-product__name title-3"><a class="cart-product__title-link" href="${item.href}" data-modal-btn="${item.href}">${item.title}</a></h3>
 							<ul class="cart-product__descr-list descr-list">
 								${item.description.map(descr => `<li class="descr-list__item">${descr}</li>`).join('')}
 							</ul>
@@ -271,7 +221,7 @@ const reviewsSlider1 = new Swiper('.reviews-slider--1', {
 	...sliderOptions,
 	...{
 		autoplay: {
-			delay: 3000, 
+			delay: 3000,
 			pauseOnMouseEnter: true
 		}
 	}
@@ -301,3 +251,4 @@ const resizeSliderHeight = () => {
 }
 window.addEventListener('load', resizeSliderHeight);
 new Filter();
+new Select();

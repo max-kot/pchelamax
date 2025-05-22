@@ -2,7 +2,7 @@ import { Swp } from "../components/tools/Swp";
 import { Category } from "../components/Category.jsx";
 import { Product } from "../components/Product.jsx";
 
-import { categories, products } from "../data/products.jsx"
+import { categories, products } from "../data/products.js"
 
 export const Products = () => {
 	const btnNext = <span><svg width="61" height="68" viewBox="0 0 61 68" fill="none" xmlns="http://www.w3.org/2000/svg">

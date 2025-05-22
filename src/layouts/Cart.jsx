@@ -19,7 +19,7 @@ export const Cart = () => {
 				<small className="cart__info small-descr">*Цена указана без доставки, финальная цена с доставкой обговаривается при контакте с продавцом</small>
 				<div className="cart__total total">
 					<span className="total__text">Итого:</span>
-					<div className="total__price price"><span data-cart-price-sum>28</span> руб</div>
+					<div className="total__price price"><span data-cart-price-sum>0</span> руб</div>
 				</div>
 				<Button className="cart__btn btn">Оформить заказ</Button>
 			</div>

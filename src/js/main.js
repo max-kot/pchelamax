@@ -18,7 +18,7 @@ import { Filter } from "./modules/Filter.js";
 //import { Spoiler } from "./modules/Spoiler.js";
 import { Select } from "./modules/Select.js";
 //import { ValueChecker } from "./modules/ValueChecker.js";
-//import { FormValidator } from "./modules/FormValidator.js";
+import { FormValidator } from "./modules/FormValidator.js";
 //import { CurrentYear } from "./modules/CurrentYear.js";
 //import { ValueSync } from "./modules/ValueSync.js";
 //import { Loader } from "./modules/Loader.js";
@@ -252,3 +252,4 @@ const resizeSliderHeight = () => {
 window.addEventListener('load', resizeSliderHeight);
 new Filter();
 new Select();
+new FormValidator();

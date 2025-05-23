@@ -13,7 +13,7 @@
 	}
 
 	&::after {
-		content: '';
+		content: "";
 		position: absolute;
 		bottom: 0;
 		left: 0;
@@ -60,12 +60,8 @@
 		@include media($tablet) {
 			position: fixed;
 			z-index: 55;
-			bottom: var(--container-padding);
+			bottom: 10px;
 			right: container-padding();
-			background: var(--color-light);
-			border: 1px solid var(--color-gray-light);
-			border-radius: 50%;
-		
 		}
 	}
 
@@ -84,13 +80,15 @@
 
 	&__cart-btn {
 		.menu-open & {
-			
 		}
 
 		@include media($tablet) {
 			@include square(rem(60));
 			justify-items: center;
 			align-items: center;
+			background: var(--color-light);
+			border: 1px solid var(--color-gray-light);
+			border-radius: 18px;
 			.cart-btn__quantity {
 				top: 10px;
 				right: 10px;
@@ -100,7 +98,7 @@
 			.cart-btn__icon {
 				padding-top: 10px;
 				padding-right: 5px;
-			} 
+			}
 			.cart-btn__text {
 				display: none;
 			}

@@ -15,13 +15,13 @@ export const Order = () => {
 						<ul className="cart__list" data-cart-list>
 						</ul>
 					</div>
-					<form className="order__form form" action="#" data-cart-form>
+					<form className="order__form form" action="#" data-cart-form data-validator>
 						<h3 className="title-2 form__title">Ваши контактные данные</h3>
 						<div className="form__field">
-							<input className="form__input" type="text" name="name" id="name" placeholder="Ваше имя" />
+							<input className="form__input" type="text" name="name" id="name" placeholder="Ваше имя" required/>
 						</div>
 						<div class="form__field form__field--select">
-							<input className="form__input form__input--select" type="text" name="contact" id="contact" placeholder="Ваши контакты" />
+							<input className="form__input form__input--select" type="text" name="contact" id="contact" placeholder="Ваши контакты" required/>
 							<select className="form__select" name="contact-value" id="contact-value" data-select>
 								{contacts.map((item, i) => <option key={i} value={item}>{item}</option>)}
 							</select>

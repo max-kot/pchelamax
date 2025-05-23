@@ -9,8 +9,9 @@ $laptop: 1440.98;
 $laptop-s: 1280.98;
 $tablet: 1024.98;
 $mobile: 768.98;
-$mobile-m: 460.98;
-$mobile-s: 320.98;
+$mobile-l: 639.98;
+$mobile-m: 459.98;
+$mobile-s: 319.98;
 
 :root {
 	// Adaptive
@@ -28,7 +29,7 @@ $mobile-s: 320.98;
 
 	// CONTAINER
 	--container-width: #{rem(1200)};
-	--container-padding: #{rem(10)}; //! даже если контейнер на весь экран, отсупы оставь а ширину сделай на 100%
+	--container-padding: #{rem(15)}; //! даже если контейнер на весь экран, отсупы оставь а ширину сделай на 100%
 
 	// FONTS
 	--font-size-html: 100%; // 1rem = 1px ===> calc(1 / 16 * 100%)

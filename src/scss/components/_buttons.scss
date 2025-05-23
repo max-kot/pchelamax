@@ -12,8 +12,6 @@
 	transition: all var(--duration-medium);
 	border: 3px solid transparent;
 
-	
-
 	svg {
 		transition: transform var(--duration-medium);
 	}
@@ -39,8 +37,6 @@
 			transform: rotate(45deg);
 		}
 	}
-
-	
 }
 .cart-btn {
 	--quantity-bg: var(--color-accent);
@@ -87,5 +83,13 @@
 		line-height: 1;
 		transition: all var(--duration-fast);
 		font-size: adapt(16, 14);
+	}
+}
+
+.link {
+	display: inline-flex;
+	@include hoverLine(up, var(--color-accent));
+	@include hover {
+		color: var(--color-dark);
 	}
 }

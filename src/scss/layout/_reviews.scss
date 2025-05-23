@@ -72,6 +72,9 @@
 	&--1 {
 	}
 	&--2 {
+		@include media($mobile) {
+			display: none;
+		}
 	}
 
 	&--1__wrapper {

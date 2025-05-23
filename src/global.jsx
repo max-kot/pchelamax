@@ -1,6 +1,6 @@
 import { Head } from "minista";
 
-import '@/scss/main.scss';
+import './scss/main.scss';
 
 export default (props) => {
 	const {

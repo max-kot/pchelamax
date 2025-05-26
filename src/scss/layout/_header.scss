@@ -28,7 +28,6 @@
 	}
 
 	&__container {
-		--container-width: #{rem(1400)};
 		gap: adapt(30, 20, $tablet);
 	}
 

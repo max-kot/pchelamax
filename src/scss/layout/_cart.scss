@@ -13,6 +13,9 @@
 	}
 
 	&__list {
+		.cart-empty & {
+			display: none;
+		}
 		display: flex;
 		flex-direction: column;
 		height: 53dvh;
@@ -108,7 +111,7 @@
 			max-height: unset;
 		}
 		@include hover {
-			img{
+			img {
 				transform: scale(1.1);
 			}
 		}

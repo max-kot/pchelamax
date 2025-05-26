@@ -14,6 +14,7 @@ import { Footer } from "../layouts/Footer.jsx"
 
 import { products } from "../data/products.js"
 import { reviews } from "../data/reviews.jsx"
+import { useState } from "react"
 
 export const metadata = {
 	title: 'Пчеловод и экофермер — Сергей Котляренко',
@@ -21,6 +22,8 @@ export const metadata = {
 }
 
 export default () => {
+	const [count, setCount] = useState(0);
+
 	return (<>
 		<Header />
 		<main className="main">
@@ -33,7 +36,7 @@ export default () => {
 			<Order />
 			<Contacts />
 		</main>
-		<Footer/>
+		<Footer />
 		{products.map((product, i) => <ProductModal key={i} data={product} reviews={reviews} />)}
 		<Cart />
 	</>)

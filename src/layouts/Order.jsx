@@ -1,3 +1,5 @@
+import { Recommended } from "../components/Recommended";
+import { CartEmptyDescr } from "../components/CartEmptyDescr";
 import { Button } from "../components/tools/Button";
 
 const contacts = ['телефон', 'эл-почта', 'ватсап', 'вайбер', 'телеграм']
@@ -12,16 +14,18 @@ export const Order = () => {
 				<div className="order__flex-box">
 					<div className="order__cart cart">
 						<h2 className="cart__title title-2">Корзина (<span data-cart-quantity>0</span>)</h2>
+						<CartEmptyDescr />
 						<ul className="cart__list" data-cart-list>
 						</ul>
+						<Recommended />
 					</div>
 					<form className="order__form form" action="#" data-cart-form data-validator>
 						<h3 className="title-2 form__title">Ваши контактные данные</h3>
 						<div className="form__field">
-							<input className="form__input" type="text" name="name" id="name" placeholder="Ваше имя" required/>
+							<input className="form__input" type="text" name="name" id="name" placeholder="Ваше имя" required />
 						</div>
 						<div class="form__field form__field--select">
-							<input className="form__input form__input--select" type="text" name="contact" id="contact" placeholder="Ваши контакты" required/>
+							<input className="form__input form__input--select" type="text" name="contact" id="contact" placeholder="Ваши контакты" required />
 							<select className="form__select" name="contact-value" id="contact-value" data-select>
 								{contacts.map((item, i) => <option key={i} value={item}>{item}</option>)}
 							</select>

@@ -1,0 +1,17 @@
+.cart-empty-descr {
+	display: none;
+	.cart-empty & {
+		display: block;
+	}
+	border-bottom: 1px solid var(--color-gray-light);
+	padding-bottom: rem(30);
+	&:not(:last-child) {
+		margin-bottom: rem(30);
+	}
+
+	a {
+		color: var(--color-dark);
+		font-weight: 500;
+	}
+	
+}

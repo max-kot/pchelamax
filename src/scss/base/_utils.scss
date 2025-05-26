@@ -35,6 +35,7 @@
 	min-height: 100dvh;
 
 	& > main {
+		padding-top: var(--header-height);
 		flex: 1 1 auto;
 	}
 }
@@ -43,6 +44,10 @@
 	max-width: calc(var(--container-width) + (var(--container-padding) * 2));
 	padding: 0 var(--container-padding);
 	margin: 0 auto;
+
+	&--wide {
+		--container-width: #{rem(1400)};
+	}
 }
 
 .flex {
@@ -68,4 +73,13 @@
 
 .flex-wrap {
 	flex-wrap: wrap;
+}
+
+@keyframes gravity {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-20px);
+	}
 }

@@ -24,6 +24,7 @@
 @import "components/_Logo.scss";
 @import "components/_Menu.scss";
 @import "components/_review.scss";
+@import "components/_cart-empty-descr.scss";
 
 // Sections
 @import "layout/_header.scss";
@@ -36,6 +37,8 @@
 @import "layout/_order.scss";
 @import "layout/_contacts.scss";
 @import "layout/_footer.scss";
+@import "layout/_section-404.scss";
+@import "layout/_recommended.scss";
 
 // Modals
 @import "layout/_cart.scss";

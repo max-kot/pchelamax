@@ -17,7 +17,7 @@ export class Filter {
 
 		this.options = Object.assign(defaultOptions, options);
 		this.activeFilters = [];
-		this.sectionId = document.querySelector('[data-filter-category]').closest('section').id || this.options.sectionId;
+		this.sectionId = document?.querySelector('[data-filter-category]')?.closest('section').id || this.options.sectionId;
 		this.events();
 	}
 

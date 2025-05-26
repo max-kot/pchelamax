@@ -232,6 +232,8 @@ reviewsSlider2.controller.control = reviewsSlider1;
 
 const getMaxHeight = (sliderSelector, slidesSelector, varSlide) => {
 	const slides = document.querySelectorAll(slidesSelector);
+	if (!slides.length) return;
+
 	const maxHeight = Array.from(slides).reduce((max, curr) => {
 		if (curr.children[0].scrollHeight > max) max = curr.children[0].scrollHeight;
 		return max;
@@ -250,6 +252,20 @@ const resizeSliderHeight = () => {
 	getMaxHeight('.reviews-slider', '.reviews-slide', 'reviews-slide-height');
 }
 window.addEventListener('load', resizeSliderHeight);
+
+const recommendedSlider = new Swiper('.recommended-swiper', {
+	loop: true,
+	slidesPerView: 'auto',
+	autoplay: {
+		delay: 3000,
+		pauseOnMouseEnter: true
+	},
+	navigation: {
+		nextEl: '.recommended__btn-next',
+		prevEl: '.recommended__btn-prev',
+	},
+})
+
 new Filter();
 new Select();
 new FormValidator();

@@ -12,7 +12,7 @@ export const Header = ({ className }) => {
 
 	return (
 		<header className={cls('header', className)} data-auto-calc="header, height">
-			<Container className="header__container flex flex-ai-c flex-jc-sb">
+			<Container className="header__container container--wide flex flex-ai-c flex-jc-sb">
 				<Logo className="header__logo" href="#" />
 				<Menu className="header__menu" data={menu}/>
 				<div className="header__btn-box flex flex-ai-c">

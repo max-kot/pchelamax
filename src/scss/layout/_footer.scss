@@ -1,6 +1,6 @@
 .footer {
 	padding-block: adapt(60, 40) rem(80);
-
+	border-top: 1px solid var(--color-gray-light);
 	&__container {
 		display: grid;
 		gap: rem(30);

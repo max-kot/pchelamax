@@ -1,0 +1,76 @@
+.section-404 {
+	text-align: center;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(20);
+	}
+
+	&__title {
+	}
+
+	&__decor {
+	}
+
+	&__text {
+		text-transform: uppercase;
+	}
+
+	&__btn-box {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: adapt(60, 20);
+	}
+}
+.decor-404 {
+	font-size: adapt(340, 120);
+	line-height: 1;
+	font-weight: 700;
+	color: var(--color-dark);
+	display: flex;
+	align-items: center;
+	gap: rem(10);
+
+	&__num {
+	}
+
+	&__center {
+		@include square(adapt(300, 100));
+		position: relative;
+	}
+	&__zero {
+		display: block;
+		position: relative;
+		font-size: 0;
+		@include square(adapt(300, 100));
+		@extend .sota-mask;
+		background: var(--color-dark);
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			@include square(adapt(200, 50));
+			@extend .sota-mask;
+			background: var(--color-accent);
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		top: -10px;
+		right: 0;
+		z-index: 2;
+		width: adapt(90, 50);
+		animation: gravity 1.5s ease-in-out infinite alternate-reverse;
+		img {
+			width: 100%;
+		}
+	}
+}

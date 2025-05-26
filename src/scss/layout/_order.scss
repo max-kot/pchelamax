@@ -17,19 +17,22 @@
 		gap: adapt(40, 30);
 
 		@include media($tablet) {
-			flex-direction: column;
+			flex-direction: column-reverse;
 		}
 	}
 
 	&__cart {
+		width: 60% !important;
+		max-width: 100%;
+		flex-shrink: 0;
 		@include media($tablet) {
-			width: 100%;
-		}
-		.cart-empty & {
-			//display: none;
+			width: 100% !important;
 		}
 		//flex: 1;
 		.cart__list {
+			.cart-empty & {
+				display: none;
+			}
 			height: rem(540);
 			//max-height: var(--form-height);
 		}
@@ -125,6 +128,9 @@
 	&__order-box {
 		display: grid;
 		gap: adapt(30, 20);
+		.cart-empty & {
+			display: none;
+		}
 	}
 
 	&__info {
